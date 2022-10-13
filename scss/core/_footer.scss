@@ -1,14 +1,394 @@
 /* Footer
  ----------------------------------------------------------------------------- */
-.footer {
-	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
 
-	&__content {
-		@extend .container_center;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+.footer {
+	color: $color_white;
+	background-color: #1C1A1A;
+	padding: 1.75em 0 3em;
+	@media (min-width: 768px) {
+		padding: 2.8125em 0 2.625em;
+
+	}
+
+	&__row {
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+		}
+		// start first-child
+		&:first-child {
+			border-bottom: 0.0625em solid #353535;
+			padding-bottom: 2em;
+			@media (max-width: 767px) {
+				.footer__col {
+					&:nth-child(2) {
+						border: none;
+						padding-bottom: 0;
+					}
+
+					&:nth-child(5) {
+						border: none;
+						padding-bottom: 0;
+					}
+
+					&:nth-child(6) {
+						padding-top: 0.5em;
+					}
+
+					&:last-child {
+						border: none;
+						padding-bottom: 0;
+					}
+				}
+			}
+
+			@media (min-width: 768px) {
+				padding-bottom: 1.625em;
+
+				.footer__col {
+					width: 12.5em;
+
+					&:first-child {
+						width: 15em;
+					}
+
+					&:last-child {
+						width: 15.375em;
+					}
+
+					&:nth-child(5) {
+						width: 12.375em;
+					}
+				}
+
+			}
+		}
+		// end first-child
+
+		// ---------------------------------------------------------------------
+
+		// start last-child
+		&:last-child {
+			.footer__col {
+				border: none;
+			}
+
+			a {
+				color: $color_warning;
+
+				@media (min-width: 768px) {
+					&.bold_border {
+						position: relative;
+						text-decoration: none;
+
+						&:after {
+							content: '';
+							display: block;
+							position: absolute;
+							bottom: -1em;
+							left: 0;
+							width: 100%;
+							border-bottom: 1em solid $color_warning;
+						}
+					};
+				}
+
+			}
+
+			span {
+				font-size: 0.75em;
+			}
+
+			padding-top: 1.625em;
+
+			@media (min-width: 768px) {
+				letter-spacing: 0.03em;
+				padding-top: 1.75em;
+				align-items: center;
+				line-height: 1.4;
+
+				.footer__col {
+					&:nth-child(1) {
+						width: 17em;
+					}
+				}
+
+				.footer__col {
+					&:nth-child(2) {
+						text-align: center;
+						width: 30em;
+					}
+				}
+
+				.footer__col {
+					&:nth-child(3) {
+						text-align: right;
+						width: 17em;
+
+						span {
+							display: inline-block;
+							width: 12em;
+						}
+					}
+				}
+
+			}
+		}
+		// end last-child
+
+	}
+
+	&__col {
+		padding-bottom: 1.25em;
+		padding-top: 1.25em;
+		border-bottom: 0.0625em solid #353535;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		@media (min-width: 768px) {
+			padding: 0;
+			border: none;
+		}
+
+		@media (max-width: 767px) {
+			&_wrap {
+				display: flex;
+				justify-content: space-between;
+
+				> * {
+					width: 47%;
+				}
+			}
+		}
+
+	}
+
+	&__logo {
+		margin-bottom: 1.125em;
+		@media (min-width: 768px) {
+			margin-bottom: 2.75em;
+
+		}
+
+		.logo {
+			width: 11.875em;
+			height: 3.125em;
+			margin-bottom: 0.625em;
+			@media (min-width: 768px) {
+				margin-bottom: 0.9375em;
+			}
+		}
+
+		.logo__info {
+			width: auto;
+			margin: 0;
+			line-height: 1.15;
+
+			span {
+				font-size: 0.625em;
+				@media (min-width: 768px) {
+					font-size: 0.875em;
+
+				}
+			}
+		}
+	}
+
+	&__messenger {
+		@media (min-width: 768px) {
+			margin-bottom: 2.625em;
+		}
+	}
+
+	.messenger {
+		display: block;
+		margin-bottom: 1.125em;
+		@media (min-width: 768px) {
+			margin-bottom: 2em;
+		}
+
+		.messenger__label {
+			width: auto;
+			margin-right: 0;
+			margin-bottom: 0.5em;
+			@media (min-width: 768px) {
+				margin-bottom: 0.75em;
+			}
+
+			span {
+				font-size: 0.75em;
+				@media (min-width: 768px) {
+					font-size: 1em;
+				}
+			}
+		}
+
+	}
+
+	&__link {
+		a {
+			text-decoration: none;
+			color: $color_warning;
+			font-size: 0.75em;
+			font-weight: 500;
+			@media (min-width: 768px) {
+				font-size: 1em;
+			}
+
+			&:after {
+				display: inline-block;
+				content: '\e900';
+				font-family: 'icomoon';
+				font-size: 0.5em;
+				margin-left: 0.75em;
+			}
+
+			@media (min-width: 768px) {
+				transform: translateX(0);
+
+				&:hover {
+					&:after {
+						-webkit-animation: snake 0.4s linear alternate infinite;
+						animation: snake 0.4s linear alternate infinite;
+					}
+				}
+			}
+
+		}
+	}
+
+	&__label {
+		letter-spacing: 0.05em;
+		margin-bottom: 0.75em;
+
+		@media (min-width: 768px) {
+			margin-bottom: 1.5em;
+		}
+
+		span {
+			font-weight: 700;
+			font-size: 0.75em;
+			@media (min-width: 768px) {
+				font-size: 1em;
+			}
+		}
+
+		&_opasity {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__action {
+		margin-bottom: 1.375em;
+		margin-top: 1.125em;
+		@media (min-width: 768px) {
+			margin-top: 0;
+		}
+
+		.phone {
+			text-align: left;
+			letter-spacing: 0.03em;
+		}
+
+		.phone__label {
+			margin-bottom: 0.25em;
+			@media (min-width: 768px) {
+				margin-bottom: 0.5em;
+
+			}
+
+			span {
+				color: $color_white;
+				font-size: 0.75em;
+				@media (min-width: 768px) {
+					font-size: 1em;
+
+				}
+			}
+		}
+
+		.phone__link {
+			margin-bottom: 0.25em;
+
+			a {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	&__mail {
+		letter-spacing: 0.03em;
+		margin-bottom: 1.275em;
+		@media (min-width: 768px) {
+			margin-bottom: 1.375em;
+
+		}
+
+		a {
+			text-decoration: none;
+			color: $color_white;
+			font-size: 0.75em;
+
+			@media (min-width: 768px) {
+				font-size: 1em;
+
+				&:hover {
+					color: $color_warning;
+				}
+			}
+
+		}
+	}
+
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+	}
+
+	.menu-item {
+		margin-bottom: 0.5em;
+		line-height: 0.75;
+
+		@media (min-width: 768px) {
+			line-height: 1.15;
+
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		a {
+			font-size: 0.625em;
+			text-decoration: none;
+			color: #6D6D6D;
+		}
+
+		@media (min-width: 768px) {
+			a {
+				font-size: 0.875em;
+
+			}
+
+			&:hover {
+				a {
+					color: $color_warning;
+
+				}
+			}
+
+		}
+	}
+
+}
+
+@keyframes snake {
+	100% {
+		transform: translateX(0.5em);
 	}
 }

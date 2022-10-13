@@ -1,6 +1,115 @@
 footer.footer
-    .footer__content
-        p
-        | &copy; 2016 |
-        i.fa.fa-github(aria-hidden='true') &nbsp;
-        a(href='#') View Source
+    .container_center.container_center_sm
+
+        .footer__row
+            .footer__col
+                .footer__logo
+                    a.logo(href="/")
+                        img(src="/img/logo.png")
+                    .logo__info
+                        span <b>Строительная компания.</b><br> Работаем с 2014 года Красноярск, Москва, СПБ
+                .footer__messenger
+                    .messenger.messenger_large
+                        .messenger__list
+                            .messenger__item
+                                a(href="#" target="_blank").messenger__link
+                                    i.icon_youtube
+                            .messenger__item
+                                a(href="#" target="_blank").messenger__link
+                                    i.icon_wk
+                            .messenger__item
+                                a(href="#" target="_blank").messenger__link
+                                    i.icon_insta
+                .footer__link
+                    a(href="#") Калькулятор стоимости
+
+            .footer__col.mobile
+                .footer__col_wrap
+                    .footer__inner
+                        .footer__label 
+                            span Навигация
+                        ul.menu
+                            each item in ['Главная', 'Услуги', 'Портфолио', 'О компании', 'Дизайнерам, архитекторам', 'Поставщикам материалов', 'Вакансии', 'Контакты' ]
+                                li.menu-item
+                                    a(href="#")=item
+                    .footer__inner
+                        .footer__label 
+                            span Услуги
+                        ul.menu
+                            each item in ['Ремонт квартир, домов', 'Ремонт коммерческих объектов', 'Дизайн-интерьера', 'Строительство и проектирование домов']
+                                li.menu-item
+                                    a(href="#")=item
+
+
+            .footer__col.desktop
+                .footer__label
+                    span Навигация по сайту
+                ul.menu
+                    each item in ['Главная', 'Услуги', 'Портфолио', 'О компании', 'Дизайнерам, архитекторам', 'Поставщикам материалов', 'Вакансии', 'Контакты' ]
+                        li.menu-item
+                            a(href="#")=item
+
+            .footer__col.desktop
+                .footer__label
+                    span Услуги
+                ul.menu
+                    each item in ['Ремонт квартир, домов', 'Ремонт коммерческих объектов', 'Дизайн-интерьера', 'Строительство и проектирование домов']
+                        li.menu-item
+                            a(href="#")=item
+
+            .footer__col
+                .footer__label
+                    span Преимущества
+
+                ul.menu
+                    each item in [ 'Гарантия 5 лет по договору', '4 уровня контроля качества', 'Фиксированная смета', 'Гарантия соблюдения сроков', 'Прямые поставки материалов', 'Работа в «белую»', '8 лет на рынке', 'Учавствуем в торгах по 223 и 44 ФЗ' ]
+                        li.menu-item
+                            a(href="#")=item
+            .footer__col
+                .footer__label.footer__label_opasity.desktop
+                    span Преимущества
+
+                ul.menu
+                    each item in [ 'Работаем по СНиП и СП', '25 узких специалистов в штате', 'Имеем допуск СРО, МЧС к высотным и огневым работам' ]
+                        li.menu-item
+                            a(href="#")=item
+            .footer__col
+                .footer__label
+                    span Контакты
+
+                .footer__action
+                    .phone
+                        .phone__label
+                            span Пн-Сб  9:00-19:00
+                        .phone__link
+                            a(href="tel:+7 (391) 2-054-081 ") +7 (391) 2-054-081
+                    .footer__link
+                        a(href="#") Заказать обратный звонок
+
+                .messenger.messenger_medium
+                    .messenger__label
+                        span Спрашивайте, отвечаем онлайн
+                    .messenger__list
+                        .messenger__item
+                            a.messenger__link(href="https://wa.me/+73912054081" target="_blank")
+                                i.icon_whatsapp
+                        .messenger__item
+                            a.messenger__link(href="https://wapp.click/73912054081" target="_blank")
+                                i.icon_telegram
+                        .messenger__item
+                            a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                i.icon_viber
+                .footer__mail
+                    a(href="mailto:informremont@mail.ru") informremont@mail.ru
+
+                .footer__link
+                    a(href="#") Все контакты
+
+
+        .footer__row
+            .footer__col
+                span ООО Арстрой<br> <a href="#">Политика конфиденциальности</a>
+            .footer__col
+                span Материалы с сайта защищены законом РФ об авторских и смежных правах. Копирование запрещено. Сайт не является договором офферты
+            .footer__col
+                span Сделано с любовью в <a class="bold_border" href="https://paradigma.website/" target="_blank">Paradigma.website</a>

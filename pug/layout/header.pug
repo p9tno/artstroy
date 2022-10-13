@@ -1,25 +1,82 @@
 header.header
     .header__content
-        .header__logo
-            a.logo(href="/")
-                img(src="/img/logo.png", alt="alt")
+        // start .header__top
+        .header__top
+            .header__logo
+                a.logo(href="/")
+                    img(src="/img/logo.png")
+                .logo__info.desktop
+                    span Строительная компания. Работаем с 2014 года Красноярск, Москва, СПБ
+            .header__city.desktop
+                .city
+                    .city__label
+                        span Ваш город
+                    ul.city__menu.menu
+                        li.menu-item.menu-item-has-children
+                            a(href="#") Москва
+                                i.icon_drop_bold
+                            ul.sub-menu
+                                each item in ['Ростов-на-Дону', 'Краснодар', 'Санкт-Петербург']
+                                    li.menu-item
+                                        a(href="#")=item
+            .header__calc.desktop
+                .calc
+                    a.calc__link(href="") калькулятор стоимости
+            .header__messenger.desktop
+                .messenger
+                    .messenger__label
+                        span Спрашивайте, отвечаем онлайн
+                    .messenger__list
+                        .messenger__item
+                            a.messenger__link(href="https://wa.me/+73912054081" target="_blank")
+                                i.icon_whatsapp
+                        .messenger__item
+                            a.messenger__link(href="https://wapp.click/73912054081" target="_blank")
+                                i.icon_telegram
+                        .messenger__item
+                            a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                i.icon_viber
+            .header__action
+                .phone
+                    .phone__label
+                        span Пн-Сб  9:00-19:00
+                    .phone__link
+                        a(href="tel:+7 (391) 2-054-081 ") +7 (391) 2-054-081
+
+                .callback
+                    a.callback__link(href="#") Обратный звонок
+
+        // end .header__top
+
+        // start .header__bottom
+        .header__bottom
+            .header__nav
+                nav.navbar#navbar
+                    ul.menu
+                        li.menu-item.menu-item-has-children
+                            a(href="#") услуги
+                                i.icon_drop
+                            ul.sub-menu
+                                each item in [1, 2, 3, 4]
+                                    li.menu-item
+                                        a(href="#") Важный пункт меню
+                        li.menu-item.current-menu-item
+                            a(href="#") Портфолио
+                        li.menu-item
+                            a(href="#") О компании
+                        li.menu-item
+                            a(href="#") Блог
+                        li.menu-item
+                            a(href="#") Дизайнерам, архитекторам
+                        li.menu-item
+                            a(href="#") Поставщикам материалов
+                        li.menu-item
+                            a(href="#") Вакансии
+                        li.menu-item
+                            a(href="#") Контакты
+
+
+
+        // end .header__bottom
 
         .header__toggle
-
-        .header__nav
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню

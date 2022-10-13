@@ -1,22 +1,39 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Roboto";
+$main_font_family: "DINPro";
 $second_font_family: "Roboto Slab";
-$main_color: #000;
 $main_line_height: 1.2;
 $main_font_size: 1em;
 
-$container_width: 80em;
+$container_width: 109.5em;
+$container_width_sm: 100.75em;
+/* 1612/16 */
 
 $footer_height: auto;
 
 // Color collection for elements
+$main_color: #2E2C2A;
+$color_white: #ffffff;
+$color_black: #000000;
+
+$color_dark: #141414;
+$color_warning: #D7B56D;
+
 $color_primary: #7b8287;
 $color_success: #36a566;
 $color_info: #03a9f4;
-$color_warning: #fca33e;
 $color_danger: #ff1a1a;
-$color_white: #ffffff;
+
+// .icon-instagram {
+// 	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+// 	// -webkit-background-clip: text;
+// 	/* Also define standard property for compatibility */
+// 	// background-clip: text;
+// 	// -webkit-text-fill-color: transparent;
+// 	&:before {
+// 		font-size: 1.75em;
+// 	}
+// }
 
 /* Grid */
 /* ======================================================================== */
