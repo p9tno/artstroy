@@ -1,46 +1,73 @@
-// Обертка для адаптивного видео
-//	<div class="video__wrapper js-youtube" id="ID_VIDEO">
-//		iframe c youtube
-// </div>
-.video {
-	&__wrapper {
+.play {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 6.25em;
+	height: 6.25em;
+	background-color: $color_warning;
+	color: $color_white;
+	transform: scale(1);
+	transition: 0.3s;
+	cursor: pointer;
+
+	i {
+		font-size: 1em;
+
+		@media (min-width: 768px) {
+			transform: scale(1);
+			transition: 0.3s;
+		}
+
+	}
+
+	@media (min-width: 768px) {
+		&:hover {
+			i {
+				transform: scale(1.6);
+			}
+		}
+
+	}
+
+}
+
+.pulse {
+	@media (min-width: 768px) {
 		position: relative;
-		overflow: hidden;
-		padding-bottom: 56.4%;
 
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-
-		.video__prev,
-		iframe {
+		&:after {
+			content: '';
 			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
+			display: block;
+			top: 50%;
+			left: 50%;
+			border: 0.25em solid;
+			border-color: $color_warning;
+			transform: translate(-50%,-50%),scale(1);
+			width: 5.875em;
+			height: 5.875em;
+			animation: 1s pulse infinite;
+			transition: 0.3s;
+
 		}
 	}
 
-	&__prev {
-		position: absolute;
-		display: block;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+}
+
+@media (min-width: 768px) {
+	@keyframes pulse {
+		0% {
+			transform: translate(-50%,-50%) scale(1);
+		}
+
+		60% {
+			opacity: 0.45;
+		}
+
+		to {
+			opacity: 0;
+			transform: translate(-50%,-50%) scale(1.2);
+		}
 	}
 
-	&__play {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 7.2em;
-		height: 7.2em;
-		margin-top: -3.6em;
-		margin-left: -3.6em;
-		border-radius: 50%;
-		cursor: pointer;
-		// background-color: #f00;
-	}
 }

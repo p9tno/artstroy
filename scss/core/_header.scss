@@ -1,18 +1,16 @@
 /* Header
  ----------------------------------------------------------------------------- */
 
-// stiky menu
-.stiky {
-	position: fixed;
+.header {
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 1;
-}
+	// z-index: 1;
+	z-index: 5;
 
-.header {
 	padding: 0.625em 0 1em;
-	background-color: $color_dark;
+	// background-color: $color_dark;
 
 	@media (min-width: 768px) {
 		padding: 2.5em 0 1em;
@@ -136,4 +134,52 @@
 		}
 	}
 
+}
+
+// stiky menu
+.stiky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	background-color: $color_dark;
+	padding: 1em 0 0;
+
+	.header__bottom {
+		padding-top: 0;
+		padding-bottom: 1em;
+	}
+
+	@media (min-width: 768px) {
+		.header__top {
+			display: none;
+		}
+
+		.menu {
+			> .menu-item {
+				padding-bottom: 1em;
+			}
+		}
+
+	}
+
+	-webkit-animation-name: showMenu;
+	animation-name: showMenu;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@keyframes showMenu {
+	0% {
+		opacity: 0.5;
+		transform: translateY(-4em);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0em);
+	}
 }

@@ -101,10 +101,11 @@ $(document).ready(function() {
     //     minimumResultsForSearch: Infinity
     // });
 
-    // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
+
     function stikyMenu() {
-        let HeaderTop = $( 'header' ).offset().top;
-        // let HeaderTop = $( 'header' ).offset().top + $( '.home' ).innerHeight();
+
+        let HeaderTop = $( '.header__bottom' ).offset().top;
+        // let HeaderTop = $( 'header' ).offset().top + $( '.section' ).innerHeight();
         let currentTop = $( window ).scrollTop();
 
         setNavbarPosition();
@@ -118,63 +119,25 @@ $(document).ready(function() {
 
             if ( currentTop > HeaderTop ) {
                 $( 'header' ).addClass( 'stiky' );
+
             } else {
                 $( 'header' ).removeClass( 'stiky' );
             }
 
-            // $( '.navbar__link' ).each( function () {
-            //     let section = $( this ).attr( 'href' );
-            //
-            //     if ( $( 'section' ).is( section ) ) {
-            //         let offset = $( section ).offset().top;
-            //
-            //         if ( offset <= currentTop && offset + $( section ).innerHeight() > currentTop ) {
-            //             $( this ).addClass( 'active' );
-            //         } else {
-            //             $( this ).removeClass( 'active' );
-            //         }
-            //     }
-            // } );
-        }
-    stikyMenu();
-
-    // Видео youtube для страницы
-    function uploadYoutubeVideo() {
-        if ( $( ".js-youtube" ) ) {
-
-            $( ".js-youtube" ).each( function () {
-                // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-                $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
-
-                // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-                $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
-
-            } );
-
-            $( '.video__play, .video__prev' ).on( 'click', function () {
-                // создаем iframe со включенной опцией autoplay
-                let wrapp = $( this ).closest( '.js-youtube' ),
-                    videoId = wrapp.attr( 'id' ),
-                    iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
-
-                if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
-
-                // Высота и ширина iframe должны быть такими же, как и у родительского блока
-                let iframe = $( '<iframe/>', {
-                    'frameborder': '0',
-                    'src': iframe_url,
-                    'allow': "autoplay"
-                } )
-
-                // Заменяем миниатюру HTML5 плеером с YouTube
-                $( this ).closest( '.video__wrapper' ).append( iframe );
-
-            } );
         }
     };
 
-    uploadYoutubeVideo();
-}
+    stikyMenu();
+
+    $(function() {
+        $('.runningLine__content').marquee({
+            duration: 20000,
+            startVisible: true,
+            duplicated: true
+        });
+    });
+
+
 
 // start animate numbers
 

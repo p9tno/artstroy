@@ -4,12 +4,143 @@ block variable
 
 
 block content
-    // begin first
-    section#first.first.section
-        .container_center
-            h2.section__title first
-            .first__content
-                .first__left
-                .first__right
 
-    // end firs
+    // begin firstscreen
+    //- section#firstscreen.firstscreen.section(style="background-image: url('../img/advantage_bg.webp')").bg
+    section#firstscreen.firstscreen.section.bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+        .container_center
+            .firstscreen__content
+                h1.section__title.mobile
+                    span <b>Проектируем ремонтируем строим дома под ключ</b> в соответсвии со строительными нормами по СНИП и ГОСТ
+                h1.section__title.desktop
+                    span Проектируем <i>|</i> ремонтируем <i>|</i><br> строим дома под ключ в соответсвии со строительными нормами по СНИП и ГОСТ
+                .section__subtitle
+                    span Работаем с физическими лицами, частными и гос. компаниями. Официально по прямому договору или тендерам.
+                .firstscreen__bottom
+                    .firstscreen__desc
+                        span Пройдите короткий тест, чтобы мы сориентировали по стоимости и сформировали предложение для вас.
+                    .firstscreen__button
+                        a.btn(href="#")
+                            span Рассчитать стоимость и
+                            span получить предложение
+                        a.btn.btn_dark.btn_whatsapp(href="#")
+                            span Напишите нам в WhatsApp
+                            small время ответа 10 минут
+
+
+    // end firstscreen
+
+
+    // begin runningLine
+
+
+    // end runningLine
+
+    // begin founder
+    section#founder.founder.section.bg
+        .runningLine
+            .runningLine__content
+                .runningLine__list
+                    each item in ['прозрачность', 'качество', 'сроки', 'Репутация', 'прозрачность', 'качество', 'сроки', 'Репутация']
+                        .runningLine__item
+                            span=item
+        .container_center.container_center_sm
+            .founder__content
+                .founder__left
+                    .founder__caption
+                        .founder__title
+                            span Меня зовут Александр Матвеев. В 2014 году я основал строительную компанию АРТСТРОЙ.
+
+
+                        .founder__description
+                            span Основной принцип, который заложен в уставе нашей компании, это честность по отношению к клиенту и самим себе, профессионализм в работе, высокий сервис и постоянное совершенствование бизнес процессов, технологий работы, систем отчёта перед клиентом с целью выполнить задачу на 100%.
+                    .founder__text
+                        span Строим дома и создаем интерьеры, которые будут актуальны даже через несколько десятков лет. Делаем жизнь уютной и комфортной за доступную стоимость.
+                    .founder__text.founder__text_bold
+                        span Мы меняем строительную индустрию и мир вокруг нас в лучшую сторону.
+
+                    .founder__button
+                        a.btn(href="#")
+                            span Обсудить задачу лично
+                            span с Александром сейчас
+                        a.btn.btn_dark(href="#")
+                            span Подробнее о компании
+                .founder__right
+                    .founder__person
+                        .person
+                            .person__name
+                                span Алексей Матвеев
+                            .person__description
+                                span Основатель и генеральный директор ООО «АРТСТРОЙ»
+
+                    .founder__play
+                        .play__info
+                            .play__label
+                                span Посмотрите видео-обращение основателя компании “АРТСТРОЙ”
+                            .play__time
+                                span Длительность: 2:32 мин
+                        .play.pulse
+                            i.icon_play
+
+
+
+    // end founder
+
+    // begin certificate
+    section#certificate.certificate.section
+        .container_center.container_center_sm
+            .certificate__figures
+                .figures
+                    .figures__list
+                        each item in [ {top: '8', bottom: 'лет успешно<br> работаем на рынке'}, {top: '<small>в</small> 19', bottom: 'городах России<br> наши<br> клиенты'}, {top: '45000 <small>м</small><sup>2</sup>', bottom: 'преобразили за годы работы '} ]
+
+                            .figures__item
+                                .figures__top
+                                    span!=item.top
+                                .figures__bottom
+                                    span!=item.bottom
+                        .figures__item
+                            span
+                            .figures__link.snakeline
+                                a(href="#") Реквизиты
+            .certificate__content
+                .certificate__left
+                    .certificate__caption
+                        h2.section__title
+                            span <b>Соблюдаем</b> международные и российские стандарты 
+                        .certificate__description
+                            p Имеем сертификаты и лицензии МЧС, СРО, допуски к высотным и огневым работам.
+                            p Работаем по СНиП, СП и ГОСТ
+
+                    .certificate__control
+                        .certificate__dotted
+                        .certificate__arrows.custom_arrows.desktop
+                            i.icon_arrow_left
+                            i.icon_arrow_right
+
+                .certificate__right
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+                    .swiper.certificate__slider.certificate-swiper-js
+                        .swiper-wrapper
+                            each item in [1,1,1,1,1]
+                                .swiper-slide.certificate__item
+                                    .certificate__doc.bg(style="background-image: url('../../img/certificate_"+item+".jpg')")
+                                        a(href="../../img/certificate_"+item+".jpg" data-fancybox data-type="image")
+                //- .certificate__control.mobile
+                //-     .certificate__dotted.mobile
+
+
+
+
+
+    // end certificate

@@ -9,6 +9,11 @@
 @import 'core/header';
 @import 'core/navbar';
 
+@import 'section/firstscreen';
+@import 'section/runningLine';
+@import 'section/founder';
+@import 'section/certificate';
+
 @import 'core/footer';
 @import 'core/parts';
 
@@ -27,4 +32,8 @@
 @import 'core/programsInfo';
 
 @import 'vendor/modal';
-@import 'vendor/slick';
+@import 'vendor/swiper';
+
+.test {
+    padding-top: 20em;
+}
