@@ -140,7 +140,76 @@ block content
                 //-     .certificate__dotted.mobile
 
 
-
-
-
     // end certificate
+
+    // begin task
+    section#task.task.section
+        .container_center
+            .task__caption
+                h2.section__title
+                    span <b>Колоссальный опыт в строительстве и человеческий подход</b> к клиентам помогает эффективно решать разноплановые задачи
+                .task__desc
+                    span <b>Ниже представлены все услуги,</b><br> предоставляемые нашей компанией
+        .task__grid.counter-wrap
+            each item in [ {title: 'Ремонт<br> коммерческих<br> объектов', num: '1' }, {title: 'Ремонт<br> квартир,<br> домов', num: '2' }, {title: 'Дизайн<br> интерьера', num: '3' }, {title: 'Строительство и<br> проектирование домов', num: '4' },  ]
+                .task__item.counter-item
+                    .task__img.img
+                        img(src="../../img/task_"+item.num+".jpg")
+
+                    .task__content
+                        .task__top
+                            .task__label
+                                span услуги
+                            .task__number
+                                span.counter-el
+                        .task__bottom
+                            .task__title
+                                span!=item.title
+                            .task__wrap
+                                .task__inner
+                                    .task__subtitle
+                                        span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                    .task__btn
+                                        a.btn.btn_sm(href="#")
+                                            span Заявка на консультацию
+
+            .task__item.task__item_info.bg.counter-item(style="background-image: url('../../img/task_5.jpg')")
+                .task__content
+                    .task__top
+                        .task__head
+                            span Не знаете, что именно вам нужно?
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            span Давайте обсудим<br> задачу и расскажем,<br> как мы можем вам<br> помочь
+                        .task__messenger
+                            .messenger
+                                .messenger__label
+                                    span Спрашивайте, отвечаем онлайн
+                                .messenger__list
+                                    .messenger__item
+                                        a.messenger__link(href="https://wa.me/+73912054081" target="_blank")
+                                            i.icon_whatsapp
+                                    .messenger__item
+                                        a.messenger__link(href="https://wapp.click/73912054081" target="_blank")
+                                            i.icon_telegram
+                                    .messenger__item
+                                        a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                            i.icon_viber
+                        .task__mail.task__link
+                            a(href="mailto:informremont@mail.ru") informremont@mail.ru
+                        .task__phone.task__link
+                            small или позвоните
+                            a(href="tel:+7 (391) 2-054-081 ") +7 (391) 2-054-081
+
+
+
+
+
+
+
+
+
+
+    // end task

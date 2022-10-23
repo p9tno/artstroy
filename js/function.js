@@ -61,6 +61,23 @@ $(document).ready(function() {
     };
     doTabs();
 
+    function showHideTask() {
+        $(".task__grid").on('mouseenter', '.task__item', function() {
+            // console.log('mouse on');
+            let wrap = $(this).find('.task__wrap');
+            wrap.slideDown(300)
+
+        });
+
+        $(".task__grid").on('mouseleave', '.task__item', function() {
+            // console.log('mouse of');
+            let wrap = $(this).find('.task__wrap');
+            wrap.slideUp(300)
+        });
+    }
+    showHideTask();
+
+
     // <div class="tabs-wrapper">
     //     <div class="tabs">
     //         <span class="tab">Вкладка 1</span>

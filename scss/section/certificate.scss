@@ -1,5 +1,11 @@
 .certificate {
     overflow: hidden;
+    padding-top: 1.75em;
+
+    @media (min-width: 768px) {
+        padding-top: 5.625em;
+
+    }
     @media (max-width: 767px) {
         padding-bottom: 3em;
     }

@@ -151,6 +151,20 @@
 		}
 	}
 
+	&_sm {
+		font-size: 0.8334em;
+		align-items: center;
+
+		@media (min-width: 768px) {
+			font-size: 0.65em;
+			align-items: flex-start;
+
+			span {
+				font-size: 1.34615em;
+			}
+		}
+	}
+
 }
 
 @media (min-width: 768px) {
