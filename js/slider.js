@@ -1,23 +1,6 @@
 $(document).ready(function() {
 
 
-    // const comments = new Swiper('.comments-swiper-js', {
-    //     loop: true,
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     pagination: {
-    //         el: '.comments__dotted',
-    //     },
-    //     navigation: {
-    //         nextEl: '.icon-drop_right',
-    //         prevEl: '.icon-drop_left',
-    //     },
-    //     spaceBetween: 10,
-    // });
-
     const certificate = new Swiper('.certificate-swiper-js', {
         slidesPerView: 2,
         speed: 500,
@@ -48,6 +31,104 @@ $(document).ready(function() {
 
         }
     });
+
+    // const projects_sm = new Swiper(".projects-swiper-sm-js", {
+    //     spaceBetween: 6,
+    //     slidesPerView: 2,
+    //     // allowTouchMove: false,
+    //     // clickable: false,
+    //     centeredSlides: true,
+    //     loop: true,
+    //
+    //
+    //     freeMode: true,
+    //     watchSlidesProgress: true,
+    //
+    //     breakpoints: {
+    //         768: {
+    //             spaceBetween: 15,
+    //             centeredSlides: false,
+    //             // allowTouchMove: false,
+    //         },
+    //     }
+    //
+    // });
+
+    // const projects = new Swiper(".projects-swiper-js", {
+    //     // spaceBetween: 10,
+    //     slidesPerView: 1,
+    //     allowTouchMove: false,
+    //     loop: true,
+    //
+    //     navigation: {
+    //         nextEl: '.icon_arrow_right',
+    //         prevEl: '.icon_arrow_left',
+    //     },
+    //
+    //     pagination: {
+    //         el: '.projects__dotted',
+    //     },
+    //
+    //     thumbs: {
+    //         swiper: projects_sm,
+    //     },
+    // });
+
+
+    function addSliders() {
+
+        let projects = $('.projects-swiper-js');
+
+        projects.each(function() {
+            let options = $(this).data('options') || {};
+            let $parent = $(this).parent();
+            let swiperDefaults = {
+
+                loop: true,
+                slidesPerView: 1,
+                allowTouchMove: false,
+
+                pagination: {
+                    el: $parent.find('.projects__dotted')[0],
+                },
+
+                navigation: {
+                    nextEl: $parent.find('.icon_arrow_right')[0],
+                    prevEl: $parent.find('.icon_arrow_left')[0],
+                },
+
+                thumbs: {
+                    swiper: {
+                        el: $parent.closest('.projects__item').find('.projects-swiper-sm-js')[0],
+                        loop: true,
+                        spaceBetween: 6,
+                        slidesPerView: 2,
+                        centeredSlides: true,
+
+                        freeMode: true,
+                        watchSlidesProgress: true,
+
+                        breakpoints: {
+                            768: {
+                                spaceBetween: 15,
+                                centeredSlides: false,
+                            },
+                        }
+                    }
+                },
+
+            };
+
+            let swiperOptions = $.extend(swiperDefaults, options),
+            mySwiper = new Swiper(this, swiperOptions);
+
+            // console.log($parent);
+            // console.log($parent.find('.projects__dotted')[0]);
+            // console.log($parent.closest('.projects__item').find('.projects-swiper-sm-js')[0]);
+        });
+
+    }
+    addSliders();
 
     // const youtube = new Swiper('.youtubeBox-swiper-js', {
     //     loop: true,

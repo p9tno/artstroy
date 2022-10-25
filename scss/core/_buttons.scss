@@ -41,7 +41,6 @@
 		font-size: 0.75em;
 		@media (min-width: 768px) {
 			font-size: 1em;
-
 		}
 	}
 
@@ -98,7 +97,7 @@
 	}
 
 	&:disabled {
-		background-color: darken($color_info, 10%);
+		background-color: lighten($color_warning, 10%);
 		cursor: not-allowed;
 
 		&:before {

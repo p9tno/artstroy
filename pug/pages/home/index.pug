@@ -86,7 +86,7 @@ block content
                                 span Посмотрите видео-обращение основателя компании “АРТСТРОЙ”
                             .play__time
                                 span Длительность: 2:32 мин
-                        .play.pulse
+                        .play.pulse.youtubeModal-js#rsDoGqnPE4c
                             i.icon_play
 
 
@@ -109,7 +109,8 @@ block content
                         .figures__item
                             span
                             .figures__link.snakeline
-                                a(href="#") Реквизиты
+                                a(href="../../img/pdf.pdf" target="_blank") Реквизиты
+                            span
             .certificate__content
                 .certificate__left
                     .certificate__caption
@@ -151,29 +152,93 @@ block content
                 .task__desc
                     span <b>Ниже представлены все услуги,</b><br> предоставляемые нашей компанией
         .task__grid.counter-wrap
-            each item in [ {title: 'Ремонт<br> коммерческих<br> объектов', num: '1' }, {title: 'Ремонт<br> квартир,<br> домов', num: '2' }, {title: 'Дизайн<br> интерьера', num: '3' }, {title: 'Строительство и<br> проектирование домов', num: '4' },  ]
-                .task__item.counter-item
-                    .task__img.img
-                        img(src="../../img/task_"+item.num+".jpg")
 
-                    .task__content
-                        .task__top
-                            .task__label
-                                span услуги
-                            .task__number
-                                span.counter-el
-                        .task__bottom
-                            .task__title
-                                span!=item.title
-                            .task__wrap
-                                .task__inner
-                                    .task__subtitle
-                                        span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
-                                    .task__btn
-                                        a.btn.btn_sm(href="#")
-                                            span Заявка на консультацию
+            .task__item.counter-item
+                .task__img.img
+                    img(src="../../img/task_1.jpg")
+                .task__content
+                    .task__top
+                        .task__label
+                            span услуги
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            a(href="#") Ремонт<br> коммерческих<br> объектов
+                        .task__wrap
+                            .task__inner
+                                .task__subtitle
+                                    span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                .task__btn
+                                    a.task__go(href="#")
+                                        i.icon_arrow_deg
+                                    a.btn.btn_sm(href="#")
+                                        span Заявка на консультацию
+            .task__item.counter-item
+                .task__img.img
+                    img(src="../../img/task_2.jpg")
+                .task__content
+                    .task__top
+                        .task__label
+                            span услуги
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            a(href="#") Ремонт<br> квартир,<br> домов
+                        .task__wrap
+                            .task__inner
+                                .task__subtitle
+                                    span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                .task__btn
+                                    a.task__go(href="#")
+                                        i.icon_arrow_deg
+                                    a.btn.btn_sm(href="#")
+                                        span Заявка на консультацию
+            .task__item.counter-item
+                .task__img.img
+                    img(src="../../img/task_3.jpg")
+                .task__content
+                    .task__top
+                        .task__label
+                            span услуги
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            a(href="#") Дизайн<br> интерьера
+                        .task__wrap
+                            .task__inner
+                                .task__subtitle
+                                    span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                .task__btn
+                                    a.task__go(href="#")
+                                        i.icon_arrow_deg
+                                    a.btn.btn_sm(href="#")
+                                        span Заявка на консультацию
+            .task__item.counter-item
+                .task__img.img
+                    img(src="../../img/task_4.jpg")
+                .task__content
+                    .task__top
+                        .task__label
+                            span услуги
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            a(href="#") Строительство и<br> проектирование домов
+                        .task__wrap
+                            .task__inner
+                                .task__subtitle
+                                    span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                .task__btn
+                                    a.task__go(href="#")
+                                        i.icon_arrow_deg
+                                    a.btn.btn_sm(href="#")
+                                        span Заявка на консультацию
 
-            .task__item.task__item_info.bg.counter-item(style="background-image: url('../../img/task_5.jpg')")
+            .task__item.task__item_info.counter-item
                 .task__content
                     .task__top
                         .task__head
@@ -204,12 +269,173 @@ block content
                             a(href="tel:+7 (391) 2-054-081 ") +7 (391) 2-054-081
 
 
-
-
-
-
-
-
-
-
     // end task
+
+    // begin presentation
+    section#presentation.presentation.section.bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+        .container_center
+            h2.section__title
+                span <b>В презентации Артстрой есть все,</b> что поможет вам определиться и понять наш подход к делу
+            .presentation__form
+                .presentation__caption
+                    .presentation__title
+                        span Скачайте презентацию в 1 клик
+                    .presentation__subtitle
+                        span просто введите ваш номер телефона
+                .form__wrap
+                    form.form.form_grid
+
+                        .form__row.form__row_31
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_31.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_31.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row.form__row_38
+                            .form__label.form__label_opacity.desktop
+                                span Нажмите
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Скачать презентацию в 1 клик
+
+
+
+                        .form__row.form__row_full.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+
+
+    // end presentation
+
+
+    //- .tabs-wrapper
+    //-     .tabs
+    //-         each item in ['Все']
+    //-             .tab=item
+    //- 
+    //-     .tabs-content
+    //-         .tab-item
+    //-             .projects__content
+
+    // begin projects
+    section#projects.projects.section
+        .container_center
+            h2.section__title
+                span <b>Более 1 000</b> реализованных проектов
+            .section__subtitle
+                span Вкладываемся душой и делом. За каждым — своя история. Изучите проекты подробнее.
+        .projects__wrap
+            each item in [ '', '', '', '', '', '', '', '', '', '' ]
+
+                .projects__item
+                    .projects__top.itemForDataFancybox_js
+                        //- begin projects__slider
+                        .swiper.projects__slider.projects-swiper-js
+                            .swiper-wrapper
+                                .swiper-slide.projects__slide
+                                    .projects__beforeAfter.img.shadow.twentytwenty-container
+                                        img(src="../../img/project_1.webp" loading="lazy")
+                                        img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.projects__video.bg.shadow(style="background-image: url('../../img/project_1.webp')")
+                                        .play.pulse.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+
+                        .projects__control
+                            .projects__dotted.dotted_sm
+                            .projects__arrows.custom_arrows.custom_arrows_white
+                                i.icon_arrow_left
+                                i.icon_arrow_right
+                        //- end projects__slider
+
+                    .projects__bottom
+                        //- begin projects__slider_sm
+                        .swiper.projects__slider_sm.projects-swiper-sm-js
+                            .swiper-wrapper
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_ba_m.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.projects__video_sm.bg(style="background-image: url('../../img/project_1.webp')")
+                                        .play
+                                            i.icon_play
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                        //- end projects__slider_sm
+
+                        .projects__content
+                            .projects__content_left
+                                .projects__title
+                                    span Ремонт 2-комнантной квартиры
+                                .projects__client
+                                    span Заказчик: частное лицо
+                                .projects__description
+                                    span Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            .projects__content_right
+                                ul.projects__list
+                                    li
+                                        span Площадь:
+                                        b 100 м<sup>2</sup>
+                                    li
+                                        span Срок ремонта:
+                                        b 3 мес
+                                    li
+                                        span ЖК Тихие зори
+                                        b Красноярск 
+                                .projects__link
+                                    a(href="#") Изучить проект подробнее
+        .container_center.container_center_sm
+            .projects__action
+                .projects__load
+                    a.load_more.show_more_js(href="#" data-load="Загрузкка" data-more="Смотреть еще") Смотреть еще 4 работы
+                .projects__buton
+                    a.btn(href="#")
+                        span Перейти в полное портфолио >100 проектов
+
+
+
+    // end projects

@@ -1,130 +1,111 @@
-@charset "UTF-8";
 @font-face {
-  font-family: "icomoon";
-  src: url("fonts/icomoon.eot?p9pnw5");
-  src: url("fonts/icomoon.eot?p9pnw5#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?p9pnw5") format("truetype"), url("fonts/icomoon.woff?p9pnw5") format("woff"), url("fonts/icomoon.svg?p9pnw5#icomoon") format("svg");
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?b9ccr6');
+  src:  url('fonts/icomoon.eot?b9ccr6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?b9ccr6') format('truetype'),
+    url('fonts/icomoon.woff?b9ccr6') format('woff'),
+    url('fonts/icomoon.svg?b9ccr6#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-[class^=icon_], [class*=" icon_"] {
+
+[class^="icon_"], [class*=" icon_"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon_arrow_left:before {
-  content: "";
+  content: "\e917";
 }
-
 .icon_arrow_right:before {
-  content: "";
+  content: "\e900";
 }
-
 .icon_arrow_left_sm:before {
-  content: "";
+  content: "\e915";
 }
-
 .icon_arrow_right_sm:before {
-  content: "";
+  content: "\e908";
 }
-
 .icon_arrow_deg:before {
-  content: "";
+  content: "\e920";
 }
-
 .icon_to_top:before {
-  content: "";
+  content: "\e904";
 }
-
 .icon_drop:before {
-  content: "";
+  content: "\e91e";
 }
-
 .icon_drop_bold:before {
-  content: "";
+  content: "\e91f";
 }
-
 .icon_viber:before {
-  content: "";
+  content: "\e91b";
 }
-
 .icon_telegram:before {
-  content: "";
+  content: "\e91c";
 }
-
 .icon_whatsapp:before {
-  content: "";
+  content: "\e91d";
 }
-
 .icon_youtube:before {
-  content: "";
+  content: "\e911";
 }
-
 .icon_insta:before {
-  content: "";
+  content: "\e90f";
 }
-
 .icon_wk:before {
-  content: "";
+  content: "\e910";
 }
-
 .icon_clip:before {
-  content: "";
+  content: "\e909";
 }
-
 .icon_percentage:before {
-  content: "";
+  content: "\e90a";
 }
-
 .icon_phone:before {
-  content: "";
+  content: "\e901";
 }
-
 .icon_pdf:before {
-  content: "";
+  content: "\e902";
 }
-
 .icon_close:before {
-  content: "";
+  content: "\e903";
 }
-
 .icon_open:before {
-  content: "";
+  content: "\e905";
 }
-
 .icon_plus:before {
-  content: "";
+  content: "\e906";
 }
-
 .icon_plus_deg:before {
-  content: "";
+  content: "\e913";
 }
-
 .icon_location:before {
-  content: "";
+  content: "\e907";
 }
-
 .icon_quotes:before {
-  content: "";
+  content: "\e90e";
 }
-
 .icon_mark:before {
-  content: "";
+  content: "\e912";
 }
-
 .icon_download:before {
-  content: "";
+  content: "\e914";
 }
-
 .icon_play:before {
-  content: "";
+  content: "\e919";
+}
+.icon_mail:before {
+  content: "\e90b";
 }

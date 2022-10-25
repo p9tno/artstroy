@@ -20,6 +20,10 @@ function submitForm() {
         // записуем объект относящийся к ЭТОЙ кнопке
         let form = $(this).closest('.form');
 
+        // проверка спама
+        let notspam = form.find('[name="notspam"]');
+        notspam.val('Not spam');
+
         // Поиск потомков внутри каждого элемента в текущем наборе ОБЯЗАТЕЛЬНЫЕ ПОЛЯ!!!
         let fields = form.find('[required]');
 
@@ -29,9 +33,7 @@ function submitForm() {
         // Записываем значения полей форм. Обязателен атрибут name у полей с уникальным значением
         let formData = form.serialize();
 
-        // проверка спама
-        let notspam = form.find('[name="notspam"]');
-        notspam.val('Not spam');
+
 
         // для счетчика (колличесто не заполненых полей)
         let empty = 0;
@@ -41,16 +43,17 @@ function submitForm() {
         fields.each(function (index, el) {
             // проверка заполнения полей. val - Метод позволяет получать и изменять значения элементов форм
             if ($(this).val() === '') {
-                $(this).addClass('invalid');
+                // $(this).addClass('invalid');
+                $(this).focus();
                 empty++;
             } else {
-                $(this).removeClass('invalid');
+                // $(this).removeClass('invalid');
             }
         });
 
-        setTimeout(function () {
-            fields.removeClass('invalid');
-        }, 1500);
+        // setTimeout(function () {
+        //     fields.removeClass('invalid');
+        // }, 1500);
 
 
         if (empty === 0) {
@@ -90,10 +93,15 @@ function submitForm() {
 }
 submitForm();
 
-$('#check_checked').on('change', function () {
-    if ( $('#check_checked').prop('checked') ) {
-        $('#btn_didisabled_js').attr('disabled', false);
-    } else {
-        $('#btn_didisabled_js').attr('disabled', true);
-    }
-});
+function disabledButton() {
+    $('.check_checked_js').on('change', function () {
+        if ( $(this).prop('checked') ) {
+            $(this).closest('.form').find('.btn_didisabled_js').attr('disabled', false);
+
+        } else {
+            $(this).closest('.form').find('.btn_didisabled_js').attr('disabled', true);
+        }
+    });
+
+}
+disabledButton();
