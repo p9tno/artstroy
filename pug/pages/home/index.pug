@@ -439,3 +439,311 @@ block content
 
 
     // end projects
+
+    // begin honest
+    section#honest.honest.section.bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+        .container_center.container_center_sm
+            .honest__content
+                .honest__caption
+                    h2.section__title
+                        span Но будем честны с вами: <b>возьмемся не за любую задачу</b>
+                    .honest__title
+                        span поскольку несем ответственность и ставим в приоритет качество, сроки и уважительное отношение к нашим клиентам,
+                    .honest__note
+                        span а не получение сиюминутной прибыли
+                .honest__list
+                    each item in ['<b>Не делаем</b><br> отдельные виды<br> ремонта', '<b>Не экономим</b><br> на черновых<br> работах', '<b>Не берем в<br> работу</b> площади<br> менее 50 м²', '<b>Не работаем</b><br> без проекта', '<b>Не строим</b><br> на «чужом»<br> фундаменте', '<b>Не строим</b><br> без геологии<br> и геодезии', '<b>Не работаем</b> без<br> договора по<br> серым схемам', '<b>Не используем</b><br> другие материалы,<br> кроме газобетона' ]
+
+                        .honest__item
+                            .honest__icon
+                                i.icon_plus_deg
+                            span!=item
+
+
+
+    // end honest
+
+    // begin advantage
+    section#advantage.advantage.section
+        .advantage__bg.bg
+        .container_center.container_center_sm
+            .advantage__wrap
+
+                .advantage__caption
+                    h2.section__title.box
+                        span У нас <b>особый<br> подход</b> к каждому<br> проекту и клиенту
+                    .section__subtitle
+                        p Главный принцип нашей работы — <b>честность перед клиентом,</b> поэтому мы полностью работаем в белую.
+                        p Вы получаете все отчётные финансовые документы и исполнительную документацию.
+
+                .advantage__list.counter-wrap
+                    each item in [ {title: '5 лет на ремонт, 25 лет на построенный дом', desc: 'гарантии зафиксированы в договоре'}, {title: 'Работа в «белую»', desc: 'Принимаем оплату на расчетный счет, карту или через терминал в нашем офисе. У вас будет чек, платежные документы и вся исполнительная документация по объекту'}, {title: 'Детальная смета', desc: 'Рассчитываем стоимость максимально прозрачно. Вы видите из чего складывается стоимость работ по позицициям материалов, сколько стоит отдельная работа и какая площадь'}, {title: 'Сроки соблюдаются без напоминаний', desc: 'Нет задач без сроков. Назначенные даты, часы, минуты понимаем буквально, а не ориентировочно. Предоставляем детальный график строительства, ремонта и поставки материалов. Следим за ходом работы субподрядных организаций'}, {title: 'Качественные материалы и современные технологии', desc: 'Налажены прямые контакты с ведущими производителями строительных материалов, работаем только профессиональным дорогим инструментом'}, {title: '7 дней в неделю на связи личный менеджер', desc: 'который быстро и адекватно реагирует на ваши пожелания и вопросы'}, {title: 'Отчитываемся', desc: 'Создаём группу в What’s App / Viber / Telegram на выбор для обсуждения текущих вопросов по объекту, согласования деталей и фото и видеоотчётов'}, {title: 'Контроль качества в 4 этапа', desc: 'Кроме прораба и бригадира перед сдачей обект проверяет независимый строительный эксперт и лично технический директор. Именно поэтому у нас меньше 1% гарантийных случаев за 8 лет'}, {title: 'Работаем без предоплаты', desc: 'Ежемесячно сдаем фактически выполненную работу и закрывающий акт-наряд. Оплачиваете — только после приемки и подписания документов'}, ]
+
+                        .advantage__item.counter-item
+                            .advantage__nav
+                                .advantage__icon.check_mark
+                                    i.icon_mark
+                                .advantage__number
+                                    span.counter-el
+                            .advantage__content
+                                .advantage__title
+                                    span!=item.title
+                                .advantage__description
+                                    span!=item.desc
+                                    //- a(href="#") Посмотреть пример реальной сметы
+
+
+
+    // end advantage
+
+    // begin location
+    section#location.location.section.bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+        .container_center.container_center_sm
+
+            .location__header
+                .location__label
+                    span Все слишком хорошо звучит? 
+                h2.section__title
+                    span Убедитесь <b>лично</b>
+            .location__body
+                .location__map.location__map_border.bg
+                    .location__item(style="top:21.5em;left:63em")
+                        .location__mark
+                            .location__logo.img
+                                img(src="../../img/logoL.svg")
+                            .location__sity
+                                span Норильск
+                    .location__item(style="top:15em;left:19em")
+                        .location__mark
+                            .location__logo.img
+                                img(src="../../img/logoL.svg")
+                            .location__sity
+                                span Санкт-Петербург
+                    .location__item(style="top:46em;left:47em")
+                        .location__mark
+                            .location__logo.img
+                                img(src="../../img/logoL.svg")
+                            .location__sity
+                                span Новосибирск
+            .location__footer
+                .location__left
+                    .location__title
+                        span С радостью покажем наш подход в деле.
+
+                    .location__subtitle
+                        span Мы следим за чистотой и порядком на объектах даже на черновом этапе работ.
+                .location__rihgt
+                    .location__description
+                        span Запишитесь и приезжайте на объект, где сейчас работают наши бригады.
+                    .location__form
+                        form.form.form_grid
+                            .form__row.form__row_43
+                                .form__label
+                                    span Введите номер телефона
+                                input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                            .form__row.form__row_57
+                                .form__label.form__label_opacity.desktop
+                                    span Нажмите
+                                button.btn.btn_didisabled_js(type="submit")
+                                    span Записаться на 
+                                    span посещение объектов
+
+                            .form__row.form__row_full.form__row_mb0
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+
+
+    // end location
+
+    // begin reviews
+    section#reviews.reviews.section
+        .container_center.container_center_sm
+            .reviews__wrap
+                .reviews__top
+                    .reviews__caption
+                        .reviews__label
+                            span Не можете приехать?
+
+                        h2.section__title
+                            span Посмотрите, что <b>говорят<br> клиенты</b> о работе с нами
+                    .reviews__list
+                        each item in ['<b>Одинаково хорошо работаем</b> как<br> на крупных гособъектах, так и в<br> квартирах площадью 100 м² ', '<b>Нас все рекомендуют</b><br> друзьям и партнерам ']
+                            .reviews__item
+                                .reviews__mark.check_mark
+                                    i.icon_mark
+                                span!=item
+                .reviews__bottom
+
+                    //- start col
+                    .reviews__col
+                        .swiper.singleSlider.single-swiper-js
+                            .swiper-wrapper.singleSlider__wrapper.itemForDataFancybox_js
+                                each item in [1,2,3,4]
+                                    .swiper-slide.singleSlider__slide
+                                        .reviews__img.img
+                                            a(href="../../img/reviews_1.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/reviews_1.jpg" loading="lazy")
+                            .singleSlider__control
+                                .singleSlider__dotted.dotted_sm
+                                .singleSlider__arrows.custom_arrows
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+                    //- start col
+
+                    //- end col
+                    .reviews__col.reviews__col_video
+                        .swiper.singleSlider.single-swiper-js
+                            .swiper-wrapper.singleSlider__wrapper
+                                each item in [1,2,3,4]
+                                    .swiper-slide.singleSlider__slide
+                                        .reviews__video.bg(style="background-image: url('../../img/reviews_2.jpg')")
+                                            .reviews__content
+                                                .reviews__name
+                                                    span Проект: Ресторан Seabass & Sauvignon
+                                                .reviews__time
+                                                    span Длительность: 2:32 мин
+
+                                            .play.youtubeModal-js#rsDoGqnPE4c
+                                                i.icon_play
+                            .singleSlider__control
+                                .singleSlider__dotted.dotted_sm
+                                .singleSlider__arrows.custom_arrows
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+                    //- end col
+
+                    //- start col
+                    .reviews__col
+                        .swiper.singleSlider.single-swiper-js
+                            .swiper-wrapper.singleSlider__wrapper.itemForDataFancybox_js
+                                each item in [1,2,3,4]
+                                    .swiper-slide.singleSlider__slide
+                                        .reviews__img.img
+                                            a(href="../../img/reviews_3.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/reviews_3.jpg" loading="lazy")
+                            .singleSlider__control
+                                .singleSlider__dotted.dotted_sm
+                                .singleSlider__arrows.custom_arrows
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+                    //- end col
+
+
+
+    // end reviews
+
+    // begin logos
+    section#logos.logos.section
+        .container_center.container_center_sm
+            .section__subtitle
+                span 123 коммерческих объекта с 2014 года
+            .logos__content
+                .swiper.logos__slider.logos-swiper-js
+                    .swiper-wrapper
+                        each item in [1,2,3,4,1,2,3,4,1,2,3,4]
+                            .swiper-slide
+                                .logos__item
+                                    .logos__pop
+                                        .pop
+                                            .pop__img.img.desktop
+                                                img(src="../../img/logo_"+item+".png")
+                                            .pop__content
+                                                span Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
+                                                a(href="#") сайт:https://paradigma.website
+                                    .logos__img.img
+                                        img(src="../../img/logo_"+item+".png")
+
+
+    // end logos
+
+
+    // begin news
+    section#news.news.section
+        .container_center.container_center_sm
+            h2.section__title
+                span <b>Делимся полезной информацией</b> в блоге и снимаем обзоры проектов на YouTube 
+            .news__content
+                .news__left
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+                    .youtubeBox
+                        .swiper.singleSlider.single-swiper-js
+                            .swiper-wrapper.singleSlider__wrapper
+                                each item in [1,1,1,1]
+                                    .swiper-slide.singleSlider__slide
+                                        .reviews__video.bg(style="background-image: url('../../img/video_1.jpg')")
+                                            .reviews__content
+                                                .reviews__name
+                                                    span Цепляющее название видео
+                                                .reviews__time
+                                                    span Длительность: 2:32 мин
+
+                                            .play.youtubeModal-js#rsDoGqnPE4c
+                                                i.icon_play
+                            .news__control
+                                .news__link
+                                    a(href="#") Перейти на YouTube
+
+                                .singleSlider__dotted.dotted_sm.mobile
+
+                                .singleSlider__arrows.custom_arrows.desktop
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+
+
+
+
+                .news__right
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+                    .blog
+                        .swiper.blog__slider.blog-swiper-js
+                            .swiper-wrapper.blog__wrapper
+                                each item in [ {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}, {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}, {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}]
+                                    .blog__slide.swiper-slide
+                                        .blog__item
+                                            .blog__img.img
+                                                img(src="../../img/blog_1.jpg" loading="lazy")
+                                            .blog__date
+                                                span=item.date
+                                            .blog__title
+                                                a(href="#")=item.title
+                                            .blog__description
+                                                span=item.desc
+
+                            .news__control
+                                .news__link
+                                    a(href="#") Перейти в блог
+
+                                .blog__dotted.dotted_sm.mobile
+
+                                .blog__arrows.custom_arrows.desktop
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+
+
+
+
+    // end news

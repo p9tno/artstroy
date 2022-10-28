@@ -350,11 +350,107 @@ $(document).ready(function() {
     }
     showMore();
 
+
+    gsap.registerPlugin(ScrollTrigger);
+    // gsap.to(".box", {
+    //   scrollTrigger: {
+    //     trigger: ".box",
+    //     toggleActions: "restart pause reverse pause ", // play pause resume restart reverse complete reset none
+    //     // toggleActions: "restart none reverse none", // play pause resume restart reverse complete reset none
+    //     start: "top center", // px % top center bottom
+    //     // start: "-100% 10%",
+    //     // end: 'bottom center',
+    //     // end: '+=300px',
+    //     end: 'top 100px',
+    //     scrub: true,
+    //     pin: true,
+    //     // pin: ".ghost",
+    //     markers: true,
+    //     toggleClass: "active",
+    //     // id: 'my-id',
+    //     // scroller: "#advantage",
+    //   },
+    //   // x: 1000,
+    //   // duration: 5,
+    //
+    // });
+
+    // ScrollTrigger.create({
+    //     trigger: "#advantage",
+    //     start: "top 20%",
+    //     end: "bottom bottom",
+    //     pin: ".advantage__caption",
+    //      markers: true,
+    // });
+
+    // ScrollTrigger.greate({
+    //     trigger: ".box",
+    //     start: "top center",
+    //     end: 'top 100px',
+    //     toggleClass: "active",
+    //     markers: true,
+    // });
+
+
+
+    // gsap.from(".advantage__list", {
+    //     scrollTrigger: {
+    //         trigger: ".advantage",
+    //         scrub: true,
+    //         pin: true,
+    //         start: "top top",
+    //         end: "+=100%"
+    //     },
+    //     scaleX: 0,
+    //     transformOrigin: "top",
+    //     ease: "none",
+    //     markers: true,
+    // });
+
+
+
+
+
+
+    // ScrollTrigger.create({
+    //     trigger: "#advantage",
+    //     start: "top top",
+    //     // endTrigger: "#otherID",
+    //     end: "bottom 50%+=100px",
+    //     markers: true,
+    //     onToggle: self => console.log("toggled, isActive:", self.isActive),
+    //     onUpdate: self => {
+    //         console.log("progress:", self.progress.toFixed(2), "direction:", self.direction, "velocity", self.getVelocity());
+    //     }
+    // });
+
+
+
+
+
+
 })
+
+// const text = document.querySelectorAll('.advantage__list > *')
+//
+// const tl = gsap.timeline().to('.advantage__list', {width: 150, height: 150}).fromTo(text, {x: -100}, {x: 0, stagger: 0.3})
+//
+// ScrollTrigger.create({
+// 	trigger: '.advantage',
+// 	animation: tl,
+// 	pin: true,
+// 	start: 'top center',
+// 	end: '+=1500 bottom',
+// 	scrub: 1, // I like the 1 sec delay, set to true for exact anime on scroll
+// 	markers: true,
+// })
+
+
+
 
 
 // gsap.registerPlugin(ScrollTrigger);
-
+//
 // gsap.utils.toArray(".panel").forEach((panel, i) => {
 //   ScrollTrigger.create({
 //     trigger: panel,
@@ -363,8 +459,8 @@ $(document).ready(function() {
 //     pinSpacing: false
 //   });
 // });
-
-
+//
+//
 // ScrollTrigger.create({
 //   snap: 1 / 4 // snap whole page to the closest section!
 // });

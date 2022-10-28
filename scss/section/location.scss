@@ -1,0 +1,224 @@
+.location {
+    .section__title {
+        text-align: left;
+    }
+
+    .lines__wrap {
+        @media (min-width: 768px) {
+            z-index: 1;
+        }
+    }
+
+    background-color: #141414;
+    color: $color_white;
+    overflow: hidden;
+
+    padding-top: 2em;
+    padding-bottom: 4.375em;
+
+    @media (min-width: 768px) {
+        position: relative;
+        padding-top: 5em;
+        padding-bottom: 6.25em;
+    }
+
+    &__header {
+        margin-bottom: 0.375em;
+        @media (min-width: 768px) {
+            margin-bottom: 34.375em;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__body {}
+
+    &__footer {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+
+            position: relative;
+            z-index: 1;
+
+        }
+
+    }
+
+    &__left {
+        margin-bottom: 0.875em;
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            width: 17em;
+            margin-right: 5.3125em;
+
+        }
+    }
+
+    &__rihgt {
+        @media (min-width: 768px) {
+            width: 53.75em;
+        }
+    }
+
+    &__label {
+        margin-bottom: 0.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
+
+        span {
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &__map {
+        overflow: hidden;
+        background-image: url("../../img/location_bg.webp");
+        position: relative;
+        width: 106.5625em;
+        height: 66.125em;
+        right: 11.988em;
+        font-size: 0.18769em;
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1em;
+        }
+
+        &_border {
+            // border: 1px solid #fff;
+        }
+    }
+
+    &__list {}
+
+    &__item {
+        position: absolute;
+    }
+
+    &__mark {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+    }
+
+    &__logo {
+        width: 2.375em;
+        height: 2.125em;
+        margin-bottom: 0.25em;
+    }
+
+    &__sity {
+        font-size: 0.875em;
+        font-weight: 500;
+    }
+
+    &__title {
+        line-height: 1.25;
+        margin-top: 0.875em;
+        margin-bottom: 0.875em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            line-height: $main_line_height;
+            margin-bottom: 1.25em;
+
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 1.25em;
+            @media (min-width: 768px) {
+                font-size: 2.25em;
+
+            }
+        }
+    }
+
+    &__subtitle {
+        line-height: 1.25;
+        @media (min-width: 768px) {
+            line-height: 1.333;
+
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 0.85em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+        }
+    }
+
+    &__description {
+        line-height: 0.9;
+        margin-bottom: 0.875em;
+        /* 14/16 */
+        @media (min-width: 768px) {
+            line-height: 1.5;
+            margin-bottom: 1.25em;
+            width: 18em;
+
+        }
+
+        span {
+            font-size: 0.625em;
+            font-weight: 300;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+    }
+
+    &__form {
+        .form_grid {
+            @media (min-width: 768px) {
+                margin: 0 -0.625em;
+            }
+
+            .form__row {
+
+                @media (min-width: 768px) {
+                    margin: 0 0.625em 0.6875em;
+                    width: calc(50% - 1.25em);
+                }
+
+                &_43 {
+                    @media (min-width: 768px) {
+                        width: calc(43% - 1.25em);
+
+                    }
+
+                }
+
+                &_57 {
+                    @media (min-width: 768px) {
+                        width: calc(57% - 1.25em);
+
+                    }
+
+                }
+            }
+        }
+
+        .btn {
+            @media (max-width: 767px) {
+                letter-spacing: normal;
+            }
+
+        }
+
+    }
+}

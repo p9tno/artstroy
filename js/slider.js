@@ -32,6 +32,84 @@ $(document).ready(function() {
         }
     });
 
+    const blog = new Swiper('.blog-swiper-js', {
+        slidesPerView: 1,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: '.blog__dotted',
+            // clickable: true,
+        },
+
+        spaceBetween: 10,
+
+        breakpoints: {
+            768: {
+                spaceBetween: 42,
+                slidesPerView: 2,
+            },
+
+        }
+    });
+
+    const singleSlider = new Swiper('.single-swiper-js', {
+        slidesPerView: 1,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: '.singleSlider__dotted',
+            clickable: true,
+        },
+
+        // spaceBetween: 10,
+
+    });
+
+    const logos = new Swiper('.logos-swiper-js', {
+        slidesPerView: 3,
+        speed: 500,
+        // loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 8,
+            },
+        }
+    });
+    logos.on('slideChange', function () {
+        console.log('slide changed');
+
+        // let leftSlide = logos.activeIndex;
+        // let rightSlide = logos.activeIndex + 2;
+        // leftSlide.add('left_slide');
+        // rightSlide.add('right_slide');
+
+        // console.log(leftSlide);
+        // console.log(rightSlide);
+        // console.log(logos.activeIndex);
+        // console.log(logos.$el);
+    });
+
+
+    // let activeSlide = swiper.activeIndex;
+
     // const projects_sm = new Swiper(".projects-swiper-sm-js", {
     //     spaceBetween: 6,
     //     slidesPerView: 2,

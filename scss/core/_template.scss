@@ -98,8 +98,23 @@ body {
 			font-size: 0.875em;
 			@media (min-width: 768px) {
 				font-size: 1.875em;
-
 			}
+		}
+
+		p {
+			margin: 0;
+
+			font-size: 0.625em;
+			@media (min-width: 768px) {
+				line-height: 1.4;
+				margin: 1.5em 0;
+				font-size: 1.875em;
+			}
+
+		}
+
+		b {
+			font-weight: 700;
 		}
 	}
 }
@@ -220,6 +235,27 @@ body {
 			content: counter(line) ' ';
 		}
 
+	}
+}
+
+.check_mark {
+	flex: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 3em;
+	height: 3em;
+	background-color: $color_warning;
+	color: $color_white;
+	font-size: 0.5em;
+	@media (min-width: 768px) {
+		font-size: 1em;
+
+	}
+
+	i {
+		font-size: 0.5625em;
 	}
 }
 

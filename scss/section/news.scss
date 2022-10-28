@@ -1,0 +1,93 @@
+.news {
+    .section__title {
+        text-align: left;
+        @media (min-width: 768px) {
+            width: 66em;
+        }
+    }
+
+    &__content {
+        margin-top: 0.875em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__left {
+        @media (min-width: 768px) {
+            width: 44em;
+            margin-right: 2.625em;
+        }
+    }
+
+    &__right {
+        @media (min-width: 768px) {
+            width: 56.5em;
+        }
+    }
+
+    &__control {
+        margin-top: 0.9375em;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            margin-top: 2.5em;
+        }
+
+        .swiper-pagination-bullets {
+            @media (max-width: 767px) {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__link {
+        flex: none;
+        margin-top: -0.375em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba($color_warning, 0.75);
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+
+            &:after {
+                display: inline-block;
+                content: '\e900';
+                font-family: 'icomoon';
+                font-size: 0.5em;
+                margin-left: 0.75em;
+            }
+
+            @media (min-width: 768px) {
+                transform: translateX(0);
+
+                &:hover {
+                    &:after {
+                        -webkit-animation: snake 0.4s linear alternate infinite;
+                        animation: snake 0.4s linear alternate infinite;
+                    }
+                }
+            }
+        }
+    }
+
+    .reviews__video {
+        height: 10.875em;
+        @media (min-width: 768px) {
+            height: 25em;
+        }
+    }
+
+}

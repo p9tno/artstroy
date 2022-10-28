@@ -62,8 +62,8 @@
     &__slider {
         height: 15.625em;
         @media (min-width: 768px) {
-            height: 62.5em;
-
+            // height: 62.5em;
+            height: 48em;
         }
     }
 
@@ -89,7 +89,6 @@
     // start SM SLIDER -----------------------------
     &__slider_sm {
         height: 4.6875em;
-        /* 75/16 */
         @media (min-width: 768px) {
             height: 6.875em;
 
@@ -97,8 +96,6 @@
     }
 
     &__slide_sm {
-        // width: 10.625em!important;
-        /* 170/16 */
         .projects__img_sm {
             height: 100%;
         }
@@ -107,10 +104,10 @@
 
     &__beforeAfter {
         height: 15.625em!important;
-        /* 250/16 */
         width: 100%!important;
         @media (min-width: 768px) {
-            height: 62.5em!important;
+            // height: 62.5em!important;
+            height: 48em!important;
 
         }
     }
