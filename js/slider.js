@@ -94,7 +94,7 @@ $(document).ready(function() {
         }
     });
     logos.on('slideChange', function () {
-        console.log('slide changed');
+        // console.log('slide changed');
 
         // let leftSlide = logos.activeIndex;
         // let rightSlide = logos.activeIndex + 2;

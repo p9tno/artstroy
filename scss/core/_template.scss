@@ -102,8 +102,8 @@ body {
 		}
 
 		p {
-			margin: 0;
-
+			margin: 1.5em 0;
+			line-height: 1.25;
 			font-size: 0.625em;
 			@media (min-width: 768px) {
 				line-height: 1.4;
@@ -133,6 +133,10 @@ body {
 
 .d-none {
 	display: none;
+}
+
+.d-block {
+	display: block!important;
 }
 
 .bg {
@@ -249,6 +253,8 @@ body {
 	background-color: $color_warning;
 	color: $color_white;
 	font-size: 0.5em;
+	border-radius: 0.0625em;
+	border-radius: 1px;
 	@media (min-width: 768px) {
 		font-size: 1em;
 

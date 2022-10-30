@@ -350,79 +350,92 @@ $(document).ready(function() {
     }
     showMore();
 
+    function showMoreAdvantage() {
+        $('.show_advantage_js').click(function(e) {
+            e.preventDefault();
+            $(this).addClass('loading');
+            let load = $(this).data('load');
+            $(this).text(load);
 
-    gsap.registerPlugin(ScrollTrigger);
-    // gsap.to(".box", {
-    //   scrollTrigger: {
-    //     trigger: ".box",
-    //     toggleActions: "restart pause reverse pause ", // play pause resume restart reverse complete reset none
-    //     // toggleActions: "restart none reverse none", // play pause resume restart reverse complete reset none
-    //     start: "top center", // px % top center bottom
-    //     // start: "-100% 10%",
-    //     // end: 'bottom center',
-    //     // end: '+=300px',
-    //     end: 'top 100px',
+            setTimeout(() => {
+                $('.advantage__item').addClass('d-block');
+                $(this).removeClass('loading');
+                $(this).parent().remove();
+
+            }, 1500);
+
+
+        });
+
+    }
+    showMoreAdvantage()
+
+
+    // gsap.registerPlugin(ScrollTrigger);
+
+    // const tl = gsap.timeline();
+    // tl.from(
+    //     '.advantage__list', {
+    //         yPercent: 1000
+    //     }
+    // );
+
+
+
+
+    // ScrollTrigger.create({
+    //     // animate: tl,
+    //
+    //     trigger: ".advantage",
+    //     start: "top 30%",
+    //     // start: "top 30%",
+    //     end: "bottom 70%",
+    //     // end: "top 70%",
+    //     markers: true,
+    //     id: 'advantage-id',
+    //     // scroller: '#advantage',????? по умолчанию окно просмотра
+    //     onEnter: () => console.log('enter'),
+    //     onLeave: () => console.log('Leave'),
+    //     onEnterBack: () => console.log('enter back'),
+    //     onLeaveBack: () => console.log('Leave back'),
+    //     // onUpdate: (self) => console.log('onUpdate', self.progress.toFixed(3)),
+    //     // onUpdate: (self) => console.log('onUpdate', self),
+    //     // onToggle: (self) => console.log('onToggle', self.isActive),
+    //
     //     scrub: true,
     //     pin: true,
-    //     // pin: ".ghost",
-    //     markers: true,
-    //     toggleClass: "active",
-    //     // id: 'my-id',
-    //     // scroller: "#advantage",
-    //   },
-    //   // x: 1000,
-    //   // duration: 5,
     //
-    // });
-
-    // ScrollTrigger.create({
-    //     trigger: "#advantage",
-    //     start: "top 20%",
-    //     end: "bottom bottom",
-    //     pin: ".advantage__caption",
-    //      markers: true,
-    // });
-
-    // ScrollTrigger.greate({
-    //     trigger: ".box",
-    //     start: "top center",
-    //     end: 'top 100px',
-    //     toggleClass: "active",
-    //     markers: true,
-    // });
+    //
+    //
+    //     // toggleClass: "active",
+    // })
 
 
 
-    // gsap.from(".advantage__list", {
+
+
+    // --- ORANGE PANEL ---
+    // gsap.from(".line", {
     //     scrollTrigger: {
-    //         trigger: ".advantage",
+    //         trigger: ".orange",
     //         scrub: true,
     //         pin: true,
-    //         start: "top top",
-    //         end: "+=100%"
+    //         start: "top 30%",
+    //         end: "+=100%",
+    //         markers: true,
+    //         onEnter: () => console.log('enter'),
+    //         onLeave: () => console.log('Leave'),
+    //         onEnterBack: () => console.log('enter back'),
+    //         onLeaveBack: () => console.log('Leave back'),
     //     },
-    //     scaleX: 0,
-    //     transformOrigin: "top",
-    //     ease: "none",
-    //     markers: true,
+    //     y: -2000,
+    //     // scaleX: 0,
+    //     // transformOrigin: "right left",
+    //     // ease: "none"
     // });
 
 
 
-
-
-
-    // ScrollTrigger.create({
-    //     trigger: "#advantage",
-    //     start: "top top",
-    //     // endTrigger: "#otherID",
-    //     end: "bottom 50%+=100px",
-    //     markers: true,
-    //     onToggle: self => console.log("toggled, isActive:", self.isActive),
-    //     onUpdate: self => {
-    //         console.log("progress:", self.progress.toFixed(2), "direction:", self.direction, "velocity", self.getVelocity());
-    //     }
-    // });
 
 
 

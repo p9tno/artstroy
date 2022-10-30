@@ -470,34 +470,42 @@ block content
 
     // end honest
 
+
     // begin advantage
-    section#advantage.advantage.section
-        .advantage__bg.bg
+    section#advantage.advantage.section.orange
+
         .container_center.container_center_sm
             .advantage__wrap
 
                 .advantage__caption
-                    h2.section__title.box
+                    .advantage__bg.bg
+                    h2.section__title
                         span У нас <b>особый<br> подход</b> к каждому<br> проекту и клиенту
                     .section__subtitle
                         p Главный принцип нашей работы — <b>честность перед клиентом,</b> поэтому мы полностью работаем в белую.
                         p Вы получаете все отчётные финансовые документы и исполнительную документацию.
 
+                        //- <span class="line"></span>
+
                 .advantage__list.counter-wrap
-                    each item in [ {title: '5 лет на ремонт, 25 лет на построенный дом', desc: 'гарантии зафиксированы в договоре'}, {title: 'Работа в «белую»', desc: 'Принимаем оплату на расчетный счет, карту или через терминал в нашем офисе. У вас будет чек, платежные документы и вся исполнительная документация по объекту'}, {title: 'Детальная смета', desc: 'Рассчитываем стоимость максимально прозрачно. Вы видите из чего складывается стоимость работ по позицициям материалов, сколько стоит отдельная работа и какая площадь'}, {title: 'Сроки соблюдаются без напоминаний', desc: 'Нет задач без сроков. Назначенные даты, часы, минуты понимаем буквально, а не ориентировочно. Предоставляем детальный график строительства, ремонта и поставки материалов. Следим за ходом работы субподрядных организаций'}, {title: 'Качественные материалы и современные технологии', desc: 'Налажены прямые контакты с ведущими производителями строительных материалов, работаем только профессиональным дорогим инструментом'}, {title: '7 дней в неделю на связи личный менеджер', desc: 'который быстро и адекватно реагирует на ваши пожелания и вопросы'}, {title: 'Отчитываемся', desc: 'Создаём группу в What’s App / Viber / Telegram на выбор для обсуждения текущих вопросов по объекту, согласования деталей и фото и видеоотчётов'}, {title: 'Контроль качества в 4 этапа', desc: 'Кроме прораба и бригадира перед сдачей обект проверяет независимый строительный эксперт и лично технический директор. Именно поэтому у нас меньше 1% гарантийных случаев за 8 лет'}, {title: 'Работаем без предоплаты', desc: 'Ежемесячно сдаем фактически выполненную работу и закрывающий акт-наряд. Оплачиваете — только после приемки и подписания документов'}, ]
+                    each item in [ {title: '5 лет на ремонт, 25 лет на построенный дом', desc: 'гарантии зафиксированы в договоре'}, {title: 'Работа в «белую»', desc: 'Принимаем оплату на расчетный счет, карту или через терминал в нашем офисе. У вас будет чек, платежные документы и вся исполнительная документация по объекту'}, {title: 'Детальная смета', desc: 'Рассчитываем стоимость максимально прозрачно. Вы видите из чего складывается стоимость работ по позицициям материалов, сколько стоит отдельная работа и какая площадь</span><a class="desktop advantage__link" href="#">Посмотреть пример реальной сметы</a>'}, {title: 'Сроки соблюдаются без напоминаний', desc: 'Нет задач без сроков. Назначенные даты, часы, минуты понимаем буквально, а не ориентировочно. Предоставляем детальный график строительства, ремонта и поставки материалов. Следим за ходом работы субподрядных организаций'}, {title: 'Качественные материалы и современные технологии', desc: 'Налажены прямые контакты с ведущими производителями строительных материалов, работаем только профессиональным дорогим инструментом'}, {title: '7 дней в неделю на связи личный менеджер', desc: 'который быстро и адекватно реагирует на ваши пожелания и вопросы'}, {title: 'Отчитываемся', desc: 'Создаём группу в What’s App / Viber / Telegram на выбор для обсуждения текущих вопросов по объекту, согласования деталей и фото и видеоотчётов'}, {title: 'Контроль качества в 4 этапа', desc: 'Кроме прораба и бригадира перед сдачей обект проверяет независимый строительный эксперт и лично технический директор. Именно поэтому у нас меньше 1% гарантийных случаев за 8 лет'}, {title: 'Работаем без предоплаты', desc: 'Ежемесячно сдаем фактически выполненную работу и закрывающий акт-наряд. Оплачиваете — только после приемки и подписания документов'}, ]
 
                         .advantage__item.counter-item
-                            .advantage__nav
-                                .advantage__icon.check_mark
-                                    i.icon_mark
-                                .advantage__number
-                                    span.counter-el
-                            .advantage__content
-                                .advantage__title
-                                    span!=item.title
-                                .advantage__description
-                                    span!=item.desc
-                                    //- a(href="#") Посмотреть пример реальной сметы
+                            .advantage__inner
+                                .advantage__nav
+                                    .advantage__icon.check_mark
+                                        i.icon_mark
+                                    .advantage__number
+                                        span.counter-el
+                                .advantage__content
+                                    .advantage__title
+                                        span!=item.title
+                                    .advantage__description
+                                        span!=item.desc
+                            //- a.advantage__link.mobile(href="#") Посмотреть пример реальной сметы
+
+                .advantage__load.mobile
+                    a.load_more.show_advantage_js(href="#" data-load="Загрузкка") Посмотреть все
 
 
 
@@ -747,3 +755,58 @@ block content
 
 
     // end news
+
+
+    // begin consultation
+    section#consultation.consultation.section
+        .container_center
+            .consultation__content.bg
+                .consultation__left
+                    h2.section__title 
+                        span <b>Обсудим</b> ваш проект? 
+                    .consultation__list
+                        each item in ['Сориентируем по <b>стоимости и срокам</b> работ', 'Ответим на вопросы', 'Вышлем <b>пакет документов:</b> примеры сметы, чертежей и планов', 'Договоримся <b>об удобном времени для выезда замерщика.</b> Выезд бесплатный и ни к чему вас не обязывает' ]
+                            .consultation__item
+                                .consultation__mark.check_mark
+                                    i.icon_mark
+                                span!=item
+                .consultation__right
+                    .consultation__label
+                        span Оставьте заявку, позвоним<br> вам в течение 10 минут.
+                    .consultation__form
+                        form.form
+                            .form__row.form__row_43
+                                .form__label
+                                    span Введите номер телефона
+                                input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                            .form__row.form__row_57
+                                .form__label.form__label_opacity.desktop
+
+                                button.btn.btn_didisabled_js(type="submit")
+                                    span Позвоните
+                                    span мне
+
+                            .form__row.form__row_full.form__row_mb0
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                    .consultation__button
+                        .consultation__phone
+                            span Ждем звонка: +7 (391) 2-0<i></i>54-081
+                        a.btn.btn_whatsapp(href="#")
+                            span Напишите нам в WhatsApp
+                            small время ответа 10 минут
+
+                .consultation__manager.bg(style="background-image: url('../../img/manager.webp')")
+                .manager
+                    .manager__name
+                        span Алексей<br> Ивановcкий
+                    .manager__post
+                        span ведущий менеджер<br> заботы о клиентах
+
+
+
+
+    // end consultation
