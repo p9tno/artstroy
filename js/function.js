@@ -57,12 +57,15 @@ $(document).ready(function() {
         toggle.on('click', function() {
             let id = $(this).data('collapse'),
             body = $('[data-collapse-body="'+id+'"]'),
-            wrap = body.closest('[data-collapse-wrapper]');
+            wrap = body.closest('[data-collapse-wrapper]'),
+            preview = $('.content__preview');
+            console.log(preview);
 
             if (!id) {
                 // $('[data-collapse-wrapper]').removeClass('open');
                 body = $(this).parent().find('[data-collapse-body]');
                 $(this).toggleClass('open');
+                preview.toggleClass('open');
                 if ($(this).hasClass('open')) {
                     body.slideDown();
                 } else {
@@ -70,9 +73,11 @@ $(document).ready(function() {
                 }
             } else if (id === 'all') {
                 body.slideDown();
+                preview.addClass('open');
                 toggle.addClass('open');
             } else {
                 body.slideToggle();
+                preview.toggleClass('open');
                 $(this).toggleClass('open');
             }
         });

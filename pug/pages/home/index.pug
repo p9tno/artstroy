@@ -99,7 +99,7 @@ block content
             .certificate__figures
                 .figures
                     .figures__list
-                        each item in [ {top: '8', bottom: 'лет успешно<br> работаем на рынке'}, {top: '<small>в</small> 19', bottom: 'городах России<br> наши<br> клиенты'}, {top: '45000 <small>м</small><sup>2</sup>', bottom: 'преобразили за годы работы '} ]
+                        each item in [ {top: '8', bottom: 'лет успешно<br> работаем на рынке'}, {top: '<small>в</small> 19', bottom: 'городах России<br> наши клиенты'}, {top: '45000 <small>м</small><sup>2</sup>', bottom: 'преобразили за годы работы '} ]
 
                             .figures__item
                                 .figures__top
@@ -110,7 +110,6 @@ block content
                             span
                             .figures__link.snakeline
                                 a(href="../../img/pdf.pdf" target="_blank") Реквизиты
-                            span
             .certificate__content
                 .certificate__left
                     .certificate__caption
@@ -330,16 +329,6 @@ block content
 
     // end presentation
 
-
-    //- .tabs-wrapper
-    //-     .tabs
-    //-         each item in ['Все']
-    //-             .tab=item
-    //- 
-    //-     .tabs-content
-    //-         .tab-item
-    //-             .projects__content
-
     // begin projects
     section#projects.projects.section
         .container_center
@@ -505,7 +494,7 @@ block content
                             //- a.advantage__link.mobile(href="#") Посмотреть пример реальной сметы
 
                 .advantage__load.mobile
-                    a.load_more.show_advantage_js(href="#" data-load="Загрузкка") Посмотреть все
+                    a.load_more.show_advantage_js(href="#" data-load="Загрузка") Посмотреть все
 
 
 
@@ -671,11 +660,8 @@ block content
                                 .logos__item
                                     .logos__pop
                                         .pop
-                                            .pop__img.img.desktop
-                                                img(src="../../img/logo_"+item+".png")
                                             .pop__content
                                                 span Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
-                                                a(href="#") сайт:https://paradigma.website
                                     .logos__img.img
                                         img(src="../../img/logo_"+item+".png")
 
@@ -810,3 +796,43 @@ block content
 
 
     // end consultation
+
+
+    // begin content
+    section#content.content.content_page.section
+        .container_center
+            h2.content__title
+                span Текст, который важен для SEO
+            .content__preview
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo lla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            .content__collapse
+                .collapse__body(data-collapse-body="")
+                    .content__content
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        h1 заголовок h1
+                        h2 заголовок h2
+                        h3 заголовок h3
+                        h4 заголовок h4
+                        h5 заголовок h5
+                        h6 заголовок h6
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        h3 заголовок третьего уровня
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        h1 список ul
+
+                        ul
+                            each item in ['защищенность от размокания;', 'использование водостойких материалов и покрытий;', 'широкий диапазон рабочих температур;', 'обработка составами, предотвращающими появление плесени или грибков;']
+                                li=item
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .collapse__title(data-collapse="")
+                    span Расскрыть полностью
+
+    // end content

@@ -85,9 +85,10 @@
         opacity: 0;
 
         @media (min-width: 768px) {
+            padding: 1.5em;
             background-color: $color_white;
             color: $main_color;
-            width: 22em;
+            width: 20em;
         }
     }
 
@@ -139,17 +140,6 @@
     @media (min-width: 768px) {
         display: flex;
         align-items: center;
-
-    }
-
-    &__img {
-        @media (min-width: 768px) {
-            flex: none;
-            width: 5em;
-            height: 5em;
-            margin-right: 0.5em;
-        }
-
     }
 
     &__content {
@@ -161,8 +151,6 @@
             font-size: 0.625em;
             @media (min-width: 768px) {
                 font-size: 1em;
-                font-size: 0.75em;
-
             }
         }
 

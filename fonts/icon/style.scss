@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?b9ccr6');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?b9ccr6#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?b9ccr6') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?b9ccr6') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?b9ccr6##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?z4hcal');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?z4hcal#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?z4hcal') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?z4hcal') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?z4hcal##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -165,6 +165,11 @@
 .icon_mail {
   &:before {
     content: $icon_mail; 
+  }
+}
+.icon_info {
+  &:before {
+    content: $icon_info; 
   }
 }
 

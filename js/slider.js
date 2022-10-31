@@ -4,6 +4,7 @@ $(document).ready(function() {
     const certificate = new Swiper('.certificate-swiper-js', {
         slidesPerView: 2,
         speed: 500,
+        loop: true,
         // autoplay: {
         //   delay: 5000,
         // },
@@ -35,6 +36,7 @@ $(document).ready(function() {
     const blog = new Swiper('.blog-swiper-js', {
         slidesPerView: 1,
         speed: 500,
+        loop: true,
         // autoplay: {
         //   delay: 5000,
         // },
@@ -62,6 +64,7 @@ $(document).ready(function() {
     const singleSlider = new Swiper('.single-swiper-js', {
         slidesPerView: 1,
         speed: 500,
+        loop: true,
         // autoplay: {
         //   delay: 5000,
         // },

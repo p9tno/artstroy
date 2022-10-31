@@ -9,11 +9,13 @@ $(document).ready(function() {
         $(this).attr('data-q', questionBlock);
         $(this).find('input').attr('name', 'q-' + questionBlock)
         total = total + 1;
+        $('.quiz-line-step_total').text(total);
 
     });
 
     let lineStep = 100 / total;
     let line;
+
 
 
 
@@ -169,7 +171,29 @@ $(document).ready(function() {
         line = lineStep * (questionNumber);
         line = 'calc(' + line + '% )';
         $('.quiz-line__bg').css('width', line)
-        $('.quiz-step__current').text(questionNumber);
+        $('.quiz-line-step_current').text(questionNumber);
+        $('.quiz-line-step_total').text(total);
     }
+
+    function addNameFile() {
+        $('input[type="file"]').change(function (e) {
+            // console.log('change');
+            var text = $(this).closest('label').attr('data-text');
+            // var container = $(this).closest('.tab-item');
+            if (typeof e.target.files[0] == 'undefined') {
+                var fileName = text;
+                $(this).parent().removeClass('active');
+            } else {
+                var fileName = e.target.files[0].name;
+                $(this).parent().addClass('active');
+                fileName = fileName.substring(0, 20);
+                // console.log(fileName);
+            }
+            $(this).parent().find('p').text(fileName);
+            // container.find('[controlBtn_JS]').removeClass('disabled');
+        });
+
+    }
+    addNameFile();
 
 });

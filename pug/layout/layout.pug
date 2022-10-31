@@ -1,5 +1,6 @@
 block variable
     -var path = '';
+    -var page = true;
 
 <!DOCTYPE html>
 html(lang="en")
@@ -16,7 +17,11 @@ html(lang="en")
         link(rel="stylesheet", type="text/css", href=path + "css/style.css")
     body
         .wrapper
-            include header.pug
+
+            if page
+                include header_bg.pug
+            else
+                include header.pug
 
             main.main_content
                 block content
@@ -36,9 +41,9 @@ html(lang="en")
             script(src=path +"js/jquery.marquee.min.js")
             script(src=path +"js/aos.js")
             script(src=path +"js/fancybox.min.js")
-            //- script(src=path +"js/quiz.js")
+            script(src=path +"js/quiz.js")
             script(src=path +"js/form.js")
-            script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js")
-            script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js")
+            //- script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js")
+            //- script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js")
 
             script(src=path +"js/function.js")
