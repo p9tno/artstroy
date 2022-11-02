@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/aos.css"/>
     <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
@@ -23,12 +24,12 @@
             <div class="header__city desktop">
               <div class="city">
                 <div class="city__label"><span>Ваш город</span></div>
-                <ul class="city__menu menu">
-                  <li class="menu-item menu-item-has-children"><a href="#">Москва<i class="icon_drop_bold"></i></a>
-                    <ul class="sub-menu">
-                      <li class="menu-item"><a href="#">Ростов-на-Дону</a></li>
-                      <li class="menu-item"><a href="#">Краснодар</a></li>
-                      <li class="menu-item"><a href="#">Санкт-Петербург</a></li>
+                <ul class="city__menu">
+                  <li class="city__item city__item_haschildren"><a href="#">Москва<i class="icon_drop_bold"></i></a>
+                    <ul class="city__submenu">
+                      <li class="city__item"><a href="#">Ростов-на-Дону</a></li>
+                      <li class="city__item"><a href="#">Краснодар</a></li>
+                      <li class="city__item"><a href="#">Санкт-Петербург</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -61,8 +62,8 @@
             <div class="header__nav">
               <nav class="navbar" id="navbar">
                 <ul class="menu">
-                  <li class="menu-item menu-item-has-children"><a href="#">услуги<i class="icon_drop"></i></a>
-                    <ul class="sub-menu">
+                  <li class="menu-item menu-item-has-children"><a href="#">услуги<i class="icon_drop desktop"></i></a>
+                    <ul class="sub-menu desktop">
                       <li class="menu-item"><a href="#">Важный пункт меню</a></li>
                       <li class="menu-item"><a href="#">Важный пункт меню</a></li>
                       <li class="menu-item"><a href="#">Важный пункт меню</a></li>
@@ -79,6 +80,19 @@
                 </ul>
               </nav>
             </div>
+            <div class="header__messenger mobile">
+              <div class="messenger">
+                <div class="messenger__label"><span>Спрашивайте, отвечаем онлайн</span></div>
+                <div class="messenger__list">
+                  <div class="messenger__item"><a class="messenger__link" href="https://wa.me/+73912054081" target="_blank"><i class="icon_whatsapp"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="https://wapp.click/73912054081" target="_blank"><i class="icon_telegram"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="viber://chat?number=%2B73912054081" target="_blank"><i class="icon_viber"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="header__calc mobile">
+              <div class="calc"><a class="calc__link" href="">калькулятор стоимости</a></div>
+            </div>
           </div>
           <!-- end .header__bottom-->
           <div class="header__toggle"></div>
@@ -88,16 +102,29 @@
         <!-- begin test-->
         <section class="test section" id="test">
           <div class="container_center">
-            <h2 class="section__title">Навигация</h2>
+            <h2 class="section__title"><span>Навигация</span></h2>
             <div class="test__content">
               <ul>
                 <li><a href="../pages/home/">Главная </a></li>
               </ul>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </section>
         <!-- end test-->
+        <!-- begin tetsModals-->
+        <section class="tetsModals section" id="tetsModals">
+          <div class="container_center">
+            <h2 class="section__title"><span>Модальные окна</span></h2>
+            <ul>
+              <li><a class="show_js" href="#privacy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ  </a></li>
+              <li><a class="show_js" href="#application">Быстро оставьте заявку</a></li>
+              <li><a class="show_js" href="#vacancymodal">Оставьте свой отклик на вакансию</a></li>
+              <li><a class="show_js" href="#mortgage">Узнайте условия строительства своего дома в ипотеку </a></li>
+              <li><a class="show_js" href="#calculate">Что вам нужно рассчитать?</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- end tetsModals-->
       </main>
       <footer class="footer">
         <div class="container_center container_center_sm">
@@ -234,6 +261,204 @@
         </div>
       </div>
       <!-- End modal info-->
+      <!-- Begin Modal privacy-->
+      <div class="modal fade privacy" id="privacy">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body">
+              <div class="privacy__content">
+                <div class="content__content">
+                  <h2>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p> 1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p> 1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p> 1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p> 1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p> 1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sed!</p>
+                  <p>Lorem ipsu</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal privacy-->
+      <!-- Begin Modal application-->
+      <div class="modal fade application" id="application">
+        <div class="modal-dialog">
+          <div class="modal-content bg"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"> <span>Быстро<br> оставить заявку</span><small>Введите номер — позвоним вам<br> в течение 10 минут в рабочее время</small></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__row">
+                    <div class="form__label"><span>Введите номер телефона</span></div>
+                    <input class="tel" type="tel" required="required" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit"><span>Позвоните мне</span></button>
+                  </div>
+                  <div class="form__row form__row_full form__row_mb0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span class="snakeline">Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal application-->
+      <!-- Begin Modal vacancymodal-->
+      <div class="modal fade vacancymodal" id="vacancymodal">
+        <div class="modal-dialog">
+          <div class="modal-content bg"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"><span>Оставьте свой<br> отклик на вакансию</span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__row">
+                    <div class="form__label"><span>Прикрепите резюме, если есть</span></div>
+                    <label class="form__file_label" data-text="Файл не выбран">
+                      <input type="file" required="required"/>
+                      <p class="form__file">Загрузить файл</p>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__label"><span>Введите номер телефона</span></div>
+                    <input class="tel" type="tel" required="required" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit"><span>Оставьте отклик</span></button>
+                  </div>
+                  <div class="form__row form__row_full form__row_mb0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span class="snakeline">Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal vacancymodal-->
+      <!-- Begin Modal mortgage-->
+      <div class="modal fade mortgage" id="mortgage">
+        <div class="modal-dialog">
+          <div class="modal-content bg"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"><span>Узнайте условия<br> строительства своего<br> дома в ипотеку </span><small>Введите номер — позвоним вам<br> в течение 10 минут в рабочее время</small></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__row">
+                    <div class="form__label"><span>Введите номер телефона</span></div>
+                    <input class="tel" type="tel" required="required" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit"><span>Позвоните мне</span></button>
+                  </div>
+                  <div class="form__row form__row_full form__row_mb0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span class="snakeline">Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal mortgage-->
+      <!-- Begin Modal calculate-->
+      <div class="modal fade calculate" id="calculate">
+        <div class="modal-dialog">
+          <div class="modal-content bg"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"><span>Что вам нужно рассчитать?</span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-list"><a class="modal-item" href="#"><i class="icon_mark"></i><span>Ремонт квартиры/дома</span></a><a class="modal-item" href="#"><i class="icon_mark"></i><span>Ремонт коммерческого<br> объекта</span></a><a class="modal-item" href="#"><i class="icon_mark"></i><span>Дизайн-проект<br> интерьера</span></a><a class="modal-item" href="#"><i class="icon_mark"></i><span>Строительство и<br> проектирование дома </span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal calculate-->
+      <!-- Begin Modal download-->
+      <div class="modal fade download" id="download">
+        <div class="modal-dialog">
+          <div class="modal-content bg"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"><span>Не можем отпустить вас с пустыми руками!</span><small>Возможно, вам сейчас не требуются наши услуги, но давайте будем на связи</small></div>
+              <div class="modal-title"><span>Скачайте в 1 клик<br> презентацию с отличными<br> идеями для вдохновения</span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form form_sm">
+                  <div class="form__row">
+                    <div class="form__label"><span>Куда прислать?</span></div>
+                    <select class="select" data-placeholder="Whatsapp">
+                      <option value=""></option>
+                      <option value="whatsapp">Whatsapp</option>
+                      <option value="Viber">Viber</option>
+                      <option value="Telegram">Telegram</option>
+                      <option value="mail">Email</option>
+                    </select>
+                  </div>
+                  <div class="form__row form__row_hide form__row_email_js">
+                    <div class="form__label"><span>Введите email</span></div>
+                    <input type="email" placeholder="E-mail"/>
+                  </div>
+                  <div class="form__row form__row_phone_js">
+                    <div class="form__label"><span>Введите номер телефона</span></div>
+                    <input class="tel" type="tel" required="required" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit"><span>Скачать презентацию</span></button>
+                  </div>
+                  <div class="form__row form__row_mb0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span class="snakeline">Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal download-->
       <script src="js/jquery.js"></script>
       <script src="js/jquery.maskedinput.min.js"></script>
       <script src="js/modal.js"></script>
@@ -245,6 +470,8 @@
       <script src="js/jquery.marquee.min.js"></script>
       <script src="js/aos.js"></script>
       <script src="js/fancybox.min.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script src="js/jquery-ui-touch-punch.js"></script>
       <script src="js/quiz.js"></script>
       <script src="js/form.js"></script>
       <script src="js/function.js"></script>

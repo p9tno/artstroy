@@ -59,10 +59,15 @@ body {
 	@media (min-width: 768px) {
 		padding: 2.8125em 0;
 
-		&:first-child {
-			padding-top: 19.375em;
-		}
+	}
 
+	&:first-child {
+		padding-top: 6.75em;
+
+		@media (min-width: 768px) {
+			padding-top: 19.375em;
+
+		}
 	}
 
 	&__title {

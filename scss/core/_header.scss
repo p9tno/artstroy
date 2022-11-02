@@ -10,7 +10,6 @@
 	z-index: 5;
 
 	padding: 0.625em 0 1em;
-	// background-color: $color_dark;
 
 	&_bg {
 		background-color: $color_dark;
@@ -19,7 +18,6 @@
 
 	@media (min-width: 768px) {
 		padding: 2.1875em 0 0;
-		/* 35/16 */
 	}
 
 	&__content {
@@ -29,6 +27,12 @@
 	&__top {
 		display: flex;
 		align-items: center;
+
+		@media (max-width: 767px) {
+			position: relative;
+			z-index: 15;
+		}
+
 		@media (min-width: 768px) {
 			justify-content: space-between;
 		}
@@ -42,12 +46,6 @@
 			align-items: center;
 		}
 	}
-
-	&__city {}
-
-	&__calc {}
-
-	&__messenger {}
 
 	&__action {
 		text-align: center;
@@ -64,83 +62,128 @@
 	}
 
 	&__bottom {
-		// padding-top: 2.5em;
-		// padding-bottom: 3.75em;
-		padding-top: 2.125em;
-		/* 34/16 */
-		padding-bottom: 2.5em;
-	}
+		@media (max-width: 767px) {
 
-	&__nav {}
+			position: fixed;
+			right: -100vw;
+			top: 0;
+			bottom: 0;
+			background-color: $color_dark;
+			width: 100vw;
+			z-index: 10;
+			overflow: hidden;
+			padding: 4.75em 1em 4em;
+			transition: right 0.2s;
+			box-shadow: 0 0 1em rgba(#000, .1);
+
+			height: 100vh;
+			overflow-y: auto;
+
+			&_open {
+				right: 0;
+			}
+
+			&:before {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 4em;
+				background: linear-gradient(to bottom, $color_dark 10%, rgba($color_dark, 0.9));
+				z-index: 1;
+			}
+		}
+
+		@media (min-width: 768px) {
+			padding-top: 2.125em;
+			padding-bottom: 2.5em;
+			transition: 0.3s;
+
+			&.open_sub_menu {
+				padding-bottom: 5.625em;
+			}
+
+		}
+
+		.header__messenger {
+			margin-top: 4.875em;
+
+			.messenger {
+				flex-direction: column;
+			}
+
+			.messenger__label {
+				width: auto;
+				margin-right: 0;
+				margin-bottom: 0.375em;
+
+				span {
+					font-size: 0.625em;
+				}
+			}
+
+			.messenger__link {
+				font-size: 1.2em;
+			}
+		}
+
+		.header__calc {
+			margin-top: 1.875em;
+			text-align: center;
+
+			.calc__link {
+				font-size: 0.75em;
+			}
+		}
+	}
 
 	&__toggle {
 		position: absolute;
 
 		@media (max-width: 767px) {
-			top: 1.75em;
-			right: 1.25em;
-			width: 0.9375em;
-			height: 0.875em;
-			color: $color_white;
-			border: 0.18em solid;
-			border-left: 0;
-			border-right: 0;
-			border-bottom: 0;
-			// border-bottom-width: 0.5em;
-
+			top: 0.9em;
+			right: 1em;
+			padding: 0.75em 0.5em 0.5em;
 			z-index: 51;
 			cursor: pointer;
-
-			&:after,
-			&:before {
-				content: '';
-				display: inline-block;
-				border-top: 0.18em solid;
-				/* 3/16 */
-				width: 0.625em;
-				position: absolute;
-				top: 50%;
-				// выровнить псевдо эл. по центру: половина от толщины border
-				margin-top: -0.09em;
-				left: 0;
-				// width: 100%;
-				transition: 0.3s;
-
-			}
-
-			&.active {
-				border-top-color: transparent;
-				border-bottom-color: transparent;
-
-				&:before {
-					transform: rotate(45deg);
-				}
-
-				&:after {
-					transform: rotate(-45deg);
-				}
-			}
+			transform: rotate(0);
+			transition: 0.2s;
+			color: $color_white;
 
 			&_open {
-				border: 0;
 				position: fixed;
-
-				&:after,
-				&:before {
-					content: '';
-					border-top: 0.18em solid $color_white;
-					width: 100%;
-				}
-
-				&:before {
-					transform: rotate(45deg);
-				}
-
-				&:after {
-					transform: rotate(-45deg);
-				}
+				transform: rotate(90deg);
+				color: $color_warning;
 			}
 		}
+
+		.toggle {
+
+			@media (max-width: 767px) {
+				position: relative;
+				width: 0.9375em;
+				height: 0.875em;
+				border: 0.18em solid;
+				border-left: 0;
+				border-right: 0;
+				border-bottom: 0;
+				transition: 0.2s;
+
+				&:before {
+					content: '';
+					display: inline-block;
+					border-top: 0.18em solid;
+					width: 0.625em;
+					position: absolute;
+					top: 50%;
+					margin-top: -0.09em;
+					left: 0;
+				}
+
+			}
+		}
+
 	}
 
 }
@@ -153,11 +196,24 @@
 	width: 100%;
 	z-index: 20;
 	background-color: $color_dark;
-	padding: 1em 0 0;
+	padding: 1em 0;
+
+	@media (min-width: 768px) {
+		padding: 1em 0 0;
+
+	}
 
 	.header__bottom {
-		padding-top: 0;
-		padding-bottom: 1em;
+
+		@media (min-width: 768px) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		&.open_sub_menu {
+			padding-bottom: 3.125em;
+		}
+
 	}
 
 	@media (min-width: 768px) {
@@ -171,6 +227,10 @@
 			}
 		}
 
+	}
+
+	.header__toggle {
+		top: 1.2em;
 	}
 
 	-webkit-animation-name: showMenu;

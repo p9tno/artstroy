@@ -4,14 +4,44 @@ block content
     // begin test
     section#test.test.section
         .container_center
-            h2.section__title Навигация
+            h2.section__title
+                span Навигация
             .test__content
                 ul
                     li
                         a(href="../pages/home/") Главная 
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
+                    //- li
+                    //-     a(href="../quiz/") Квиз 
 
 
     // end test
+
+    // begin tetsModals
+    section#tetsModals.tetsModals.section
+        .container_center
+            h2.section__title
+                span Модальные окна
+
+            ul
+                li
+                    a.show_js(href="#privacy") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ  
+                li
+                    a.show_js(href="#application") Быстро оставьте заявку
+                li
+                    a.show_js(href="#vacancymodal") Оставьте свой отклик на вакансию
+                li
+                    a.show_js(href="#mortgage") Узнайте условия строительства своего дома в ипотеку 
+                li
+                    a.show_js(href="#calculate") Что вам нужно рассчитать?
+                //- li
+                //-     a.show_js(href="#download") Скачать презентацию
+                //- li
+                //-     a.show_js(href="#download1") Скачать презентацию 2
+
+
+
+
+
+
+
+    // end tetsModals

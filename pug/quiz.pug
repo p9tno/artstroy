@@ -1,0 +1,459 @@
+//- extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+
+// begin quiz
+section#quiz.quiz.section
+    .container_center
+        .quiz__caption
+            h1.section__title
+                span <b>Рассчитайте стоимость</b> в калькуляторе +<br> зафиксируйте за собой подарок
+            .quiz__description
+                span <b>После теста вы получите:</b><br> альбом чертежей и пример сметы на реальный<br> объект, консультацию нашего специалиста 
+
+        form.quiz-form(action='#')
+
+            // start quiz-container
+            #quiz.quiz-container
+                // start quiz-main
+                .quiz-main
+                    .quiz-wrap
+                        .quiz-line
+                            .quiz-line__bg(style='width: 5%;')
+                            .quiz-line__text
+                                span.quiz-line__label.bold Вопрос 
+                                span.quiz-line-step_current.bold 1
+                                span.quiz-line__label  из 
+                                span.quiz-line-step_total 4
+
+                        // start quiz-question
+                        .quiz-question.quiz-question__photo.active(data-q='')
+
+                            .quiz-question__title 
+                                span Что именно вам нужно?
+
+                            .quiz-question__wrap.quiz-question__wrap_grid
+
+                                // start quiz-question__photo-block
+                                .quiz-question__photo-block
+                                    label.quiz-question__photo-label
+                                        input(type='radio' name='q-1')
+                                        img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_1.jpg' alt='')
+                                        .quiz-question__check.quiz-question__photo-check
+                                            i.icon_mark
+                                        .quiz-question__photo-text 
+                                            span Комплексный ремонт дома, квартиры под ключ
+                                // end quiz-question__photo-block
+
+                                // start quiz-question__photo-block
+                                .quiz-question__photo-block
+                                    label.quiz-question__photo-label
+                                        input(type='radio' name='q-1')
+                                        img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_2.jpg' alt='')
+                                        .quiz-question__check.quiz-question__photo-check
+                                            i.icon_mark
+                                        .quiz-question__photo-text
+                                            span Ремонт коммерческого объекта
+
+                                    .quiz-question-video
+                                        .play.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+
+                                // end quiz-question__photo-block
+
+                                // start quiz-question__photo-block
+                                .quiz-question__photo-block
+                                    label.quiz-question__photo-label
+                                        input(type='radio' name='q-1')
+                                        img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_3.jpg' alt='')
+                                        .quiz-question__check.quiz-question__photo-check
+                                            i.icon_mark
+                                        .quiz-question__photo-text
+                                            span Создание дизайн-проекта интерьера
+
+                                    .quiz-question-hint
+                                        i.icon_info
+                                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                // end quiz-question__photo-block
+
+                                // start quiz-question__photo-block
+                                .quiz-question__photo-block
+                                    label.quiz-question__photo-label
+                                        input(type='radio' name='q-1')
+                                        img.quiz-question__photo-img(loading='lazy' src=path +'../img/quiz/question/photo_4.jpg' alt='')
+                                        .quiz-question__check.quiz-question__photo-check
+                                            i.icon_mark
+                                        .quiz-question__photo-text
+                                            span Строительство каменного дома
+                                // end quiz-question__photo-block
+
+                        // end quiz-question
+
+                        // start quiz-question
+                        .quiz-question.quiz-question__photo(data-q='')
+
+                            .quiz-question__title 
+                                span Что именно вам нужно 2?
+
+                            .quiz-question__wrap.quiz-question__wrap_grid
+
+                                // start quiz-question__photo-block
+                                .quiz-question__photo-block
+                                    label.quiz-question__photo-label
+                                        input(type='checkbox' name='q-1')
+                                        img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_1.jpg' alt='')
+                                        .quiz-question__check.quiz-question__photo-check
+                                            i.icon_mark
+                                        .quiz-question__photo-text
+                                            span Комплексный ремонт дома, квартиры под ключ
+                                // end quiz-question__photo-block
+
+                                // start quiz-question__photo-block
+                                .quiz-question__photo-block
+                                    label.quiz-question__photo-label
+                                        input(type='checkbox' name='q-1')
+                                        img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_2.jpg' alt='')
+                                        .quiz-question__check.quiz-question__photo-check
+                                            i.icon_mark
+                                        .quiz-question__photo-text 
+                                            span Ремонт коммерческого объекта
+
+                                    .quiz-question-video
+                                        .play.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+
+                                // end quiz-question__photo-block
+
+                                // start quiz-question__photo-block
+                                .quiz-question__photo-block
+                                    label.quiz-question__photo-label
+                                        input(type='checkbox' name='q-1')
+                                        img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_3.jpg' alt='')
+                                        .quiz-question__check.quiz-question__photo-check
+                                            i.icon_mark
+                                        .quiz-question__photo-text 
+                                            span Создание дизайн-проекта интерьера
+
+                                    .quiz-question-hint
+                                        i.icon_info
+                                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                // end quiz-question__photo-block
+
+                                // start quiz-question__photo-block
+                                .quiz-question__photo-block
+                                    label.quiz-question__photo-label
+                                        input(type='checkbox' name='q-1')
+                                        img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_4.jpg' alt='')
+                                        .quiz-question__check.quiz-question__photo-check
+                                            i.icon_mark
+                                        .quiz-question__photo-text 
+                                            span Строительство каменного дома
+                                // end quiz-question__photo-block
+
+                        // end quiz-question
+
+                        // start quiz-question
+                        .quiz-question.quiz-question__text(data-q='')
+
+                            .quiz-question__title 
+                                span Какое текущее состояние объекта?
+
+                            .quiz-question__wrap.quiz-question__wrap_text
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='radio' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Без отделки
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='radio' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Чистовая отделка от застройщика
+                                    .quiz-question-hint
+                                        i.icon_info
+                                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='radio' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Черновая отделка (штукатурка на стенах)
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='radio' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Вторичная недивжимость, необходим осмотр
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='radio' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Получистовая отделка “Белый куб”
+                                    .quiz-question-video
+                                        .play.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='radio' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Пропустить вопрос
+                                // end quiz-question__text-block
+
+
+                        // end quiz-question
+
+                        // start quiz-question
+                        .quiz-question.quiz-question__text(data-q='')
+
+                            .quiz-question__title 
+                                span Какое текущее состояние объекта 2?
+
+                            .quiz-question__wrap.quiz-question__wrap_text
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='checkbox' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Без отделки
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='checkbox' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Чистовая отделка от застройщика
+                                    .quiz-question-hint
+                                        i.icon_info
+                                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='checkbox' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Черновая отделка (штукатурка на стенах)
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='checkbox' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Вторичная недивжимость, необходим осмотр
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='checkbox' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Получистовая отделка “Белый куб”
+                                    .quiz-question-video
+                                        .play.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+                                // end quiz-question__text-block
+
+                                // start quiz-question__text-block
+                                .quiz-question__text-block
+                                    label.quiz-question__text-label
+                                        input(type='checkbox' name='q-1')
+                                        .quiz-question__check.quiz-question__text-check
+                                            i.icon_mark
+                                        p Пропустить вопрос
+                                // end quiz-question__text-block
+
+
+                        // end quiz-question
+
+                        // start quiz-question
+                        .quiz-question.quiz-question__file(data-q='')
+
+                            .quiz-question__title.quiz-question__file-title
+                                span Прикрепите дизайн-проект<br> или фото, если есть?
+                                small Это поможет нам предложить лучшее решение<br> для вас и сократит время на уточнение деталей  
+
+                            .quiz-question__wrap.quiz-question__wrap_file
+                                .quiz-question__file-block
+                                    label(data-text="Файл не выбран").send-form__file
+                                        input(type='file' required='required')
+                                        p Загрузить файл
+
+                                .quiz-question__file-block
+                                    label(data-text="Файл не выбран").send-form__file
+                                        input(type='file' required='required')
+                                        p Загрузить файл
+
+                                .quiz-question__file-block
+                                    .send-form__link
+                                        input(type='url' placeholder="Или добавьте ссылку на документ")
+
+                            .quiz-question__slider-input
+                                label
+                                    input(type='checkbox' required='' name='')
+                                    .input-check
+                                        i.icon_mark
+                                    p Пропустить вопрос
+                        // end quiz-question
+
+                        // start quiz-question
+                        .quiz-question.quiz-question__content(data-q='')
+
+                            .quiz-question__title.quiz-question__file-content
+                                span Хотим, чтобы вы знали ...
+
+                            .quiz-question__wrap.quiz-question__wrap_content
+                                .quiz-question__content-block
+                                    p Мы разрабатываем и реализуем проекты под ключ.
+                                    p Берем на себя тотальную ответственность и даем 5-летнюю гарантию.  
+
+                                .quiz-question__slider-input
+                                    label
+                                        input(type='checkbox' required='' name='')
+                                        .input-check
+                                            i.icon_mark
+                                        p Прочитал (-а)
+                        // end quiz-question
+
+                        // start quiz-question
+                        .quiz-question.quiz-question__slider(data-q='')
+                            .quiz-question__title
+                                span Укажите площадь объекта
+
+                            .quiz-question__slider_wrap
+                                .quiz-question__slider_top
+                                    .quiz-question__slider_measure
+                                        span Площадь
+                                    .quiz-question__slider_input
+                                        input(value="40" id="square_field" type="number" max="9999" min="0")
+                                    .quiz-question__slider_measure
+                                        span м<sup>2</sup>
+
+                                .quiz-question__slider_main
+                                    .quiz-question__slider_slide.js-slide
+
+                                .quiz-question__slider_bottom
+                                    .quiz-question__slider_measure
+                                        span 40 м<sup>2</sup>
+                                    .quiz-question__slider_measure
+                                        span 300 м<sup>2</sup>
+
+
+
+
+                            .quiz-question__slider-input
+                                label
+                                    input(type='checkbox' required='' name='')
+                                    .input-check
+                                        i.icon_mark
+                                    p Не знаю размеров
+
+                        // end quiz-question
+
+                    .quiz-footer
+
+                        .quiz-arrow__wrap
+                            button.quiz-arrow.quiz-arrow__prev
+                                p Назад
+                            button.quiz-arrow.quiz-arrow__next(disabled='')
+                                p Далее
+                        .quiz-footer__hint
+                            span <b>Выберите вариант ответа</b><br> и нажмите кнопку “Далее”
+
+                // end quiz-main
+
+
+
+                // start quiz-right
+                .quiz-right.desktop
+                    .quiz-right__bg.bg(style="background-image: url('../../img/quiz/quiz_bg.png')")
+                    .quiz-right__persone.bg(style="background-image: url('../../img/quiz/quiz_person.png')")
+                    .quiz-right__content
+
+                        p Здравствуйте, меня зовут Маргарита,<br> менеджер по работе с клиентами.
+                        p Рассчитаю стоимость, сориентирую<br> по срокам, подготовлю коммерческое<br> предложение по вашим ответам
+
+                // end quiz-right
+
+            // end quiz-container
+
+            // start quiz-result
+            .quiz-result.bg
+                .quiz-result__wrap
+                    .quiz-line
+                        .quiz-line__bg(style='width: 100%;')
+                        .quiz-line__text
+                            span.quiz-line__label.bold Готово 
+                    .quiz-result__title
+                        span Благодарим за ответы!
+
+                    .quiz-result__text
+                        span Оставьте телефон — мы свяжемся с вами,<br> чтобы обсудить детали для составления точной<br> сметы и закрепим за вами выбранный подарок. 
+
+                    .quiz-result__messenger
+                        .form.form_sm
+                            .form__row
+                                .form__label
+                                    span Куда прислать?
+                                select.select(data-placeholder="Whatsapp")
+                                    option(value="")
+                                    option(value="whatsapp") Whatsapp
+                                    option(value="Viber") Viber
+                                    option(value="Telegram") Telegram
+                                    option(value="mail") Email
+
+                            .form__row.form__row_phone_js
+                                .form__label
+                                    span Введите номер телефона
+                                input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                            .form__row.form__row_hide.form__row_email_js
+                                .form__label
+                                    span Введите email
+                                input(type="email" placeholder="E-mail")
+
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit") Получить смету
+
+
+
+                            .form__row.form__row_mb0
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+                    .quiz-result__phone.bg
+
+            // end quiz-container
+
+
+// end quiz

@@ -11,14 +11,25 @@ header.header.header_bg
                 .city
                     .city__label
                         span Ваш город
-                    ul.city__menu.menu
-                        li.menu-item.menu-item-has-children
+                    ul.city__menu
+                        li.city__item.city__item_haschildren
                             a(href="#") Москва
                                 i.icon_drop_bold
-                            ul.sub-menu
+                            ul.city__submenu
                                 each item in ['Ростов-на-Дону', 'Краснодар', 'Санкт-Петербург']
-                                    li.menu-item
+                                    li.city__item
                                         a(href="#")=item
+                //- .city
+                //-     .city__label
+                //-         span Ваш город
+                //-     ul.city__menu.menu
+                //-         li.menu-item.menu-item-has-children
+                //-             a(href="#") Москва
+                //-                 i.icon_drop_bold
+                //-             ul.sub-menu
+                //-                 each item in ['Ростов-на-Дону', 'Краснодар', 'Санкт-Петербург']
+                //-                     li.menu-item
+                //-                         a(href="#")=item
             .header__calc.desktop
                 .calc
                     a.calc__link(href="") калькулятор стоимости
@@ -55,8 +66,8 @@ header.header.header_bg
                     ul.menu
                         li.menu-item.menu-item-has-children
                             a(href="#") услуги
-                                i.icon_drop
-                            ul.sub-menu
+                                i.icon_drop.desktop
+                            ul.sub-menu.desktop
                                 each item in [1, 2, 3, 4]
                                     li.menu-item
                                         a(href="#") Важный пункт меню
@@ -74,6 +85,25 @@ header.header.header_bg
                             a(href="#") Вакансии
                         li.menu-item
                             a(href="#") Контакты
+
+            .header__messenger.mobile
+                .messenger
+                    .messenger__label
+                        span Спрашивайте, отвечаем онлайн
+                    .messenger__list
+                        .messenger__item
+                            a.messenger__link(href="https://wa.me/+73912054081" target="_blank")
+                                i.icon_whatsapp
+                        .messenger__item
+                            a.messenger__link(href="https://wapp.click/73912054081" target="_blank")
+                                i.icon_telegram
+                        .messenger__item
+                            a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                i.icon_viber
+
+            .header__calc.mobile
+                .calc
+                    a.calc__link(href="") калькулятор стоимости
 
 
 

@@ -4,21 +4,42 @@ $(document).ready(function() {
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
             // console.log('Показ меню');
-            $('.navbar').toggleClass('navbar_open');
+            // $('.header__top').toggleClass('header__top_open');
+            $('.header__bottom').toggleClass('header__bottom_open');
             $('.header__toggle').toggleClass('header__toggle_open');
-            $('.nav_open_bg').toggleClass('nav_open_bg_open');
+            // $('.nav_open_bg').toggleClass('nav_open_bg_open');
             $( 'body' ).toggleClass( 'nav-open' );
         });
     };
     openMobileNav();
 
-    function activeNav() {
-        $('.menu-item').on('click', function() {
-            $('.menu-item').removeClass('current-menu-item');
-            $(this).addClass('current-menu-item');
-        })
-    };
-    activeNav();
+    // start modal
+    function showModal() {
+        $('.show_js').on('click', function (e) {
+            e.preventDefault();
+            let id  = $(this).attr('href');
+
+            $(id).modal('show');
+        });
+    }
+    showModal();
+
+    $('.modal').on('show.bs.modal', () => {
+        // let openedModal = $('.modal.in:not(.popapCalc)');
+        let openedModal = $('.modal');
+        if (openedModal.length > 0) {
+            openedModal.modal('hide');
+        }
+    });
+    // end modal
+
+    // function activeNav() {
+    //     $('.menu-item').on('click', function() {
+    //         $('.menu-item').removeClass('current-menu-item');
+    //         $(this).addClass('current-menu-item');
+    //     })
+    // };
+    // activeNav();
 
     function uploadYoutubeVideoForModal() {
         if ( $( ".youtubeModal-js" ) ) {
@@ -112,6 +133,45 @@ $(document).ready(function() {
     }
     showHideTask();
 
+    function showHideSubmenu() {
+        $(".menu").on('mouseenter', '.menu-item-has-children', function() {
+            // console.log('mouse on');
+            let wrap = $(this).closest('.header__bottom');
+            wrap.addClass('open_sub_menu');
+
+        });
+
+        $(".menu").on('mouseleave', '.menu-item-has-children', function() {
+            let wrap = $(this).closest('.header__bottom');
+            wrap.removeClass('open_sub_menu');
+
+        });
+    }
+    showHideSubmenu();
+
+    function addNameFile() {
+        $('input[type="file"]').change(function (e) {
+            // console.log('change');
+            var text = $(this).closest('label').attr('data-text');
+            // var container = $(this).closest('.tab-item');
+            if (typeof e.target.files[0] == 'undefined') {
+                var fileName = text;
+                $(this).parent().removeClass('active');
+            } else {
+                var fileName = e.target.files[0].name;
+                $(this).parent().addClass('active');
+                fileName = fileName.substring(0, 20);
+                // console.log(fileName);
+            }
+            $(this).parent().find('p').text(fileName);
+            // console.log(fileName);
+
+            // container.find('[controlBtn_JS]').removeClass('disabled');
+        });
+
+    }
+    addNameFile();
+
 
     // <div class="tabs-wrapper">
     //     <div class="tabs">
@@ -126,28 +186,29 @@ $(document).ready(function() {
     //     </div>
     // </div>
 
-    $('.tabs-wrapper').each(function() {
-        let ths = $(this);
-        ths.find('.tab-item').not(':first').hide();
-        ths.find('.tab').click(function() {
-            ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-            ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-        }).eq(0).addClass('active');
-    });
+    // $('.tabs-wrapper').each(function() {
+    //     let ths = $(this);
+    //     ths.find('.tab-item').not(':first').hide();
+    //     ths.find('.tab').click(function() {
+    //         ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+    //         ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+    //     }).eq(0).addClass('active');
+    // });
 
 
-    function doDrop() {
-        $('.drop__toggle').on('click', function() {
-            // $('.drop__list').toggleClass('open');
-            $(this).toggleClass('active');
-            $(this).closest('.drop').find('.drop__list').toggleClass('open');
-        });
-    };
-    doDrop();
+    // function doDrop() {
+    //     $('.drop__toggle').on('click', function() {
+    //         // $('.drop__list').toggleClass('open');
+    //         $(this).toggleClass('active');
+    //         $(this).closest('.drop').find('.drop__list').toggleClass('open');
+    //     });
+    // };
+    // doDrop();
 
 
 
-    // for select2
+    // start select2
+
     function addIcon(icon) {
         if (!icon.id) {
             return icon.text;
@@ -170,6 +231,8 @@ $(document).ready(function() {
         // tags: true,
         templateSelection: addIcon,
     });
+
+    // end select2
 
     $(function(){
         $(".tel").mask("+7 ( 9 9 9 ) - 9 9 9 - 9 9 - 9 9");
@@ -376,109 +439,8 @@ $(document).ready(function() {
     showMoreAdvantage()
 
 
-    // gsap.registerPlugin(ScrollTrigger);
-
-    // const tl = gsap.timeline();
-    // tl.from(
-    //     '.advantage__list', {
-    //         yPercent: 1000
-    //     }
-    // );
-
-
-
-
-    // ScrollTrigger.create({
-    //     // animate: tl,
-    //
-    //     trigger: ".advantage",
-    //     start: "top 30%",
-    //     // start: "top 30%",
-    //     end: "bottom 70%",
-    //     // end: "top 70%",
-    //     markers: true,
-    //     id: 'advantage-id',
-    //     // scroller: '#advantage',????? по умолчанию окно просмотра
-    //     onEnter: () => console.log('enter'),
-    //     onLeave: () => console.log('Leave'),
-    //     onEnterBack: () => console.log('enter back'),
-    //     onLeaveBack: () => console.log('Leave back'),
-    //     // onUpdate: (self) => console.log('onUpdate', self.progress.toFixed(3)),
-    //     // onUpdate: (self) => console.log('onUpdate', self),
-    //     // onToggle: (self) => console.log('onToggle', self.isActive),
-    //
-    //     scrub: true,
-    //     pin: true,
-    //
-    //
-    //
-    //     // toggleClass: "active",
-    // })
-
-
-
-
-
-    // --- ORANGE PANEL ---
-    // gsap.from(".line", {
-    //     scrollTrigger: {
-    //         trigger: ".orange",
-    //         scrub: true,
-    //         pin: true,
-    //         start: "top 30%",
-    //         end: "+=100%",
-    //         markers: true,
-    //         onEnter: () => console.log('enter'),
-    //         onLeave: () => console.log('Leave'),
-    //         onEnterBack: () => console.log('enter back'),
-    //         onLeaveBack: () => console.log('Leave back'),
-    //     },
-    //     y: -2000,
-    //     // scaleX: 0,
-    //     // transformOrigin: "right left",
-    //     // ease: "none"
-    // });
-
-
-
-
-
 
 
 
 
 })
-
-// const text = document.querySelectorAll('.advantage__list > *')
-//
-// const tl = gsap.timeline().to('.advantage__list', {width: 150, height: 150}).fromTo(text, {x: -100}, {x: 0, stagger: 0.3})
-//
-// ScrollTrigger.create({
-// 	trigger: '.advantage',
-// 	animation: tl,
-// 	pin: true,
-// 	start: 'top center',
-// 	end: '+=1500 bottom',
-// 	scrub: 1, // I like the 1 sec delay, set to true for exact anime on scroll
-// 	markers: true,
-// })
-
-
-
-
-
-// gsap.registerPlugin(ScrollTrigger);
-//
-// gsap.utils.toArray(".panel").forEach((panel, i) => {
-//   ScrollTrigger.create({
-//     trigger: panel,
-//     start: "top top",
-//     pin: true,
-//     pinSpacing: false
-//   });
-// });
-//
-//
-// ScrollTrigger.create({
-//   snap: 1 / 4 // snap whole page to the closest section!
-// });

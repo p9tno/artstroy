@@ -190,10 +190,35 @@ $(document).ready(function() {
                 // console.log(fileName);
             }
             $(this).parent().find('p').text(fileName);
+            console.log(fileName);
+
             // container.find('[controlBtn_JS]').removeClass('disabled');
         });
 
     }
-    addNameFile();
+    // addNameFile();
+
+    function changeSlide() {
+
+        $( ".js-slide" ).slider({
+            range: "min",
+            value:40,
+            min: 10,
+            max: 300,
+            step: 1,
+            slide: function( event, ui ) {
+                // $( "#square_text" ).text( ui.value );
+                $( "#square_field" ).val( ui.value );
+                $('.quiz-arrow__next').removeAttr('disabled');
+
+            }
+        });
+
+
+        // $( "#current_text" ).text( $( ".js-slide" ).slider( "value" ) );
+        // $( "#square_field" ).val( $( ".js-slide" ).slider( "value" ) );
+
+    };
+    changeSlide();
 
 });
