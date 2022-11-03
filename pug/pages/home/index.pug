@@ -52,7 +52,7 @@ block content
             .founder__content
                 .founder__left
                     .founder__caption
-                        .founder__title
+                        .founder__title(data-aos="fade-up")
                             span Меня зовут Александр Матвеев. В 2014 году я основал строительную компанию АРТСТРОЙ.
 
 
@@ -72,9 +72,9 @@ block content
                 .founder__right
                     .founder__person
                         .person
-                            .person__name
+                            .person__name(data-aos="fade-left" data-aos-delay="300")
                                 span Алексей Матвеев
-                            .person__description
+                            .person__description(data-aos="fade-left" data-aos-delay="600")
                                 span Основатель и генеральный директор ООО «АРТСТРОЙ»
 
                     .founder__play
@@ -96,13 +96,26 @@ block content
             .certificate__figures
                 .figures
                     .figures__list
-                        each item in [ {top: '8', bottom: 'лет успешно<br> работаем на рынке'}, {top: '<small>в</small> 19', bottom: 'городах России<br> наши клиенты'}, {top: '45000 <small>м</small><sup>2</sup>', bottom: 'преобразили за годы работы '} ]
 
-                            .figures__item
-                                .figures__top
-                                    span!=item.top
-                                .figures__bottom
-                                    span!=item.bottom
+                        .figures__item
+                            .figures__top
+                                span(class="count_numbers_js") 8
+                            .figures__bottom
+                                span лет успешно<br> работаем на рынке
+
+                        .figures__item
+                            .figures__top
+                                <span><small>в</small> </span>
+                                <span class="count_numbers_js">19</span>
+                            .figures__bottom
+                                span городах России<br> наши клиенты
+                        .figures__item
+                            .figures__top
+                                span(class="count_numbers_big_js") 45000 
+                                <span><small>м</small></span>
+                                <span><sup>2</sup></span>
+                            .figures__bottom
+                                span преобразили за годы работы
                         .figures__item
                             span
                             .figures__link.snakeline
@@ -110,7 +123,7 @@ block content
             .certificate__content
                 .certificate__left
                     .certificate__caption
-                        h2.section__title
+                        h2.section__title(data-aos="fade-up")
                             span <b>Соблюдаем</b> международные и российские стандарты 
                         .certificate__description
                             p Имеем сертификаты и лицензии МЧС, СРО, допуски к высотным и огневым работам.
@@ -143,7 +156,7 @@ block content
     section#task.task.section
         .container_center
             .task__caption
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span <b>Колоссальный опыт в строительстве и человеческий подход</b> к клиентам помогает эффективно решать разноплановые задачи
                 .task__desc
                     span <b>Ниже представлены все услуги,</b><br> предоставляемые нашей компанией
@@ -277,7 +290,7 @@ block content
                 span
                 span
         .container_center
-            h2.section__title
+            h2.section__title(data-aos="fade-up")
                 span <b>В презентации Артстрой есть все,</b> что поможет вам определиться и понять наш подход к делу
             .presentation__form
                 .presentation__caption
@@ -329,7 +342,7 @@ block content
     // begin projects
     section#projects.projects.section
         .container_center
-            h2.section__title
+            h2.section__title(data-aos="fade-up")
                 span <b>Более 1 000</b> реализованных проектов
             .section__subtitle
                 span Вкладываемся душой и делом. За каждым — своя история. Изучите проекты подробнее.
@@ -438,7 +451,7 @@ block content
         .container_center.container_center_sm
             .honest__content
                 .honest__caption
-                    h2.section__title
+                    h2.section__title(data-aos="fade-up")
                         span Но будем честны с вами: <b>возьмемся не за любую задачу</b>
                     .honest__title
                         span поскольку несем ответственность и ставим в приоритет качество, сроки и уважительное отношение к нашим клиентам,
@@ -476,7 +489,7 @@ block content
                 .advantage__list.counter-wrap
                     each item in [ {title: '5 лет на ремонт, 25 лет на построенный дом', desc: 'гарантии зафиксированы в договоре'}, {title: 'Работа в «белую»', desc: 'Принимаем оплату на расчетный счет, карту или через терминал в нашем офисе. У вас будет чек, платежные документы и вся исполнительная документация по объекту'}, {title: 'Детальная смета', desc: 'Рассчитываем стоимость максимально прозрачно. Вы видите из чего складывается стоимость работ по позицициям материалов, сколько стоит отдельная работа и какая площадь</span><a class="desktop advantage__link" href="#">Посмотреть пример реальной сметы</a>'}, {title: 'Сроки соблюдаются без напоминаний', desc: 'Нет задач без сроков. Назначенные даты, часы, минуты понимаем буквально, а не ориентировочно. Предоставляем детальный график строительства, ремонта и поставки материалов. Следим за ходом работы субподрядных организаций'}, {title: 'Качественные материалы и современные технологии', desc: 'Налажены прямые контакты с ведущими производителями строительных материалов, работаем только профессиональным дорогим инструментом'}, {title: '7 дней в неделю на связи личный менеджер', desc: 'который быстро и адекватно реагирует на ваши пожелания и вопросы'}, {title: 'Отчитываемся', desc: 'Создаём группу в What’s App / Viber / Telegram на выбор для обсуждения текущих вопросов по объекту, согласования деталей и фото и видеоотчётов'}, {title: 'Контроль качества в 4 этапа', desc: 'Кроме прораба и бригадира перед сдачей обект проверяет независимый строительный эксперт и лично технический директор. Именно поэтому у нас меньше 1% гарантийных случаев за 8 лет'}, {title: 'Работаем без предоплаты', desc: 'Ежемесячно сдаем фактически выполненную работу и закрывающий акт-наряд. Оплачиваете — только после приемки и подписания документов'}, ]
 
-                        .advantage__item.counter-item
+                        .advantage__item.counter-item(data-aos="fade-left")
                             .advantage__inner
                                 .advantage__nav
                                     .advantage__icon.check_mark
@@ -511,23 +524,23 @@ block content
             .location__header
                 .location__label
                     span Все слишком хорошо звучит? 
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span Убедитесь <b>лично</b>
             .location__body
                 .location__map.location__map_border.bg
-                    .location__item(style="top:21.5em;left:63em")
+                    .location__item(style="top:21.5em;left:63em" data-aos="fade-down")
                         .location__mark
                             .location__logo.img
                                 img(src="../../img/logoL.svg")
                             .location__sity
                                 span Норильск
-                    .location__item(style="top:15em;left:19em")
+                    .location__item(style="top:15em;left:19em" data-aos="fade-down")
                         .location__mark
                             .location__logo.img
                                 img(src="../../img/logoL.svg")
                             .location__sity
                                 span Санкт-Петербург
-                    .location__item(style="top:46em;left:47em")
+                    .location__item(style="top:46em;left:47em" data-aos="fade-down")
                         .location__mark
                             .location__logo.img
                                 img(src="../../img/logoL.svg")
@@ -561,7 +574,7 @@ block content
                                 .form__privacy
                                     label.form__check
                                         input.check_checked_js(type="checkbox" checked="checked")
-                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
 
 
 
@@ -576,7 +589,7 @@ block content
                         .reviews__label
                             span Не можете приехать?
 
-                        h2.section__title
+                        h2.section__title(data-aos="fade-up")
                             span Посмотрите, что <b>говорят<br> клиенты</b> о работе с нами
                     .reviews__list
                         each item in ['<b>Одинаково хорошо работаем</b> как<br> на крупных гособъектах, так и в<br> квартирах площадью 100 м² ', '<b>Нас все рекомендуют</b><br> друзьям и партнерам ']
@@ -774,7 +787,7 @@ block content
                                 .form__privacy
                                     label.form__check
                                         input.check_checked_js(type="checkbox" checked="checked")
-                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
                     .consultation__button
                         .consultation__phone
                             span Ждем звонка: +7 (391) 2-0<i></i>54-081

@@ -27,6 +27,8 @@ body {
 	min-height: 100%;
 
 	font-size: $main_font_size;
+
+	// overflow: hidden;
 }
 
 /* Middle
@@ -126,6 +128,26 @@ body {
 			font-weight: 700;
 		}
 	}
+
+	&__caption {
+		margin-bottom: 1.5em;
+		@media (min-width: 768px) {
+			margin-bottom: 3.125em;
+		}
+
+		.section__title {}
+
+		.section__subtitle {
+			text-align: left;
+			margin-top: 1em;
+			@media (min-width: 768px) {
+				margin-top: 1.5em;
+
+			}
+		}
+	}
+
+	&_page {}
 }
 
 .desktop {

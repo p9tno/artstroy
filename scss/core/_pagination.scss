@@ -1,33 +1,96 @@
 // Pagination ==================================================================
+
 .pagination {
-	margin: 25px 0;
-	padding: 0;
-	li {
-		display: inline-block;
-		a {
-			display: block;
-			text-align: center;
+	margin-top: 1em;
+	@media (min-width: 768px) {
+		margin-top: 6em;
+
+	}
+	letter-spacing: 0.02em;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		display: flex;
+		justify-content: center;
+		@media (min-width: 768px) {
+			justify-content: flex-start;
 		}
-		&.prev, &.next {
-			a {
-				&:before {					
-				}
+	}
+
+	a,
+	span {
+
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 2.5834em;
+		height: 2.5834em;
+		margin: 0 0.66667em;
+
+		color: #B7C2C2;
+		font-weight: 500;
+		font-size: 0.6em;
+		@media (min-width: 768px) {
+			font-size: 1.5em;
+
+		}
+
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			border-bottom: 0.0834em solid;
+		}
+
+		&:before {
+			width: 100%;
+
+		}
+
+		&:after {
+			width: 0;
+			transition: width 0.3s;
+			color: $color_black;
+		}
+
+		&.current {
+			color: $color_black;
+
+			&:after,
+			&:before {
+
+				border-bottom: 0.167em solid;
 			}
 		}
-		&.prev {
-			a {
-				&:before {
-					content: '<';
-					
-				}
+
+		&.dots {
+			margin-top: -0.35em;
+
+			&:after,
+			&:before {
+				content: none;
 			}
+
 		}
-		&.next {
-			a {
-				&:before {
-					content: '>';
-					
-				}
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: $color_black;
+
+			&:after {
+				width: 100%;
+
 			}
 		}
 	}

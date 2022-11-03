@@ -144,6 +144,35 @@
 
 // End modal mortgage
 
+// Begin Modal discounts
+.modal.fade.discounts#discounts
+    .modal-dialog
+        .modal-content.bg
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-header
+                .modal-title
+                    span Расскажем про<br> актуальные скидки
+                    small Введите номер — позвоним вам<br> в течение 10 минут в рабочее время
+            .modal-body
+                .modal-form
+                    form.form
+                        .form__row
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Позвоните мне
+
+                        .form__row.form__row_full.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+// End modal discounts
+
 // Begin Modal calculate
 .modal.fade.calculate#calculate
     .modal-dialog

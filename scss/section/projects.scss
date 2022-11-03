@@ -2,9 +2,11 @@
     .section__title {
         text-align: left;
         margin-bottom: 0.8125em;
+
         @media (min-width: 768px) {
             margin-bottom: 1.25em;
         }
+
     }
 
     .section__subtitle {

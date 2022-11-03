@@ -269,7 +269,6 @@ $(document).ready(function() {
         //отменяем стандартную обработку нажатия по ссылке
         $(".toTop").on("click","a", function (event) {
             event.preventDefault();
-            console.log('toTop');
             //забираем идентификатор блока с атрибута href
             let id  = $(this).attr('href'),
             //узнаем высоту от начала страницы до блока на который ссылается якорь
@@ -438,15 +437,29 @@ $(document).ready(function() {
         }
     }
 
-    onVisible( '.programsInfo__number', function ( e ) {
+    onVisible( '.count_numbers_js', function ( e ) {
         animateNumber( e, e.innerHTML );
     } );
 
-    function animateNumber( elem, final, duration = 1000 ) {
+    onVisible( '.count_numbers_big_js', function ( e ) {
+        animateNumberBig( e, e.innerHTML );
+    } );
+
+    function animateNumber( elem, final, duration = 1500 ) {
         let start = 0;
         // console.log('init');
         setInterval( function () {
-            if ( final > start ) {
+            if ( final >= start ) {
+                elem.innerHTML = start++;
+            }
+        }, duration / final );
+    }
+    function animateNumberBig( elem, final, duration = 1500 ) {
+        // let start = 0;
+        let start = 44500;
+        // console.log('init');
+        setInterval( function () {
+            if ( final >= start ) {
                 elem.innerHTML = start++;
             }
         }, duration / final );
@@ -524,7 +537,23 @@ $(document).ready(function() {
         });
 
     }
-    showMoreAdvantage()
+    showMoreAdvantage();
+
+    // https://github.com/michalsnik/aos
+    AOS.init({
+        disable: 'mobile',
+        // anchorPlacement: 'bottom-bottom',
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        // offset: 20,
+        once: true,
+    });
+
+    AOS.init({
+        disable: function () {
+            var maxWidth = 768;
+            return window.innerWidth < maxWidth;
+        }
+    });
 
 
 

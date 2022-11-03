@@ -1,0 +1,145 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title Портфолио
+    // end breadcrumbs
+
+    // begin projects
+    section#projects.projects.section
+        .container_center
+            .section__caption
+                h1.section__title
+                    span <b>Портфолио</b> заверешенных проектов
+                .section__subtitle
+                    span Вкладываемся душой и делом. За каждым — своя история. Изучите проекты подробнее.
+            ul.cat-list
+                li.cat-item
+                    a(href="#") Все
+                li.cat-item
+                    a(href="#") Ремонты частных домов, квартир
+                li.cat-item.current-cat
+                    a(href="#") Ремонт коммерческих объектов
+                li.cat-item
+                    a(href="#") Дизайн-проекты
+                li.cat-item
+                    a(href="#") Строительство домов
+
+
+        .projects__wrap
+            each item in [ '', '', '', '', '', '', '', '', '', '' ]
+
+                .projects__item
+                    .projects__top.itemForDataFancybox_js
+                        //- begin projects__slider
+                        .swiper.projects__slider.projects-swiper-js
+                            .swiper-wrapper
+                                .swiper-slide.projects__slide
+                                    .projects__beforeAfter.img.shadow.twentytwenty-container
+                                        img(src="../../img/project_1.webp" loading="lazy")
+                                        img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.projects__video.bg.shadow(style="background-image: url('../../img/project_1.webp')")
+                                        .play.pulse.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+
+                        .projects__control
+                            .projects__dotted.dotted_sm
+                            .projects__arrows.custom_arrows.custom_arrows_white
+                                i.icon_arrow_left
+                                i.icon_arrow_right
+                        //- end projects__slider
+
+                    .projects__bottom
+                        //- begin projects__slider_sm
+                        .swiper.projects__slider_sm.projects-swiper-sm-js
+                            .swiper-wrapper
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_ba_m.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.projects__video_sm.bg(style="background-image: url('../../img/project_1.webp')")
+                                        .play
+                                            i.icon_play
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                        //- end projects__slider_sm
+
+                        .projects__content
+                            .projects__content_left
+                                .projects__title
+                                    span Ремонт 2-комнантной квартиры
+                                .projects__client
+                                    span Заказчик: частное лицо
+                                .projects__description
+                                    span Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            .projects__content_right
+                                ul.projects__list
+                                    li
+                                        span Площадь:
+                                        b 100 м<sup>2</sup>
+                                    li
+                                        span Срок ремонта:
+                                        b 3 мес
+                                    li
+                                        span ЖК Тихие зори
+                                        b Красноярск 
+                                .projects__link
+                                    a(href="#") Изучить проект подробнее
+        .container_center.container_center_sm
+
+            .pagination
+                ul.page-numbers
+                    li
+                        span.page-numbers.current 1
+                    li
+                        a.page-numbers(href="#") 2
+                    li
+                        a.page-numbers(href="#") 3
+                    li
+                        span.page-numbers.dots ...
+                    li
+                        a.page-numbers(href="#") 18
+                    li
+                        a.page-numbers(href="#") 19
+                    li
+                        a.page-numbers(href="#") 20
+
+
+
+
+
+
+    // end projects

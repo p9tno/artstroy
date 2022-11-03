@@ -1,0 +1,246 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title Услуги
+    // end breadcrumbs
+
+    // begin task
+    section#task.task.section
+        .container_center
+            .section__caption
+
+                h1.section__title
+                    span <b>Услуги</b> Артстрой
+                .section__subtitle
+                    span Колоссальный опыт в строительстве и человеческий подход к клиентам помогаем решать любые задачи
+
+        .task__grid.counter-wrap
+
+            .task__item.counter-item
+                .task__img.img
+                    img(src="../../img/task_1.jpg")
+                .task__content
+                    .task__top
+                        .task__label
+                            span услуги
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            a(href="#") Ремонт<br> коммерческих<br> объектов
+                        .task__wrap
+                            .task__inner
+                                .task__subtitle
+                                    span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                .task__btn
+                                    a.task__go(href="#")
+                                        i.icon_arrow_deg
+                                    a.btn.btn_sm(href="#")
+                                        span Заявка на консультацию
+            .task__item.counter-item
+                .task__img.img
+                    img(src="../../img/task_2.jpg")
+                .task__content
+                    .task__top
+                        .task__label
+                            span услуги
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            a(href="#") Ремонт<br> квартир,<br> домов
+                        .task__wrap
+                            .task__inner
+                                .task__subtitle
+                                    span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                .task__btn
+                                    a.task__go(href="#")
+                                        i.icon_arrow_deg
+                                    a.btn.btn_sm(href="#")
+                                        span Заявка на консультацию
+            .task__item.counter-item
+                .task__img.img
+                    img(src="../../img/task_3.jpg")
+                .task__content
+                    .task__top
+                        .task__label
+                            span услуги
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            a(href="#") Дизайн<br> интерьера
+                        .task__wrap
+                            .task__inner
+                                .task__subtitle
+                                    span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                .task__btn
+                                    a.task__go(href="#")
+                                        i.icon_arrow_deg
+                                    a.btn.btn_sm(href="#")
+                                        span Заявка на консультацию
+            .task__item.counter-item
+                .task__img.img
+                    img(src="../../img/task_4.jpg")
+                .task__content
+                    .task__top
+                        .task__label
+                            span услуги
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            a(href="#") Строительство и<br> проектирование домов
+                        .task__wrap
+                            .task__inner
+                                .task__subtitle
+                                    span Узнайте стоимость и сроки<br> реализации вашего проекта<br> на консультации
+                                .task__btn
+                                    a.task__go(href="#")
+                                        i.icon_arrow_deg
+                                    a.btn.btn_sm(href="#")
+                                        span Заявка на консультацию
+
+            .task__item.task__item_info.counter-item
+                .task__content
+                    .task__top
+                        .task__head
+                            span Не знаете, что именно вам нужно?
+                        .task__number
+                            span.counter-el
+                    .task__bottom
+                        .task__title
+                            span Давайте обсудим<br> задачу и расскажем,<br> как мы можем вам<br> помочь
+                        .task__messenger
+                            .messenger
+                                .messenger__label
+                                    span Спрашивайте, отвечаем онлайн
+                                .messenger__list
+                                    .messenger__item
+                                        a.messenger__link(href="https://wa.me/+73912054081" target="_blank")
+                                            i.icon_whatsapp
+                                    .messenger__item
+                                        a.messenger__link(href="https://wapp.click/73912054081" target="_blank")
+                                            i.icon_telegram
+                                    .messenger__item
+                                        a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                            i.icon_viber
+                        .task__mail.task__link
+                            a(href="mailto:informremont@mail.ru") informremont@mail.ru
+                        .task__phone.task__link
+                            small или позвоните
+                            a(href="tel:+7 (391) 2-054-081 ") +7 (391) 2-054-081
+
+
+    // end task
+
+
+    // begin presentation
+    section#presentation.presentation.section.bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+        .container_center
+            h2.section__title(data-aos="fade-up")
+                span <b>В презентации Артстрой есть все,</b> что поможет вам определиться и понять наш подход к делу
+            .presentation__form
+                .presentation__caption
+                    .presentation__title
+                        span Скачайте презентацию в 1 клик
+                    .presentation__subtitle
+                        span просто введите ваш номер телефона
+                .form__wrap
+                    form.form.form_grid
+
+                        .form__row.form__row_31
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_31.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_31.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row.form__row_38
+                            .form__label.form__label_opacity.desktop
+                                span Нажмите
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Скачать презентацию в 1 клик
+
+
+
+                        .form__row.form__row_full.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+
+
+    // end presentation
+
+    // begin content
+    section#content.content.content_page.section
+        .container_center
+            h2.content__title
+                span Текст, который важен для SEO
+            .content__preview
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo lla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            .content__collapse
+                .collapse__body(data-collapse-body="")
+                    .content__content
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        h1 заголовок h1
+                        h2 заголовок h2
+                        h3 заголовок h3
+                        h4 заголовок h4
+                        h5 заголовок h5
+                        h6 заголовок h6
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        h3 заголовок третьего уровня
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        h1 список ul
+
+                        ul
+                            each item in ['защищенность от размокания;', 'использование водостойких материалов и покрытий;', 'широкий диапазон рабочих температур;', 'обработка составами, предотвращающими появление плесени или грибков;']
+                                li=item
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .collapse__title(data-collapse="")
+                    span Расскрыть полностью
+
+    // end content
