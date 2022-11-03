@@ -5,6 +5,7 @@
 @import "../fonts/icon/style.css";
 @import 'core/reset';
 @import 'core/template';
+@import 'core/preloader';
 
 @import 'core/header';
 @import 'core/navbar';
@@ -31,6 +32,11 @@
 @import 'core/parts';
 
 @import 'core/form';
+@import 'core/lowerpanel';
+@import 'core/clip';
+@import 'core/toTop';
+
+// ----------------------------------------
 
 @import 'core/breadcrumb';
 

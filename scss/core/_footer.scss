@@ -385,6 +385,40 @@
 		}
 	}
 
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin-bottom: 0.5em;
+			line-height: 0.75;
+
+			@media (min-width: 768px) {
+				line-height: 1.15;
+
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			span {
+				font-size: 0.625em;
+				text-decoration: none;
+				color: #6D6D6D;
+			}
+
+			@media (min-width: 768px) {
+				span {
+					font-size: 0.875em;
+
+				}
+
+			}
+		}
+	}
+
 }
 
 @keyframes snake {

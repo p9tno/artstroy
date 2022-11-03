@@ -1,0 +1,74 @@
+.clip {
+    position: fixed;
+    bottom: 2em;
+    left: 1em;
+
+    @media (min-width: 768px) {
+        bottom: 5em;
+        left: 2em;
+
+    }
+
+    z-index: 10;
+    transition: left 0.3s;
+
+    &.hide {
+        left: -8.25em;
+
+        @media (min-width: 768px) {
+            left: -16.375em;
+        }
+    }
+
+    &__bg {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 14.375em;
+        height: 21.875em;
+        border-radius: 0.125em;
+        padding: 0.875em 0.9375em 0.875em 1.625em;
+        font-size: 0.57144em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(#030303, 0.5);
+
+        }
+
+    }
+
+    &__toggle {
+        cursor: pointer;
+        z-index: 1;
+        margin-left: auto;
+
+        i {
+            color: $color_white;
+            font-size: 0.625em;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            i {
+                color: $color_danger;
+            }
+        }
+
+    }
+
+    .play {
+        font-size: 0.64em;
+    }
+}

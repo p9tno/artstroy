@@ -19,13 +19,24 @@ $(document).ready(function() {
 
 
 
-    let quizScroll;
-    if ($(window).width() < 600) {
-        quizScroll = $("#quiz").offset().top - 120
+    // let quizScroll;
+    // if ($(window).width() < 600) {
+    //     quizScroll = $("#quiz").offset().top - 120
+    //
+    // } else {
+    //     quizScroll = $("#quiz").offset().top - 70
+    // }
+    //
+    let quizBox = $('#quiz');
+    if (quizBox.length) {
+        if ($(window).width() < 600) {
+            quizScroll = quizBox.offset().top - 120
 
-    } else {
-        quizScroll = $("#quiz").offset().top - 70
+        } else {
+            quizScroll = quizBox.offset().top - 70
+        }
     }
+
 
     let questionNumber = 1;
     let inputNumber;

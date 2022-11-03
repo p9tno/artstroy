@@ -61,18 +61,18 @@ footer.footer
                 .footer__label
                     span Преимущества
 
-                ul.menu
+                ul.footer__list
                     each item in [ 'Гарантия 5 лет по договору', '4 уровня контроля качества', 'Фиксированная смета', 'Гарантия соблюдения сроков', 'Прямые поставки материалов', 'Работа в «белую»', '8 лет на рынке', 'Учавствуем в торгах по 223 и 44 ФЗ' ]
-                        li.menu-item
-                            a(href="#")=item
+                        li
+                            span=item
             .footer__col
                 .footer__label.footer__label_opasity.desktop
                     span Преимущества
 
-                ul.menu
+                ul.footer__list
                     each item in [ 'Работаем по СНиП и СП', '25 узких специалистов в штате', 'Имеем допуск СРО, МЧС к высотным и огневым работам' ]
-                        li.menu-item
-                            a(href="#")=item
+                        li
+                            span=item
             .footer__col
                 .footer__label
                     span Контакты

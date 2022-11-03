@@ -1,5 +1,22 @@
 $(document).ready(function() {
 
+    function preloader() {
+        $(()=>{
+
+            setTimeout( () => {
+                let p = $('#preloader');
+                p.addClass('hide');
+
+                setTimeout( () => {
+                    p.remove()
+                },1000);
+
+            },1000);
+        });
+    }
+    preloader();
+    // setTimeout( ()=> preloader(),15000 )
+
 
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
@@ -204,6 +221,77 @@ $(document).ready(function() {
     //     });
     // };
     // doDrop();
+    function hideClip() {
+
+        if (localStorage.getItem('hideClip') !== 'hide') {
+
+            $('.clip').addClass('hide');
+
+            $('.lowerpanel').addClass('lowerpanel_bottom');
+
+            setTimeout(function(){
+                $('.lowerpanel').removeClass('lowerpanel_bottom');
+
+                setTimeout(function(){
+                    $('.clip').removeClass('hide');
+                }, 300);
+                // $('.clip').removeClass('hide');
+
+
+                localStorage.setItem("hideClip", "hide");
+                // console.log('removeClass hide');
+            }, 10000);
+        }
+
+        $('.clip-toggle-js').click(function(event) {
+            $('.clip').addClass('hide');
+            // $('.lowerpanel').addClass('lowerpanel_bottom');
+
+            setTimeout(function(){
+                $('.lowerpanel').addClass('lowerpanel_bottom');
+            }, 300);
+
+            if (localStorage.getItem('hideClip') == 'hide') {
+                localStorage.removeItem("hideClip", "hide");
+
+            } else {
+                localStorage.setItem("hideClip", "hide");
+                console.log('сохранить пару ключ/значение.');
+            }
+
+        });
+
+    }
+    hideClip();
+
+    // scrollTop
+    $(document).ready(function(){
+        //отменяем стандартную обработку нажатия по ссылке
+        $(".toTop").on("click","a", function (event) {
+            event.preventDefault();
+            console.log('toTop');
+            //забираем идентификатор блока с атрибута href
+            let id  = $(this).attr('href'),
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+            //анимируем переход на расстояние - top за 1500 мс
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    });
+
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            if($(window).scrollTop()>500){
+                $('.toTop').fadeIn(900)
+            }else{
+                $('.toTop').fadeOut(700)
+            }
+        });
+    });
+
+    // end scrollTop
+
+
 
 
 

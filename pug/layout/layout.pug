@@ -17,7 +17,20 @@ html(lang="en")
         link(rel="stylesheet", type="text/css", href=path +"css/jquery-ui.css")
         link(rel="stylesheet", type="text/css", href=path + "css/style.css")
     body
-        .wrapper
+
+        .preloader__wrap#preloader
+            .preloader
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+        .wrapper#wrapper
 
             if page
                 include header_bg.pug
@@ -26,6 +39,58 @@ html(lang="en")
 
             main.main_content
                 block content
+
+            //- begin lowerpanel
+            .lowerpanel#lowerpanel
+                .lowerpanel__wrap
+                    .lowerpanel__toggle
+                        span
+
+                    .lowerpanel__container
+                        a(href="#").lowerpanel__link
+                            .lowerpanel__btn
+                                i.icon_pdf
+                            .lowerpanel__hint
+                                span Скачать презентацию
+                        a(href="#").lowerpanel__link
+                            .lowerpanel__btn
+                                i.icon_phone
+                            .lowerpanel__hint
+                                span Оставить заявку
+                        a(href="#").lowerpanel__link
+                            .lowerpanel__btn
+                                i.icon_percentage
+                            .lowerpanel__hint
+                                span Акции
+                        a(href="#").lowerpanel__link
+                            .lowerpanel__btn
+                                i.icon_whatsapp
+                            .lowerpanel__hint
+                                span Написать в WhatsApp
+            //- end lowerpanel
+
+            //- begin clip
+
+            .clip
+                .clip__bg.bg(style="background-image: url('"+path +"img/clip_bg.png')")
+                    .clip__toggle.clip-toggle-js
+                        i.icon_plus_deg
+                    .clip__play
+                        .play.pulse.youtubeModal-js#rsDoGqnPE4c
+                            i.icon_play
+
+
+
+            //- end clip
+
+            //- begin toTop
+            .toTop
+                a(href="#wrapper") 
+                    i.icon_to_top
+
+            //- end toTop
+
+
 
             include footer.pug
             include modal.pug
