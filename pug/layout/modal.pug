@@ -171,7 +171,7 @@
                 .modal-title
                     span Не можем отпустить вас с пустыми руками!
                     small Возможно, вам сейчас не требуются наши услуги, но давайте будем на связи
-                .modal-title
+                .modal-title.modal-title_regular
                     span Скачайте в 1 клик<br> презентацию с отличными<br> идеями для вдохновения
             .modal-body
                 .modal-form
@@ -207,3 +207,46 @@
                                     span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
 
 // End modal download
+
+// Begin Modal download2
+.modal.fade.download.download_2#download2
+    .modal-dialog
+        .modal-content.bg
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-header
+                .modal-title.modal-title_large
+                    span Скачайте<br> презентацию<br> АРТСТРОЙ
+            .modal-body
+                .modal-form
+                    form.form.form_sm
+                        .form__row
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Скачать презентацию
+
+                        .form__row.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+// End modal download2

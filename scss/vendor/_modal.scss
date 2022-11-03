@@ -73,9 +73,7 @@
         width: 18em;
         @media (min-width: 768px) {
             width: 31.25em;
-            /* 500/16 */
         }
-        // background-image: url("../../img/advantage_bg_m.webp");
     }
 
     &-content {
@@ -132,9 +130,7 @@
             display: block;
             font-weight: 500;
             font-size: 1.5em;
-            // margin-bottom: 0.25em;
             @media (min-width: 768px) {
-                // margin-bottom: 0.125em;
                 font-size: 2.25em;
 
             }
@@ -148,6 +144,25 @@
             @media (min-width: 768px) {
                 margin-top: 0.125em;
                 font-size: 1.25em;
+
+            }
+        }
+
+        &_regular {
+            span {
+                font-weight: 300;
+            }
+        }
+
+        &_large {
+            line-height: 1.5;
+            @media (min-width: 768px) {}
+
+            span {
+                @media (min-width: 768px) {
+                    font-size: 3em;
+
+                }
 
             }
         }
@@ -240,14 +255,11 @@
 
 .privacy {
     .modal-dialog {
-        // max-width: 18em;
-        // width: 100%;
 
         margin-top: 2em;
         padding-bottom: 2em;
         @media (min-width: 768px) {
             width: 100em;
-            // max-width: 100em;
         }
     }
 
@@ -304,7 +316,6 @@
     }
 
     .modal-list {
-        // text-align:
 
         @media (min-width: 768px) {
             display: grid;
@@ -382,10 +393,63 @@
         }
     }
 
+    .modal-header {
+        margin-bottom: 1em;
+    }
+
+    .modal-title {
+        small {
+            @media (min-width: 768px) {
+                margin-top: 0.75em;
+            }
+        }
+    }
+
+    .modal-title_regular {
+        margin-top: 1em;
+
+    }
+
     .modal-form {
         @media (min-width: 768px) {
             width: 22.25em;
         }
+    }
+
+    .form__row {
+        @media (min-width: 768px) {
+            margin-bottom: 0.875em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .btn {
+        @media (min-width: 768px) {
+            padding: 1em 4.625em 1em 2.625em;
+            align-items: flex-start;
+
+            &:after {
+                right: 2em;
+                font-size: 0.75em;
+            }
+        }
+    }
+
+    &_2 {
+        .modal-content {
+            background-image: url("../../img/modal_bg_2.webp");
+        }
+
+        .modal-header {
+            margin-bottom: 1em;
+            @media (min-width: 768px) {
+                margin-bottom: 3.5em;
+            }
+        }
+
     }
 
 }

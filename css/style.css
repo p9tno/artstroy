@@ -6696,7 +6696,6 @@ input[type=number] {
 @media (min-width: 768px) {
   .modal-dialog {
     width: 31.25em;
-    /* 500/16 */
   }
 }
 .modal-content {
@@ -6763,6 +6762,17 @@ input[type=number] {
   .modal-title small {
     margin-top: 0.125em;
     font-size: 1.25em;
+  }
+}
+.modal-title_regular span {
+  font-weight: 300;
+}
+.modal-title_large {
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .modal-title_large span {
+    font-size: 3em;
   }
 }
 .modal-body {
@@ -6952,9 +6962,49 @@ input[type=number] {
     padding: 2.8125em 5.375em 3.75em;
   }
 }
+.download .modal-header {
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  .download .modal-title small {
+    margin-top: 0.75em;
+  }
+}
+.download .modal-title_regular {
+  margin-top: 1em;
+}
 @media (min-width: 768px) {
   .download .modal-form {
     width: 22.25em;
+  }
+}
+@media (min-width: 768px) {
+  .download .form__row {
+    margin-bottom: 0.875em;
+  }
+  .download .form__row:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .download .btn {
+    padding: 1em 4.625em 1em 2.625em;
+    align-items: flex-start;
+  }
+  .download .btn:after {
+    right: 2em;
+    font-size: 0.75em;
+  }
+}
+.download_2 .modal-content {
+  background-image: url("../../img/modal_bg_2.webp");
+}
+.download_2 .modal-header {
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  .download_2 .modal-header {
+    margin-bottom: 3.5em;
   }
 }
 
