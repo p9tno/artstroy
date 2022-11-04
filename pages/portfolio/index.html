@@ -48,7 +48,7 @@
               </div>
             </div>
             <div class="header__calc desktop">
-              <div class="calc"><a class="calc__link" href="">калькулятор стоимости</a></div>
+              <div class="calc"><a class="calc__link show_js" href="#calculate">калькулятор стоимости</a></div>
             </div>
             <div class="header__messenger desktop">
               <div class="messenger">
@@ -65,7 +65,7 @@
                 <div class="phone__label"><span>Пн-Сб  9:00-19:00</span></div>
                 <div class="phone__link"><a href="tel:+7 (391) 2-054-081 ">+7 (391) 2-054-081</a></div>
               </div>
-              <div class="callback"><a class="callback__link" href="#">Обратный звонок</a></div>
+              <div class="callback"><a class="callback__link show_js" href="#application">Обратный звонок</a></div>
             </div>
           </div>
           <!-- end .header__top-->
@@ -103,11 +103,13 @@
               </div>
             </div>
             <div class="header__calc mobile">
-              <div class="calc"><a class="calc__link" href="">калькулятор стоимости</a></div>
+              <div class="calc"><a class="calc__link show_js" href="#calculate">калькулятор стоимости</a></div>
             </div>
           </div>
           <!-- end .header__bottom-->
-          <div class="header__toggle"></div>
+          <div class="header__toggle">
+            <div class="toggle"></div>
+          </div>
         </div>
       </header>
       <main class="main_content">
@@ -820,6 +822,58 @@
           </div>
         </section>
         <!-- end projects-->
+        <!-- begin report-->
+        <section class="report section" id="report">
+          <div class="report__wrap">
+            <div class="report__notepad">
+              <div class="notepad">
+                <div class="section__subtitle"><span>Рассчитайте примерную стоимость в нашем онлайн калькуляторе</span></div>
+                <div class="notepad__link"><a class="show_js" href="#calculate">Перейти в калькулятор</a></div>
+                <div class="notepad__bg bg"></div>
+              </div>
+            </div>
+            <div class="report__content">
+              <div class="report__caption">
+                <h2 class="report__title" data-aos="fade-up"><span>Скачайте пример реальной сметы на ремонт с полными графиками работ</span></h2>
+                <div class="report__subtitle"><span>и поймите наш подход наглядно</span></div>
+              </div>
+              <div class="report__form">
+                <form class="form form_sm">
+                  <div class="form__row">
+                    <div class="form__label"><span>Куда прислать?</span></div>
+                    <select class="select" data-placeholder="Whatsapp">
+                      <option value=""></option>
+                      <option value="whatsapp">Whatsapp</option>
+                      <option value="Viber">Viber</option>
+                      <option value="Telegram">Telegram</option>
+                      <option value="mail">Email</option>
+                    </select>
+                  </div>
+                  <div class="form__row form__row_hide form__row_email_js">
+                    <div class="form__label"><span>Введите email</span></div>
+                    <input type="email" placeholder="E-mail"/>
+                  </div>
+                  <div class="form__row form__row_phone_js">
+                    <div class="form__label"><span>Введите номер телефона</span></div>
+                    <input class="tel" type="tel" required="required" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit"><span>Скачать смету</span></button>
+                  </div>
+                  <div class="form__row form__row_mb0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span class="snakeline">Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="report__bg bg" data-aos="fade-left" data-aos-delay="500"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end report-->
       </main>
       <div class="lowerpanel" id="lowerpanel">
         <div class="lowerpanel__wrap">
@@ -860,7 +914,7 @@
                   </div>
                 </div>
               </div>
-              <div class="footer__link"><a href="#">Калькулятор стоимости</a></div>
+              <div class="footer__link"><a class="show_js" href="#calculate">Калькулятор стоимости</a></div>
             </div>
             <div class="footer__col mobile">
               <div class="footer__col_wrap">
@@ -938,7 +992,7 @@
                   <div class="phone__label"><span>Пн-Сб  9:00-19:00</span></div>
                   <div class="phone__link"><a href="tel:+7 (391) 2-054-081 ">+7 (391) 2-054-081</a></div>
                 </div>
-                <div class="footer__link"><a href="#">Заказать обратный звонок</a></div>
+                <div class="footer__link"><a class="show_js" href="#application">Заказать обратный звонок</a></div>
               </div>
               <div class="messenger messenger_medium">
                 <div class="messenger__label"><span>Спрашивайте, отвечаем онлайн</span></div>
@@ -1165,7 +1219,7 @@
       <!-- Begin Modal download-->
       <div class="modal fade download" id="download">
         <div class="modal-dialog">
-          <div class="modal-content bg"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-content bg"><a class="modal-close" href="#" data-dismiss="modal" id="closeModalDownload"></a>
             <div class="modal-header">
               <div class="modal-title"><span>Не можем отпустить вас с пустыми руками!</span><small>Возможно, вам сейчас не требуются наши услуги, но давайте будем на связи</small></div>
               <div class="modal-title modal-title_regular"><span>Скачайте в 1 клик<br> презентацию с отличными<br> идеями для вдохновения</span></div>

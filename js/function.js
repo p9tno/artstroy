@@ -1,3 +1,22 @@
+// window.onload = function () {
+//     console.log('ok!');
+//     function preloader() {
+//         $(()=>{
+//
+//             setTimeout( () => {
+//                 let p = $('#preloader');
+//                 p.addClass('hide');
+//
+//                 setTimeout( () => {
+//                     p.remove()
+//                 },1000);
+//
+//             },1000);
+//         });
+//     }
+//     preloader();
+// }
+
 $(document).ready(function() {
 
     function preloader() {
@@ -48,6 +67,22 @@ $(document).ready(function() {
             openedModal.modal('hide');
         }
     });
+
+    function showDownloadModal() {
+        if (localStorage.getItem('showDownloadModal') == 'disable') {
+        } else {
+            setTimeout(function () {
+                $('#download').modal('show');
+            }, 30000);
+
+            $('#closeModalDownload').on('click', function() {
+                localStorage.setItem('showDownloadModal', 'disable');
+            })
+        }
+        // console.log(localStorage.getItem('showDownloadModal'));
+        // localStorage.clear();
+    };
+    showDownloadModal();
     // end modal
 
     // function activeNav() {
@@ -240,7 +275,7 @@ $(document).ready(function() {
 
                 localStorage.setItem("hideClip", "hide");
                 // console.log('removeClass hide');
-            }, 10000);
+            }, 30000);
         }
 
         $('.clip-toggle-js').click(function(event) {

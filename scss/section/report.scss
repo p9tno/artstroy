@@ -1,0 +1,201 @@
+.report {
+    padding-bottom: 0;
+    overflow: hidden;
+    @media (min-width: 768px) {}
+
+    &__wrap {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__notepad {}
+
+    &__content {
+        position: relative;
+        background-color: #F1F5F5;
+        padding: 2.5em 2em 12em;
+
+        @media (min-width: 768px) {
+            padding: 3.5em 4.375em 3em;
+            flex-grow: 1;
+            display: flex;
+        }
+    }
+
+    &__caption {
+        color: $second_color;
+        margin-bottom: 1.125em;
+        @media (min-width: 768px) {
+            width: 26.875em;
+            margin-right: 4.375em;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1em;
+        margin-bottom: 1em;
+        line-height: 1.15;
+        @media (min-width: 768px) {
+            margin-bottom: 2.375em;
+
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 1.125em;
+
+            @media (min-width: 768px) {
+                font-size: 3em;
+
+            }
+        }
+    }
+
+    &__subtitle {
+        line-height: 1.125;
+
+        span {
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+
+            }
+        }
+    }
+
+    &__form {
+        position: relative;
+        z-index: 1;
+        @media (min-width: 768px) {
+            width: 22.25em;
+
+            .form__row {
+                margin-bottom: 0.875em;
+            }
+
+        }
+
+        .btn {
+            align-items: center;
+
+            &:after {
+                right: 12em;
+                @media (min-width: 768px) {
+                    right: 5em;
+
+                }
+
+            }
+
+            span {
+                @media (min-width: 768px) {
+                    text-transform: none;
+                }
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: -12em;
+        right: 0;
+        width: 32.375em;
+        height: 30em;
+        background-image: url("../../img/report_bg.webp");
+        font-size: 0.66em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            bottom: 0;
+
+        }
+    }
+
+}
+
+.notepad {
+    color: $color_white;
+    background-image: url("../../img/notepad_bg.svg");
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5em 2em 0;
+    @media (min-width: 768px) {
+        padding: 2.625em 3em 0;
+        width: 30em;
+    }
+
+    .section__subtitle {
+        span {
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            line-height: 1.15;
+            width: 20em;
+        }
+    }
+
+    &__title {
+        span {
+            color: $color_white;
+        }
+    }
+
+    &__link {
+        text-align: center;
+        margin: 1em 0;
+        @media (min-width: 768px) {
+            text-align: left;
+            margin: 1.75em 0;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: $color_warning;
+            font-size: 0.75em;
+            font-weight: 500;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+
+            &:after {
+                display: inline-block;
+                content: '\e900';
+                font-family: 'icomoon';
+                font-size: 0.5em;
+                margin-left: 0.75em;
+            }
+
+            @media (min-width: 768px) {
+                transform: translateX(0);
+
+                &:hover {
+                    &:after {
+                        -webkit-animation: snake 0.4s linear alternate infinite;
+                        animation: snake 0.4s linear alternate infinite;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__bg {
+
+        margin-left: auto;
+        margin-right: auto;
+
+        background-image: url("../../img/notepad_bg.webp");
+        width: 23.5em;
+        height: 14.25em;
+        font-size: 0.625em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+    }
+
+}
