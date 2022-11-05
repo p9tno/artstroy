@@ -13,6 +13,11 @@
         margin-top: -15.3125em;
     }
 
+    &_nomt {
+        margin-top: 0;
+        padding-top: 1em;
+    }
+
     &__content {
 
         @media (min-width: 768px) {

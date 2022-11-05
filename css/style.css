@@ -1338,6 +1338,10 @@ body {
     margin-top: -15.3125em;
   }
 }
+.founder_nomt {
+  margin-top: 0;
+  padding-top: 1em;
+}
 @media (min-width: 768px) {
   .founder__content {
     display: flex;
@@ -5206,8 +5210,6 @@ body {
   background-image: url("../../img/approach_bg.webp");
   padding-top: 14em;
   padding-bottom: 0;
-  position: relative;
-  z-index: 1;
 }
 .approach .section__title {
   margin-bottom: 0.75em;
@@ -7065,7 +7067,7 @@ input[type=number] {
 .toTop {
   display: none;
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   bottom: 2em;
   right: 1em;
 }
