@@ -52,4 +52,24 @@
 		}
 
 	}
+
+	&_reverse {
+		position: absolute;
+		top: 0.5em;
+		left: 0;
+		width: 100%;
+		z-index: 3;
+		@media (min-width: 768px) {
+			top: 0;
+
+		}
+
+		.kama_breadcrumbs {
+			.kb_title {
+				color: $color_white;
+			}
+		}
+
+	}
+
 }

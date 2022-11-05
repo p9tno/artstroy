@@ -408,7 +408,10 @@ $(document).ready(function() {
 
     function stikyMenu() {
 
+        // let HeaderTop = $( '.header__bottom' ).offset().top;
+
         let HeaderTop = $( '.header__bottom' ).offset().top;
+        // console.log(HeaderTop);
         // let HeaderTop = $( 'header' ).offset().top + $( '.section' ).innerHeight();
         let currentTop = $( window ).scrollTop();
 

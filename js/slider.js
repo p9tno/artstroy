@@ -82,6 +82,33 @@ $(document).ready(function() {
 
     });
 
+    const teamSlider = new Swiper('.team-swiper-js', {
+        slidesPerView: 2,
+        speed: 500,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: '.teamSlider__dotted',
+            clickable: true,
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+            },
+        }
+
+        // spaceBetween: 10,
+
+    });
+
     const logos = new Swiper('.logos-swiper-js', {
         slidesPerView: 3,
         speed: 500,
