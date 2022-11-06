@@ -53,6 +53,15 @@ body {
 		}
 		max-width: $container_width_sm;
 	}
+
+	&_right {
+		@media (min-width: 768px) {
+			padding-left: 5.375em;
+			/* 86/16 */
+			padding-right: 1em;
+
+		}
+	}
 }
 
 .section {

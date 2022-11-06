@@ -1,0 +1,66 @@
+.videoWork {
+
+    @media (max-width: 767px) {
+        padding-bottom: 2.25em;
+    }
+    @media (min-width: 768px) {
+        overflow: hidden;
+    }
+
+    &__content {
+        position: relative;
+        @media (min-width: 768px) {
+            position: initial;
+            display: flex;
+        }
+    }
+
+    &__left {
+        @media (min-width: 768px) {
+            flex: none;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            width: 26.25em;
+            margin-right: 9.625em;
+
+        }
+    }
+
+    &__right {
+        @media (min-width: 768px) {
+            width: 91.5em;
+        }
+    }
+
+    &__control {
+        position: absolute;
+        bottom: -1.5em;
+        left: 0;
+        @media (min-width: 768px) {
+            position: initial;
+            left: auto;
+            bottom: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+}
+
+.videoWorkSlider {
+    &__wrapper {}
+
+    &__slide {}
+
+    .reviews__video {
+        height: 10.875em;
+        @media (min-width: 768px) {
+            height: 25em;
+        }
+    }
+
+}

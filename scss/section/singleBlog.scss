@@ -1,0 +1,155 @@
+.singleBlog {
+    &__wrap {
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__content {
+        border: 1px solid #000;
+        @media (min-width: 768px) {
+            flex-grow: 1;
+        }
+    }
+
+    &__sidebar {
+        // border: 1px solid #000;
+        @media (min-width: 768px) {
+            flex: none;
+            position: sticky;
+            top: 7em;
+            height: 100%;
+            width: 31.25em;
+            margin-left: 4.625em;
+
+        }
+    }
+
+    &__hashtag {
+        margin-bottom: 1.875em;
+    }
+
+    &__time {
+        margin-top: 0.5em;
+
+        span {
+            font-size: 0.75em;
+            color: #B8B8B8;
+        }
+    }
+
+    &__row {
+        margin: 3.25em 0;
+        /* 52/16 */
+    }
+
+    &__text {}
+
+    &__img {}
+
+    &__caption {}
+
+    &__quote {}
+
+    .hashtag {
+        display: flex;
+
+        &__item {
+            background-color: #F1F5F5;
+            /* 8/16 */
+            /* 12/16 */
+            margin-right: 0.625em;
+            // line-height: 1;
+            /* 10/16 */
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            span {
+                padding: 0.765em 1.3em;
+                display: inline-block;
+
+                font-weight: 400;
+                font-size: 0.6875em;
+                color: rgba($main_color, 0.3);
+            }
+        }
+
+    }
+
+    .sidebar {
+        &__item {
+            color: $color_white;
+            padding: 2.875em 3.375em 13.25em;
+            margin-bottom: 1.625em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .form__row {
+                @media (min-width: 768px) {
+                    margin-bottom: 0.875em;
+                }
+            }
+
+            .btn {
+                width: 100%;
+
+                padding: 1em 6.625em 1em 2.625em;
+                min-height: 4.445em;
+
+                font-size: 0.7031em;
+                @media (min-width: 768px) {
+                    font-size: 1.125em;
+                    align-items: center;
+
+                }
+
+                &:after {
+                    right: 4.5em;
+                }
+
+                span {
+                    text-transform: none;
+                }
+
+            }
+        }
+
+        &__item_download {
+            background-image: url("../../img/sidebar_download.jpg");
+        }
+
+        &__item_calc {
+            background-image: url("../../img/sidebar_calc.jpg");
+            padding-bottom: 18.231em;
+        }
+
+        &__title {
+            line-height: 1.315;
+            margin-bottom: 1.125em;
+
+            span {
+                font-weight: 300;
+                font-size: 1.25em;
+                @media (min-width: 768px) {
+                    font-size: 2.25em;
+
+                }
+            }
+
+            b {
+                font-weight: 500;
+
+            }
+        }
+
+        &__form {}
+
+        &__button {}
+
+    }
+}

@@ -109,6 +109,35 @@ $(document).ready(function() {
 
     });
 
+    const videoWork = new Swiper('.videoWork-swiper-js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: '.videoWork__dotted',
+            clickable: true,
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 56,
+            },
+        }
+
+        // spaceBetween: 10,
+
+    });
+
     const logos = new Swiper('.logos-swiper-js', {
         slidesPerView: 3,
         speed: 500,

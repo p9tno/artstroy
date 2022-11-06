@@ -722,30 +722,30 @@ block content
                         .swiper__img
                             img(src="../../img/hand.svg")
                         span Листайте влево/вправо
-                    .blog
-                        .swiper.blog__slider.blog-swiper-js
-                            .swiper-wrapper.blog__wrapper
-                                each item in [ {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}, {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}, {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}]
-                                    .blog__slide.swiper-slide
-                                        .blog__item
+                    .swiper.blog__slider.blog-swiper-js
+                        .swiper-wrapper.blog__wrapper
+                            each item in [ {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}, {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}, {date: '29 апреля 2022', title: 'С чего начать ремонт?', desc: 'Все, что нужно знать о начале ремонта и выборе подрядчика'}]
+                                .blog__slide.swiper-slide
+                                    .blog__item
+                                        .blog__img_wrap
                                             .blog__img.img
                                                 img(src="../../img/blog_1.jpg" loading="lazy")
-                                            .blog__date
-                                                span=item.date
-                                            .blog__title
-                                                a(href="#")=item.title
-                                            .blog__description
-                                                span=item.desc
+                                        .blog__date
+                                            span=item.date
+                                        .blog__title
+                                            a(href="#")=item.title
+                                        .blog__description
+                                            span=item.desc
 
-                            .news__control
-                                .news__link
-                                    a(href="#") Перейти в блог
+                        .news__control
+                            .news__link
+                                a(href="#") Перейти в блог
 
-                                .blog__dotted.dotted_sm.mobile
+                            .blog__dotted.dotted_sm.mobile
 
-                                .blog__arrows.custom_arrows.desktop
-                                    i.icon_arrow_left
-                                    i.icon_arrow_right
+                            .blog__arrows.custom_arrows.desktop
+                                i.icon_arrow_left
+                                i.icon_arrow_right
 
 
 

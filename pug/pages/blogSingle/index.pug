@@ -1,0 +1,161 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+                span
+                    a(href="#")
+                        span Блог
+                span.kb_sep
+
+                span.kb_title С чего начать ремонт
+    // end breadcrumbs
+
+    // begin singleBlog
+    section#singleBlog.singleBlog.section
+        .container_center.container_center_right
+            .singleBlog__wrap
+                // begin content
+                .singleBlog__content
+                    .singleBlog__hashtag
+                        .hashtag
+                            .hashtag__item
+                                span #Ремонт ком. объектов
+                            .hashtag__item
+                                span #Дизайн-проекты
+                    h1.section__title
+                        span <b>С чего начать ремонт?</b>
+                    .singleBlog__time
+                        span Читать примерно 2 минуты
+
+                    // begin row
+                    .singleBlog__row
+                        .singleBlog__text
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    // end row
+                    // begin row
+                    .singleBlog__row
+                        .singleBlog__img.img
+                            img(src="../../img/blog_full.jpg" loading="lazy")
+                        .singleBlog__caption
+                            span Подпись к иллюстрации
+
+                    // end row
+
+                    // begin row
+                    .singleBlog__row
+                        .singleBlog__text
+                            h2 Заголовок
+                            ul
+                                li Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
+                                li Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. 
+                    // end row
+
+                    // begin row
+                    .singleBlog__row
+                        .singleBlog__text
+                            h2 Картинка справа, текст слева
+                            p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
+                            p Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                            p Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                        .singleBlog__img.img
+                            img(src="../../img/blog.jpg" loading="lazy")
+
+                    // end row
+
+                    // begin row
+                    .singleBlog__row
+                        .singleBlog__text
+                            h2 И наоборот, если информации будет еще больше
+                            p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                            p Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+
+                        .singleBlog__img.img
+                            img(src="../../img/blog.jpg" loading="lazy")
+                    // end row
+
+                    // begin row
+                    .singleBlog__row
+                        .singleBlog__text
+                            h2 Заголовок 
+                            p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                            p Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu 
+                    // end row
+                    // begin row
+                    .singleBlog__row
+                        .singleBlog__quote
+                            span Если нужно выделить главный смысл или цитату из статьи 
+                    // end row
+
+
+                // end content
+
+                // begin sidebar
+                .singleBlog__sidebar
+                    .sidebar
+                        // begin sidebar__item
+                        .sidebar__item.bg.sidebar__item_download
+                            .sidebar__title
+                                span <b>Скачайте презентацию</b> с портфолио и ценами всего в 1 клик
+                            .sidebar__form
+                                form.form.form_sm
+
+                                    .form__row
+                                        .form__label
+                                            span Куда прислать?
+                                        select.select(data-placeholder="Whatsapp")
+                                            option(value="")
+                                            option(value="whatsapp") Whatsapp
+                                            option(value="Viber") Viber
+                                            option(value="Telegram") Telegram
+                                            option(value="mail") Email
+
+                                    .form__row.form__row_hide.form__row_email_js
+                                        .form__label
+                                            span Введите email
+                                        input(type="email" placeholder="E-mail")
+
+                                    .form__row.form__row_phone_js
+                                        .form__label
+                                            span Введите номер телефона
+                                        input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                                    .form__row
+                                        button.btn.btn_didisabled_js(type="submit")
+                                            span Скачать презентацию
+
+                                    .form__row.form__row_full.form__row_mb0
+                                        .form__privacy
+                                            label.form__check
+                                                input.check_checked_js(type="checkbox" checked="checked")
+                                                span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+                        // end sidebar__item
+
+                        // begin sidebar__item
+                        .sidebar__item.bg.sidebar__item_calc
+                            .sidebar__title
+                                span <b>Рассчитайте примерную стоимость</b> в нашем онлайн калькуляторе
+                            .sidebar__button
+                                a.btn(href="#") Перейти в калькулятор
+                        // end sidebar__item
+
+                // end sidebar
+
+
+
+
+
+
+
+    // end singleBlog

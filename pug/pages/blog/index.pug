@@ -1,0 +1,184 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title Блог
+    // end breadcrumbs
+
+    // begin blog
+    section#blog.blog.section
+        .container_center.container_center_right
+            .section__caption
+                h1.section__title
+                    span Полезные <b>статьи</b>
+                .section__subtitle
+                    span о строительстве, проектировании и ремонте
+            ul.cat-list
+                li.cat-item
+                    a(href="#") Все
+                li.cat-item
+                    a(href="#") Ремонт
+                li.cat-item.current-cat
+                    a(href="#") Ремонт ком. объектов
+                li.cat-item
+                    a(href="#") Дизайн-проекты
+                li.cat-item
+                    a(href="#") Проектирование домов
+                li.cat-item
+                    a(href="#") Малоэтажное строительство
+            .blog__grid
+
+                each item in [ 1,2,3,4,5,6,7,8,9 ]
+                    .blog__item
+                        .blog__img_wrap
+                            .blog__img.img
+                                img(src="../../img/blog_1.jpg" loading="lazy")
+                        .blog__date
+                            span 29 апреля 2022
+                        .blog__title
+                            a(href="#") С чего начать ремонт?
+                        .blog__description
+                            span Все, что нужно знать о начале ремонта и выборе подрядчика
+                        .blog__link
+                            a(href="#") Читать подробнее
+
+            .blog__pagination
+                .pagination
+                    ul.page-numbers
+                        li
+                            span.page-numbers.current 1
+                        li
+                            a.page-numbers(href="#") 2
+                        li
+                            a.page-numbers(href="#") 3
+                        li
+                            span.page-numbers.dots ...
+                        li
+                            a.page-numbers(href="#") 18
+                        li
+                            a.page-numbers(href="#") 19
+                        li
+                            a.page-numbers(href="#") 20
+
+    // end blog
+
+    // begin videoWork
+    section#videoWork.videoWork.section
+        .container_center.container_center_right
+            .videoWork__content
+                .videoWork__left
+                    h2.section__title(data-aos="fade-up")
+                        span Рассказываем о работе <b>в видео</b>
+                    .videoWork__control
+                        .videoWork__dotted
+                        .videoWork__arrows.custom_arrows.desktop
+                            i.icon_arrow_left
+                            i.icon_arrow_right
+                .videoWork__right
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+
+                    .swiper.videoWorkSlider.videoWork-swiper-js
+                        .swiper-wrapper.videoWorkSlider__wrapper
+                            each item in [1,1,1,1]
+                                .swiper-slide.videoWorkSlider__slide
+                                    .reviews__video.bg(style="background-image: url('../../img/video_1.jpg')")
+                                        .reviews__content
+                                            .reviews__name
+                                                span Цепляющее название видео
+                                            .reviews__time
+                                                span Длительность: 2:32 мин
+
+                                        .play.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+
+    // end videoWork
+
+    //- // begin blogMore
+    //- section#blogMore.blogMore.section
+    //-     .container_center
+    //-         h2.section__title(data-aos="fade-up")
+    //-             span Вам может быть также интересно
+    //-         .blog__grid
+    //-             each item in [ 1,2,3 ]
+    //-                 .blog__item
+    //-                     .blog__img_wrap
+    //-                         .blog__img.img
+    //-                             img(src="../../img/blog_1.jpg" loading="lazy")
+    //-                     .blog__date
+    //-                         span 29 апреля 2022
+    //-                     .blog__title
+    //-                         a(href="#") С чего начать ремонт?
+    //-                     .blog__description
+    //-                         span Все, что нужно знать о начале ремонта и выборе подрядчика
+    //-                     .blog__link
+    //-                         a(href="#") Читать подробнее
+    //- 
+    //- // end blogMore
+
+
+    // begin report
+    section#report.report.section
+        .report__wrap
+            .report__notepad
+                .notepad
+                    .section__subtitle
+                        span Рассчитайте примерную стоимость в нашем онлайн калькуляторе
+                    .notepad__link
+                        a.show_js(href="#calculate") Перейти в калькулятор
+
+                    .notepad__bg.bg
+            .report__content
+                .report__caption
+                    h2.report__title(data-aos="fade-up")
+                        span Скачайте пример реальной сметы на ремонт с полными графиками работ
+                    .report__subtitle
+                        span и поймите наш подход наглядно
+                .report__form
+                    form.form.form_sm
+                        .form__row
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Скачать смету
+
+                        .form__row.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+                .report__bg.bg(data-aos="fade-left" data-aos-delay="500")
+
+    // end report
