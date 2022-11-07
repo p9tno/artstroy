@@ -169,47 +169,52 @@ $(document).ready(function() {
 
     // let activeSlide = swiper.activeIndex;
 
-    // const projects_sm = new Swiper(".projects-swiper-sm-js", {
-    //     spaceBetween: 6,
-    //     slidesPerView: 2,
-    //     // allowTouchMove: false,
-    //     // clickable: false,
-    //     centeredSlides: true,
-    //     loop: true,
-    //
-    //
-    //     freeMode: true,
-    //     watchSlidesProgress: true,
-    //
-    //     breakpoints: {
-    //         768: {
-    //             spaceBetween: 15,
-    //             centeredSlides: false,
-    //             // allowTouchMove: false,
-    //         },
-    //     }
-    //
-    // });
 
-    // const projects = new Swiper(".projects-swiper-js", {
-    //     // spaceBetween: 10,
-    //     slidesPerView: 1,
-    //     allowTouchMove: false,
-    //     loop: true,
-    //
-    //     navigation: {
-    //         nextEl: '.icon_arrow_right',
-    //         prevEl: '.icon_arrow_left',
-    //     },
-    //
-    //     pagination: {
-    //         el: '.projects__dotted',
-    //     },
-    //
-    //     thumbs: {
-    //         swiper: projects_sm,
-    //     },
-    // });
+    // BEGIN project
+    const project_sm = new Swiper(".project-swiper-sm-js", {
+        spaceBetween: 6,
+        slidesPerView: 2,
+        // allowTouchMove: false,
+        // clickable: false,
+        centeredSlides: true,
+        loop: true,
+
+
+        freeMode: true,
+        watchSlidesProgress: true,
+
+        breakpoints: {
+            768: {
+                slidesPerView: 7,
+                spaceBetween: 12,
+                centeredSlides: false,
+                // allowTouchMove: false,
+            },
+        }
+
+    });
+
+    const project = new Swiper(".project-swiper-js", {
+        // spaceBetween: 10,
+        slidesPerView: 1,
+        allowTouchMove: false,
+        loop: true,
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+
+        pagination: {
+            el: '.project__dotted',
+        },
+
+        thumbs: {
+            swiper: project_sm,
+        },
+    });
+
+    // END project
 
 
     function addSliders() {
@@ -266,6 +271,80 @@ $(document).ready(function() {
 
     }
     addSliders();
+
+
+    // const steps = new Swiper('.steps-swiper-js', {
+    //     slidesPerView: 2,
+    //     spaceBetween: 10,
+    //     speed: 500,
+    //     loop: true,
+    //     // autoplay: {
+    //     //   delay: 5000,
+    //     // },
+    //
+    //     navigation: {
+    //         nextEl: '.icon_arrow_right',
+    //         prevEl: '.icon_arrow_left',
+    //     },
+    //     pagination: {
+    //         el: '.steps__dotted',
+    //         clickable: true,
+    //     },
+    //
+    //     breakpoints: {
+    //         768: {
+    //             slidesPerView: 3,
+    //             spaceBetween: 36,
+    //         },
+    //     }
+    //
+    //     // spaceBetween: 10,
+    //
+    // });
+
+    function addSteps() {
+
+        let steps = $('.steps-swiper-js');
+
+        steps.each(function() {
+            let options = $(this).data('options') || {};
+            let $parent = $(this).parent().parent();
+            let swiperDefaults = {
+
+                slidesPerView: 1,
+                spaceBetween: 10,
+                speed: 500,
+                loop: true,
+
+                pagination: {
+                    el: $parent.find('.steps__dotted')[0],
+                },
+
+                navigation: {
+                    nextEl: $parent.find('.icon_arrow_right')[0],
+                    prevEl: $parent.find('.icon_arrow_left')[0],
+                },
+
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 36,
+                    },
+                }
+
+
+            };
+
+            let swiperOptions = $.extend(swiperDefaults, options),
+            mySwiper = new Swiper(this, swiperOptions);
+
+            // console.log($parent);
+            // console.log($parent.find('.steps__dotted')[0]);
+            // console.log($parent.closest('.projects__item').find('.projects-swiper-sm-js')[0]);
+        });
+
+    }
+    addSteps();
 
     // const youtube = new Swiper('.youtubeBox-swiper-js', {
     //     loop: true,
