@@ -159,7 +159,7 @@
                 </div>
                 <!-- end row-->
                 <!-- begin row-->
-                <div class="singleBlog__row">
+                <div class="singleBlog__row singleBlog__row_flex">
                   <div class="singleBlog__text">
                     <h2>Картинка справа, текст слева</h2>
                     <p>Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>
@@ -170,7 +170,7 @@
                 </div>
                 <!-- end row-->
                 <!-- begin row-->
-                <div class="singleBlog__row">
+                <div class="singleBlog__row singleBlog__row_flex reverse">
                   <div class="singleBlog__text">
                     <h2>И наоборот, если информации будет еще больше</h2>
                     <p>Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</p>
@@ -238,7 +238,7 @@
                   <!-- begin sidebar__item-->
                   <div class="sidebar__item bg sidebar__item_calc">
                     <div class="sidebar__title"><span><b>Рассчитайте примерную стоимость</b> в нашем онлайн калькуляторе</span></div>
-                    <div class="sidebar__button"><a class="btn" href="#">Перейти в калькулятор</a></div>
+                    <div class="sidebar__button"><a class="btn show_js" href="#calculate">Перейти в калькулятор</a></div>
                   </div>
                   <!-- end sidebar__item-->
                 </div>
@@ -248,6 +248,102 @@
           </div>
         </section>
         <!-- end singleBlog-->
+        <!-- begin blogMore-->
+        <section class="blogMore section" id="blogMore">
+          <div class="container_center container_center_right">
+            <h2 class="section__title" data-aos="fade-up"><span>Вам может быть также интересно</span></h2>
+            <div class="blog__grid">
+              <div class="blog__item">
+                <div class="blog__img_wrap">
+                  <div class="blog__img img"><img src="../../img/blog_1.jpg" loading="lazy"/></div>
+                </div>
+                <div class="blog__date"><span>29 апреля 2022</span></div>
+                <div class="blog__title"><a href="#">С чего начать ремонт?</a></div>
+                <div class="blog__description"><span>Все, что нужно знать о начале ремонта и выборе подрядчика</span></div>
+                <div class="blog__link"><a href="#">Читать подробнее</a></div>
+              </div>
+              <div class="blog__item">
+                <div class="blog__img_wrap">
+                  <div class="blog__img img"><img src="../../img/blog_1.jpg" loading="lazy"/></div>
+                </div>
+                <div class="blog__date"><span>29 апреля 2022</span></div>
+                <div class="blog__title"><a href="#">С чего начать ремонт?</a></div>
+                <div class="blog__description"><span>Все, что нужно знать о начале ремонта и выборе подрядчика</span></div>
+                <div class="blog__link"><a href="#">Читать подробнее</a></div>
+              </div>
+              <div class="blog__item">
+                <div class="blog__img_wrap">
+                  <div class="blog__img img"><img src="../../img/blog_1.jpg" loading="lazy"/></div>
+                </div>
+                <div class="blog__date"><span>29 апреля 2022</span></div>
+                <div class="blog__title"><a href="#">С чего начать ремонт?</a></div>
+                <div class="blog__description"><span>Все, что нужно знать о начале ремонта и выборе подрядчика</span></div>
+                <div class="blog__link"><a href="#">Читать подробнее</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end blogMore-->
+        <!-- begin videoWork-->
+        <section class="videoWork section" id="videoWork">
+          <div class="container_center container_center_right">
+            <div class="videoWork__content">
+              <div class="videoWork__left">
+                <h2 class="section__title" data-aos="fade-up"><span>Рассказываем о работе <b>в видео</b></span></h2>
+                <div class="videoWork__control">
+                  <div class="videoWork__dotted"></div>
+                  <div class="videoWork__arrows custom_arrows desktop"><i class="icon_arrow_left"></i><i class="icon_arrow_right"></i></div>
+                </div>
+              </div>
+              <div class="videoWork__right">
+                <div class="swiper__label mobile">
+                  <div class="swiper__img"><img src="../../img/hand.svg"/></div><span>Листайте влево/вправо</span>
+                </div>
+                <div class="swiper videoWorkSlider videoWork-swiper-js">
+                  <div class="swiper-wrapper videoWorkSlider__wrapper">
+                    <div class="swiper-slide videoWorkSlider__slide">
+                      <div class="reviews__video bg" style="background-image: url('../../img/video_1.jpg')">
+                        <div class="reviews__content">
+                          <div class="reviews__name"><span>Цепляющее название видео</span></div>
+                          <div class="reviews__time"><span>Длительность: 2:32 мин</span></div>
+                        </div>
+                        <div class="play youtubeModal-js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide videoWorkSlider__slide">
+                      <div class="reviews__video bg" style="background-image: url('../../img/video_1.jpg')">
+                        <div class="reviews__content">
+                          <div class="reviews__name"><span>Цепляющее название видео</span></div>
+                          <div class="reviews__time"><span>Длительность: 2:32 мин</span></div>
+                        </div>
+                        <div class="play youtubeModal-js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide videoWorkSlider__slide">
+                      <div class="reviews__video bg" style="background-image: url('../../img/video_1.jpg')">
+                        <div class="reviews__content">
+                          <div class="reviews__name"><span>Цепляющее название видео</span></div>
+                          <div class="reviews__time"><span>Длительность: 2:32 мин</span></div>
+                        </div>
+                        <div class="play youtubeModal-js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide videoWorkSlider__slide">
+                      <div class="reviews__video bg" style="background-image: url('../../img/video_1.jpg')">
+                        <div class="reviews__content">
+                          <div class="reviews__name"><span>Цепляющее название видео</span></div>
+                          <div class="reviews__time"><span>Длительность: 2:32 мин</span></div>
+                        </div>
+                        <div class="play youtubeModal-js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end videoWork-->
       </main>
       <div class="lowerpanel" id="lowerpanel">
         <div class="lowerpanel__wrap">

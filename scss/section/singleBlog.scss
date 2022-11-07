@@ -1,4 +1,10 @@
 .singleBlog {
+    .section__title {
+        text-align: left;
+    }
+
+    color: $second_color;
+
     &__wrap {
 
         @media (min-width: 768px) {
@@ -7,15 +13,15 @@
     }
 
     &__content {
-        border: 1px solid #000;
         @media (min-width: 768px) {
             flex-grow: 1;
         }
     }
 
     &__sidebar {
-        // border: 1px solid #000;
+        margin-top: 2em;
         @media (min-width: 768px) {
+            margin-top: 0;
             flex: none;
             position: sticky;
             top: 7em;
@@ -27,41 +33,179 @@
     }
 
     &__hashtag {
-        margin-bottom: 1.875em;
+        margin-bottom: 0.625em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.25em;
+        }
     }
 
     &__time {
-        margin-top: 0.5em;
+        margin-top: 0.25em;
+        @media (min-width: 768px) {
+            margin-top: 0.5em;
+
+        }
 
         span {
-            font-size: 0.75em;
             color: #B8B8B8;
+            font-size: 0.5em;
+            @media (min-width: 768px) {
+                font-size: 0.75em;
+
+            }
+        }
+    }
+
+    &__text {
+        line-height: 1.55;
+        font-size: 0.555556em;
+        @media (min-width: 768px) {
+            line-height: 1.37;
+            font-size: 1em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 500;
+            font-size: 1.8em;
+            margin: 0.75em 0;
+
+            @media (min-width: 768px) {
+                font-size: 2em;
+                margin: 0.625em 0;
+
+            }
+        }
+
+        p {
+            font-size: 1.125em;
+        }
+
+        ol,
+        ul {
+            padding: 0 0 0 1.75em;
+
+            li {
+                font-size: 1.125em;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 9.75em;
+        @media (min-width: 768px) {
+            height: 31.25em;
+        }
+    }
+
+    &__caption {
+        @media (min-width: 768px) {
+            margin-top: 1.25em;
+
+        }
+
+        span {
+            font-size: 0.5em;
+            @media (min-width: 768px) {
+                font-size: 0.75em;
+
+            }
         }
     }
 
     &__row {
-        margin: 3.25em 0;
-        /* 52/16 */
+        margin: 0.625em 0;
+
+        @media (min-width: 768px) {
+            margin: 3.25em 0;
+
+        }
+
+        &_flex {
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+
+                &.reverse {
+                    flex-direction: row-reverse;
+                }
+
+                > * {
+                    width: 31.25em;
+
+                }
+
+                .singleBlog__img {
+                    flex: none;
+                    height: 21.875em;
+
+                }
+
+            }
+
+        }
     }
 
-    &__text {}
+    &__quote {
+        background-color: #F1F5F5;
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
 
-    &__img {}
+        span {
+            position: relative;
+            display: inline-block;
+            font-size: 1em;
+            padding: 2.5em 1em 1.5em;
 
-    &__caption {}
+            @media (min-width: 768px) {
+                padding: 1.375em 3.125em 1.375em 3.4375em;
+                font-size: 2em;
 
-    &__quote {}
+            }
+
+            &:before {
+                content: '\e90e';
+                font-family: 'icomoon';
+                position: absolute;
+                font-size: 1em;
+                color: $color_white;
+
+                top: 1em;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @media (min-width: 768px) {
+                    font-size: 0.75em;
+                    top: 50%;
+                    transform: translateX(0);
+                    transform: translateY(-50%);
+                    left: 2em;
+
+                }
+            }
+        }
+    }
 
     .hashtag {
         display: flex;
+        flex-wrap: wrap;
+        font-size: 0.73em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
 
         &__item {
             background-color: #F1F5F5;
-            /* 8/16 */
-            /* 12/16 */
             margin-right: 0.625em;
-            // line-height: 1;
-            /* 10/16 */
+            margin-bottom: 0.625em;
 
             &:last-child {
                 margin-right: 0;
@@ -82,8 +226,14 @@
     .sidebar {
         &__item {
             color: $color_white;
-            padding: 2.875em 3.375em 13.25em;
-            margin-bottom: 1.625em;
+            padding: 1.5em 1em 5em;
+            margin-bottom: 1.125em;
+
+            @media (min-width: 768px) {
+                margin-bottom: 1.625em;
+                padding: 2.875em 3.375em 13.25em;
+
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -100,16 +250,18 @@
 
                 padding: 1em 6.625em 1em 2.625em;
                 min-height: 4.445em;
-
                 font-size: 0.7031em;
+                align-items: center;
                 @media (min-width: 768px) {
                     font-size: 1.125em;
-                    align-items: center;
-
                 }
 
                 &:after {
-                    right: 4.5em;
+                    right: 8.5em;
+                    @media (min-width: 768px) {
+                        right: 4.5em;
+
+                    }
                 }
 
                 span {
@@ -125,12 +277,20 @@
 
         &__item_calc {
             background-image: url("../../img/sidebar_calc.jpg");
-            padding-bottom: 18.231em;
+            padding-bottom: 10.275em;
+            @media (min-width: 768px) {
+                padding-bottom: 18.231em;
+
+            }
         }
 
         &__title {
             line-height: 1.315;
-            margin-bottom: 1.125em;
+            margin-bottom: 0.5em;
+            @media (min-width: 768px) {
+                margin-bottom: 1.125em;
+
+            }
 
             span {
                 font-weight: 300;
@@ -149,7 +309,12 @@
 
         &__form {}
 
-        &__button {}
+        &__button {
+            margin-top: 2em;
+            @media (min-width: 768px) {
+                margin-top: 0;
+            }
+        }
 
     }
 }

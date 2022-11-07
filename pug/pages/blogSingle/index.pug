@@ -62,7 +62,7 @@ block content
                     // end row
 
                     // begin row
-                    .singleBlog__row
+                    .singleBlog__row.singleBlog__row_flex
                         .singleBlog__text
                             h2 Картинка справа, текст слева
                             p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
@@ -74,7 +74,7 @@ block content
                     // end row
 
                     // begin row
-                    .singleBlog__row
+                    .singleBlog__row.singleBlog__row_flex.reverse
                         .singleBlog__text
                             h2 И наоборот, если информации будет еще больше
                             p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
@@ -147,15 +147,66 @@ block content
                             .sidebar__title
                                 span <b>Рассчитайте примерную стоимость</b> в нашем онлайн калькуляторе
                             .sidebar__button
-                                a.btn(href="#") Перейти в калькулятор
+                                a.btn.show_js(href="#calculate") Перейти в калькулятор
                         // end sidebar__item
 
                 // end sidebar
 
 
-
-
-
-
-
     // end singleBlog
+
+    // begin blogMore
+    section#blogMore.blogMore.section
+        .container_center.container_center_right
+            h2.section__title(data-aos="fade-up")
+                span Вам может быть также интересно
+            .blog__grid
+                each item in [ 1,2,3 ]
+                    .blog__item
+                        .blog__img_wrap
+                            .blog__img.img
+                                img(src="../../img/blog_1.jpg" loading="lazy")
+                        .blog__date
+                            span 29 апреля 2022
+                        .blog__title
+                            a(href="#") С чего начать ремонт?
+                        .blog__description
+                            span Все, что нужно знать о начале ремонта и выборе подрядчика
+                        .blog__link
+                            a(href="#") Читать подробнее
+
+    // end blogMore
+
+    // begin videoWork
+    section#videoWork.videoWork.section
+        .container_center.container_center_right
+            .videoWork__content
+                .videoWork__left
+                    h2.section__title(data-aos="fade-up")
+                        span Рассказываем о работе <b>в видео</b>
+                    .videoWork__control
+                        .videoWork__dotted
+                        .videoWork__arrows.custom_arrows.desktop
+                            i.icon_arrow_left
+                            i.icon_arrow_right
+                .videoWork__right
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+
+                    .swiper.videoWorkSlider.videoWork-swiper-js
+                        .swiper-wrapper.videoWorkSlider__wrapper
+                            each item in [1,1,1,1]
+                                .swiper-slide.videoWorkSlider__slide
+                                    .reviews__video.bg(style="background-image: url('../../img/video_1.jpg')")
+                                        .reviews__content
+                                            .reviews__name
+                                                span Цепляющее название видео
+                                            .reviews__time
+                                                span Длительность: 2:32 мин
+
+                                        .play.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+
+    // end videoWork
