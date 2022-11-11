@@ -1,0 +1,140 @@
+.teamSliders {
+    .reviews__video {
+
+        @media (min-width: 768px) {
+            height: 50em;
+            justify-content: flex-end;
+        }
+    }
+
+    .reviews__content {
+        @media (min-width: 768px) {
+            text-align: right;
+        }
+    }
+
+    .section__title {
+        text-align: left;
+    }
+
+    &__label {
+        margin-bottom: 0.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.125em;
+
+        }
+
+        span {
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 1.875em;
+
+            }
+        }
+    }
+
+    &__content {}
+
+    &__top {
+        margin-bottom: 1em;
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-bottom: 3.125em;
+            margin-top: 3.125em;
+
+        }
+
+    }
+
+    &__bottom {}
+
+    &__control {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+    }
+
+}
+
+.section {
+    &__title {}
+
+}
+
+.container_center {}
+
+.container_center_right {}
+
+.mobile {}
+
+.swiper {
+    &__label {}
+
+    &__img {}
+
+}
+
+.teamImgSlider {
+    &__control {}
+
+    &__dotted {}
+
+    &__arrows {}
+
+}
+
+.teamImgSlider-swiper-js {}
+
+.itemForDataFancybox_js {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.img {}
+
+.dotted_sm {}
+
+.custom_arrows {}
+
+.desktop {}
+
+.icon_arrow_left {}
+
+.icon_arrow_right {}
+
+.singleSlider {
+    &__wrapper {}
+
+    &__slide {}
+
+    &__dotted {}
+
+    &__arrows {}
+
+}
+
+.single-swiper-js {}
+
+.bg {}
+
+.play {}
+
+.youtubeModal-js {}
+
+.icon_play {}
+
+.data__img {}
+
+.reviews__video {}
+
+.reviews__content {}
+
+.reviews__name {}
+
+.reviews__time {}

@@ -233,30 +233,34 @@ block content
     section#team.team.section
         .team__bg.bg.desktop
         .container_center.container_center_sm
-            .team__top
-                .team__left
-                    h2.section__title(data-aos="fade-up")
-                        span Ключевые <b>лица компании</b>
-                    .team__subtitle
-                        span Собрали команду специалистов, которые привыкли делать свою работу как положено. Это высоко ценят наши клиенты.
-                    .team__list.counter-wrap
-                        each item in ['', '', '', '']
-                            .team__item.counter-item
-                                .team__nav
-                                    .team__icon.check_mark
-                                        i.icon_mark
-                                    .team__number
-                                        span.counter-el
-                                .team__content
-                                    span Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                .team__right
-                    .team__person.bg
-                        .person
-                            .person__name(data-aos="fade-left" data-aos-delay="300")
-                                span Илья<br>Мачурин
+            .swiper.teamPreview.teamPreview-swiper-js
+                .swiper-wrapper.teamPreview__wrapper
+                    each item in [ 'Илья<br>Мачурин', 'Алексей<br>Матвеев', 'Илья<br>Мачурин', 'Алексей<br>Матвеев' ]
+                        .swiper-slide.teamPreview__slide
+                            .team__top
+                                .team__left
+                                    h2.section__title
+                                        span Ключевые <b>лица компании</b>
+                                    .team__subtitle
+                                        span Собрали команду специалистов, которые привыкли делать свою работу как положено. Это высоко ценят наши клиенты.
+                                    .team__list.counter-wrap
+                                        each item in ['', '', '', '']
+                                            .team__item.counter-item
+                                                .team__nav
+                                                    .team__icon.check_mark
+                                                        i.icon_mark
+                                                    .team__number
+                                                        span.counter-el
+                                                .team__content
+                                                    span Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                .team__right
+                                    .team__person.bg
+                                        .person
+                                            .person__name
+                                                span!=item
 
-                            .person__description(data-aos="fade-left" data-aos-delay="600")
-                                span Ведущий менеджер
+                                            .person__description
+                                                span Ведущий менеджер
 
 
 
@@ -264,7 +268,7 @@ block content
 
             .swiper.teamSlider.team-swiper-js
                 .swiper-wrapper.teamSlider__wrapper
-                    each item in [1,1,1,1,1,1,1,1]
+                    each item in [1,2,3,4]
                         .swiper-slide.teamSlider__slide
                             .teamSlider__item
                                 .teamSlider__img.img
@@ -325,26 +329,30 @@ block content
     // end advantage
 
 
-    //- // begin logos
-    //- section#logos.logos.section
-    //-     .container_center.container_center_sm
-    //-         .section__subtitle
-    //-             span 123 коммерческих объекта с 2014 года
-    //-         .logos__content
-    //-             .swiper.logos__slider.logos-swiper-js
-    //-                 .swiper-wrapper
-    //-                     each item in [1,2,3,4,1,2,3,4,1,2,3,4]
-    //-                         .swiper-slide
-    //-                             .logos__item
-    //-                                 .logos__pop
-    //-                                     .pop
-    //-                                         .pop__content
-    //-                                             span Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
-    //-                                 .logos__img.img
-    //-                                     img(src="../../img/logo_"+item+".png")
-    //- 
-    //- 
-    //- // end logos
+    // begin logos
+    section#logos.logos.section
+        .container_center.container_center_sm
+            .logos__caption
+                h2.section__title
+                    span Используем <b>лучшие материалы</b> и современное <b>оборудование</b>
+                .logos__label
+                    p Не экономим на черновых материалах, поскольку это залог качества на десятки лет. 
+                    p Профессиональный дорогой инструмент помогает соблюдать страндарты и укладываться в сроки
+            .logos__content
+                .swiper.logos__slider.logos-swiper-js
+                    .swiper-wrapper
+                        each item in [1,2,3,4,1,2,3,4,1,2,3,4]
+                            .swiper-slide
+                                .logos__item
+                                    .logos__pop
+                                        .pop
+                                            .pop__content
+                                                span Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
+                                    .logos__img.img
+                                        img(src="../../img/logo_"+item+".png")
+
+
+    // end logos
 
     // begin reviews
     section#reviews.reviews.section

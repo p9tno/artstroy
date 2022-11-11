@@ -136,7 +136,6 @@
         background-image: url("../../img/director.webp");
 
         font-size: 0.42442em;
-        // margin-left: -5.3013em;
         margin-left: -2.3013em;
         @media (min-width: 768px) {
             font-size: 1em;
@@ -218,6 +217,8 @@
         align-items: center;
         flex-direction: column;
 
+        cursor: pointer;
+
         padding: 1em;
 
         @media (min-width: 768px) {
@@ -245,6 +246,7 @@
         overflow: hidden;
         background-color: $color_white;
         font-size: 0.5em;
+
         @media (min-width: 768px) {
             font-size: 1em;
         }
@@ -261,6 +263,9 @@
             transition: opacity 0.3s;
             border-radius: 50%;
         }
+
+        // &.swiper-slide-active {
+        //     }
 
         img {
             position: relative;
@@ -346,6 +351,15 @@
 
     .swiper-pagination-bullets {
         width: fit-content;
+    }
+
+    .swiper-slide-thumb-active {
+        .teamSlider__img {
+            &:before {
+                opacity: 1;
+
+            }
+        }
     }
 
 }

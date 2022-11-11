@@ -1,0 +1,106 @@
+.partOfTeam {
+    .section__caption {
+        text-align: left;
+
+        @media (min-width: 768px) {
+            width: 55em;
+            /* 860/16 */
+        }
+    }
+
+    // .section__title {
+    //     text-align: left;
+    // }
+
+    .section__subtitle {
+        @media (min-width: 768px) {
+            margin-top: 2.375em;
+            line-height: 1.5;
+            /* 38/16 */
+        }
+    }
+
+    .team__list {
+        @media (min-width: 768px) {
+            width: 47em;
+            margin-top: 3.75em;
+            margin-bottom: 26em;
+
+        }
+    }
+
+    &__bg {
+        position: relative;
+        background-image: url("../../img/partOfTeam_bg.webp");
+
+        padding-bottom: 1em;
+        @media (min-width: 768px) {
+            padding-bottom: 5.125em;
+
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 48.75em;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 32.15%, rgba(0, 0, 0, 0.75) 100%);
+
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__label {
+        margin-bottom: 2em;
+        @media (min-width: 768px) {
+            margin-bottom: 5em;
+        }
+
+        span {
+            color: $color_white;
+            font-weight: 500;
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+
+            }
+        }
+    }
+
+    &__figures {
+        color: $color_white;
+    }
+
+    .figures {
+        &__list {}
+
+        &__item {
+            &:last-child {
+                @media (max-width: 767px) {
+                    width: 65%;
+                }
+                @media (min-width: 768px) {
+                    width: auto;
+
+                }
+            }
+
+            @media (max-width: 767px) {
+                &:nth-child(3) {
+                    width: 35%;
+                }
+            }
+        }
+
+        &__top {}
+
+        &__bottom {}
+
+    }
+}

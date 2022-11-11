@@ -58,49 +58,50 @@ header.header
 
         // start .header__bottom
         .header__bottom
-            .header__nav
-                nav.navbar#navbar
-                    ul.menu
-                        li.menu-item.menu-item-has-children
-                            a(href="#") услуги
-                                i.icon_drop.desktop
-                            ul.sub-menu.desktop
-                                each item in ['Ремонт квартир, домов', 'Ремонт коммерческих объектов', 'Дизайн интерьера', 'Строительство и проектирование домов']
-                                    li.menu-item
-                                        a(href="#")=item
-                        li.menu-item.current-menu-item
-                            a(href="#") Портфолио
-                        li.menu-item
-                            a(href="#") О компании
-                        li.menu-item
-                            a(href="#") Блог
-                        li.menu-item
-                            a(href="#") Дизайнерам, архитекторам
-                        li.menu-item
-                            a(href="#") Поставщикам материалов
-                        li.menu-item
-                            a(href="#") Вакансии
-                        li.menu-item
-                            a(href="#") Контакты
+            .header__overflow
+                .header__nav
+                    nav.navbar#navbar
+                        ul.menu
+                            li.menu-item.menu-item-has-children
+                                a(href="#") услуги
+                                    i.icon_drop.desktop
+                                ul.sub-menu.desktop
+                                    each item in ['Ремонт квартир, домов', 'Ремонт коммерческих объектов', 'Дизайн интерьера', 'Строительство и проектирование домов']
+                                        li.menu-item
+                                            a(href="#")=item
+                            li.menu-item.current-menu-item
+                                a(href="#") Портфолио
+                            li.menu-item
+                                a(href="#") О компании
+                            li.menu-item
+                                a(href="#") Блог
+                            li.menu-item
+                                a(href="#") Дизайнерам, архитекторам
+                            li.menu-item
+                                a(href="#") Поставщикам материалов
+                            li.menu-item
+                                a(href="#") Вакансии
+                            li.menu-item
+                                a(href="#") Контакты
 
-            .header__messenger.mobile
-                .messenger
-                    .messenger__label
-                        span Спрашивайте, отвечаем онлайн
-                    .messenger__list
-                        .messenger__item
-                            a.messenger__link(href="https://wa.me/+73912054081" target="_blank")
-                                i.icon_whatsapp
-                        .messenger__item
-                            a.messenger__link(href="https://wapp.click/73912054081" target="_blank")
-                                i.icon_telegram
-                        .messenger__item
-                            a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
-                                i.icon_viber
+                .header__messenger.mobile
+                    .messenger
+                        .messenger__label
+                            span Спрашивайте, отвечаем онлайн
+                        .messenger__list
+                            .messenger__item
+                                a.messenger__link(href="https://wa.me/+73912054081" target="_blank")
+                                    i.icon_whatsapp
+                            .messenger__item
+                                a.messenger__link(href="https://wapp.click/73912054081" target="_blank")
+                                    i.icon_telegram
+                            .messenger__item
+                                a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                    i.icon_viber
 
-            .header__calc.mobile
-                .calc
-                    a.calc__link.show_js(href="#calculate") калькулятор стоимости
+                .header__calc.mobile
+                    .calc
+                        a.calc__link.show_js(href="#calculate") калькулятор стоимости
 
 
 

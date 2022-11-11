@@ -71,39 +71,41 @@
           <!-- end .header__top-->
           <!-- start .header__bottom-->
           <div class="header__bottom">
-            <div class="header__nav">
-              <nav class="navbar" id="navbar">
-                <ul class="menu">
-                  <li class="menu-item menu-item-has-children"><a href="#">услуги<i class="icon_drop desktop"></i></a>
-                    <ul class="sub-menu desktop">
-                      <li class="menu-item"><a href="#">Ремонт квартир, домов</a></li>
-                      <li class="menu-item"><a href="#">Ремонт коммерческих объектов</a></li>
-                      <li class="menu-item"><a href="#">Дизайн интерьера</a></li>
-                      <li class="menu-item"><a href="#">Строительство и проектирование домов</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item current-menu-item"><a href="#">Портфолио</a></li>
-                  <li class="menu-item"><a href="#">О компании</a></li>
-                  <li class="menu-item"><a href="#">Блог</a></li>
-                  <li class="menu-item"><a href="#">Дизайнерам, архитекторам</a></li>
-                  <li class="menu-item"><a href="#">Поставщикам материалов</a></li>
-                  <li class="menu-item"><a href="#">Вакансии</a></li>
-                  <li class="menu-item"><a href="#">Контакты</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="header__messenger mobile">
-              <div class="messenger">
-                <div class="messenger__label"><span>Спрашивайте, отвечаем онлайн</span></div>
-                <div class="messenger__list">
-                  <div class="messenger__item"><a class="messenger__link" href="https://wa.me/+73912054081" target="_blank"><i class="icon_whatsapp"></i></a></div>
-                  <div class="messenger__item"><a class="messenger__link" href="https://wapp.click/73912054081" target="_blank"><i class="icon_telegram"></i></a></div>
-                  <div class="messenger__item"><a class="messenger__link" href="viber://chat?number=%2B73912054081" target="_blank"><i class="icon_viber"></i></a></div>
+            <div class="header__overflow">
+              <div class="header__nav">
+                <nav class="navbar" id="navbar">
+                  <ul class="menu">
+                    <li class="menu-item menu-item-has-children"><a href="#">услуги<i class="icon_drop desktop"></i></a>
+                      <ul class="sub-menu desktop">
+                        <li class="menu-item"><a href="#">Ремонт квартир, домов</a></li>
+                        <li class="menu-item"><a href="#">Ремонт коммерческих объектов</a></li>
+                        <li class="menu-item"><a href="#">Дизайн интерьера</a></li>
+                        <li class="menu-item"><a href="#">Строительство и проектирование домов</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item current-menu-item"><a href="#">Портфолио</a></li>
+                    <li class="menu-item"><a href="#">О компании</a></li>
+                    <li class="menu-item"><a href="#">Блог</a></li>
+                    <li class="menu-item"><a href="#">Дизайнерам, архитекторам</a></li>
+                    <li class="menu-item"><a href="#">Поставщикам материалов</a></li>
+                    <li class="menu-item"><a href="#">Вакансии</a></li>
+                    <li class="menu-item"><a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header__messenger mobile">
+                <div class="messenger">
+                  <div class="messenger__label"><span>Спрашивайте, отвечаем онлайн</span></div>
+                  <div class="messenger__list">
+                    <div class="messenger__item"><a class="messenger__link" href="https://wa.me/+73912054081" target="_blank"><i class="icon_whatsapp"></i></a></div>
+                    <div class="messenger__item"><a class="messenger__link" href="https://wapp.click/73912054081" target="_blank"><i class="icon_telegram"></i></a></div>
+                    <div class="messenger__item"><a class="messenger__link" href="viber://chat?number=%2B73912054081" target="_blank"><i class="icon_viber"></i></a></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="header__calc mobile">
-              <div class="calc"><a class="calc__link show_js" href="#calculate">калькулятор стоимости</a></div>
+              <div class="header__calc mobile">
+                <div class="calc"><a class="calc__link show_js" href="#calculate">калькулятор стоимости</a></div>
+              </div>
             </div>
           </div>
           <!-- end .header__bottom-->
@@ -321,46 +323,190 @@
         <section class="team section" id="team">
           <div class="team__bg bg desktop"></div>
           <div class="container_center container_center_sm">
-            <div class="team__top">
-              <div class="team__left">
-                <h2 class="section__title" data-aos="fade-up"><span>Ключевые <b>лица компании</b></span></h2>
-                <div class="team__subtitle"><span>Собрали команду специалистов, которые привыкли делать свою работу как положено. Это высоко ценят наши клиенты.</span></div>
-                <div class="team__list counter-wrap">
-                  <div class="team__item counter-item">
-                    <div class="team__nav">
-                      <div class="team__icon check_mark"><i class="icon_mark"></i></div>
-                      <div class="team__number"><span class="counter-el"></span></div>
+            <div class="swiper teamPreview teamPreview-swiper-js">
+              <div class="swiper-wrapper teamPreview__wrapper">
+                <div class="swiper-slide teamPreview__slide">
+                  <div class="team__top">
+                    <div class="team__left">
+                      <h2 class="section__title"><span>Ключевые <b>лица компании</b></span></h2>
+                      <div class="team__subtitle"><span>Собрали команду специалистов, которые привыкли делать свою работу как положено. Это высоко ценят наши клиенты.</span></div>
+                      <div class="team__list counter-wrap">
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
-                  </div>
-                  <div class="team__item counter-item">
-                    <div class="team__nav">
-                      <div class="team__icon check_mark"><i class="icon_mark"></i></div>
-                      <div class="team__number"><span class="counter-el"></span></div>
+                    <div class="team__right">
+                      <div class="team__person bg">
+                        <div class="person">
+                          <div class="person__name"><span>Илья<br>Мачурин</span></div>
+                          <div class="person__description"><span>Ведущий менеджер</span></div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
-                  </div>
-                  <div class="team__item counter-item">
-                    <div class="team__nav">
-                      <div class="team__icon check_mark"><i class="icon_mark"></i></div>
-                      <div class="team__number"><span class="counter-el"></span></div>
-                    </div>
-                    <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
-                  </div>
-                  <div class="team__item counter-item">
-                    <div class="team__nav">
-                      <div class="team__icon check_mark"><i class="icon_mark"></i></div>
-                      <div class="team__number"><span class="counter-el"></span></div>
-                    </div>
-                    <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
                   </div>
                 </div>
-              </div>
-              <div class="team__right">
-                <div class="team__person bg">
-                  <div class="person">
-                    <div class="person__name" data-aos="fade-left" data-aos-delay="300"><span>Илья<br>Мачурин</span></div>
-                    <div class="person__description" data-aos="fade-left" data-aos-delay="600"><span>Ведущий менеджер</span></div>
+                <div class="swiper-slide teamPreview__slide">
+                  <div class="team__top">
+                    <div class="team__left">
+                      <h2 class="section__title"><span>Ключевые <b>лица компании</b></span></h2>
+                      <div class="team__subtitle"><span>Собрали команду специалистов, которые привыкли делать свою работу как положено. Это высоко ценят наши клиенты.</span></div>
+                      <div class="team__list counter-wrap">
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team__right">
+                      <div class="team__person bg">
+                        <div class="person">
+                          <div class="person__name"><span>Алексей<br>Матвеев</span></div>
+                          <div class="person__description"><span>Ведущий менеджер</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide teamPreview__slide">
+                  <div class="team__top">
+                    <div class="team__left">
+                      <h2 class="section__title"><span>Ключевые <b>лица компании</b></span></h2>
+                      <div class="team__subtitle"><span>Собрали команду специалистов, которые привыкли делать свою работу как положено. Это высоко ценят наши клиенты.</span></div>
+                      <div class="team__list counter-wrap">
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team__right">
+                      <div class="team__person bg">
+                        <div class="person">
+                          <div class="person__name"><span>Илья<br>Мачурин</span></div>
+                          <div class="person__description"><span>Ведущий менеджер</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide teamPreview__slide">
+                  <div class="team__top">
+                    <div class="team__left">
+                      <h2 class="section__title"><span>Ключевые <b>лица компании</b></span></h2>
+                      <div class="team__subtitle"><span>Собрали команду специалистов, которые привыкли делать свою работу как положено. Это высоко ценят наши клиенты.</span></div>
+                      <div class="team__list counter-wrap">
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                        <div class="team__item counter-item">
+                          <div class="team__nav">
+                            <div class="team__icon check_mark"><i class="icon_mark"></i></div>
+                            <div class="team__number"><span class="counter-el"></span></div>
+                          </div>
+                          <div class="team__content"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team__right">
+                      <div class="team__person bg">
+                        <div class="person">
+                          <div class="person__name"><span>Алексей<br>Матвеев</span></div>
+                          <div class="person__description"><span>Ведущий менеджер</span></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -369,42 +515,6 @@
           <div class="team__bottom">
             <div class="swiper teamSlider team-swiper-js">
               <div class="swiper-wrapper teamSlider__wrapper">
-                <div class="swiper-slide teamSlider__slide">
-                  <div class="teamSlider__item">
-                    <div class="teamSlider__img img"><img src="../../img/employee.webp"/></div>
-                    <div class="teamSlider__content">
-                      <div class="teamSlider__name"><span>Алексей<br> Матвеев</span></div>
-                      <div class="teamSlider__description"><span>Основатель и генеральный<br> директор ООО «АРТСТРОЙ»</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide teamSlider__slide">
-                  <div class="teamSlider__item">
-                    <div class="teamSlider__img img"><img src="../../img/employee.webp"/></div>
-                    <div class="teamSlider__content">
-                      <div class="teamSlider__name"><span>Алексей<br> Матвеев</span></div>
-                      <div class="teamSlider__description"><span>Основатель и генеральный<br> директор ООО «АРТСТРОЙ»</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide teamSlider__slide">
-                  <div class="teamSlider__item">
-                    <div class="teamSlider__img img"><img src="../../img/employee.webp"/></div>
-                    <div class="teamSlider__content">
-                      <div class="teamSlider__name"><span>Алексей<br> Матвеев</span></div>
-                      <div class="teamSlider__description"><span>Основатель и генеральный<br> директор ООО «АРТСТРОЙ»</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide teamSlider__slide">
-                  <div class="teamSlider__item">
-                    <div class="teamSlider__img img"><img src="../../img/employee.webp"/></div>
-                    <div class="teamSlider__content">
-                      <div class="teamSlider__name"><span>Алексей<br> Матвеев</span></div>
-                      <div class="teamSlider__description"><span>Основатель и генеральный<br> директор ООО «АРТСТРОЙ»</span></div>
-                    </div>
-                  </div>
-                </div>
                 <div class="swiper-slide teamSlider__slide">
                   <div class="teamSlider__item">
                     <div class="teamSlider__img img"><img src="../../img/employee.webp"/></div>
@@ -577,6 +687,145 @@
           </div>
         </section>
         <!-- end advantage-->
+        <!-- begin logos-->
+        <section class="logos section" id="logos">
+          <div class="container_center container_center_sm">
+            <div class="logos__caption">
+              <h2 class="section__title"><span>Используем <b>лучшие материалы</b> и современное <b>оборудование</b></span></h2>
+              <div class="logos__label">
+                <p>Не экономим на черновых материалах, поскольку это залог качества на десятки лет. </p>
+                <p>Профессиональный дорогой инструмент помогает соблюдать страндарты и укладываться в сроки</p>
+              </div>
+            </div>
+            <div class="logos__content">
+              <div class="swiper logos__slider logos-swiper-js">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_1.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_2.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_3.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_4.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_1.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_2.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_3.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_4.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_1.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_2.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_3.png"/></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="logos__item">
+                      <div class="logos__pop">
+                        <div class="pop">
+                          <div class="pop__content"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem</span></div>
+                        </div>
+                      </div>
+                      <div class="logos__img img"><img src="../../img/logo_4.png"/></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end logos-->
         <!-- begin reviews-->
         <section class="reviews section" id="reviews">
           <div class="container_center container_center_sm">

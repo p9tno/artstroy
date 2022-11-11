@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     const certificate = new Swiper('.certificate-swiper-js', {
         slidesPerView: 2,
+        spaceBetween: 10,
         speed: 500,
         loop: true,
         // autoplay: {
@@ -18,17 +19,63 @@ $(document).ready(function() {
             clickable: true,
         },
 
-        spaceBetween: 10,
-
         breakpoints: {
             768: {
                 spaceBetween: 24,
                 slidesPerView: 3,
             },
-            pagination: {
-                 el: '.certificate__dotted',
+
+        }
+    });
+
+    const data = new Swiper('.data-swiper-js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        // loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: '.data__dotted',
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 80,
+                slidesPerView: 3,
             },
 
+        }
+    });
+
+    const teamImgSlider = new Swiper('.teamImgSlider-swiper-js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: '.teamImgSlider__dotted',
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 74,
+                slidesPerView: 3,
+            },
 
         }
     });
@@ -78,17 +125,35 @@ $(document).ready(function() {
             clickable: true,
         },
 
-        // spaceBetween: 10,
-
     });
 
+    // BEGIN TEAM
     const teamSlider = new Swiper('.team-swiper-js', {
         slidesPerView: 2,
         speed: 500,
         loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        // centeredSlides: true,
+        freeMode: true,
+        watchSlidesProgress: true,
+
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+            },
+        }
+    });
+
+
+    const teamPreview = new Swiper('.teamPreview-swiper-js', {
+        slidesPerView: 1,
+        speed: 500,
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+
+        allowTouchMove: false,
 
         navigation: {
             nextEl: '.icon_arrow_right',
@@ -99,15 +164,20 @@ $(document).ready(function() {
             clickable: true,
         },
 
-        breakpoints: {
-            768: {
-                slidesPerView: 4,
-            },
-        }
+        thumbs: {
+            swiper: teamSlider,
+        },
 
-        // spaceBetween: 10,
+        slideToClickedSlide: true,
+        autoHeight: true,
 
     });
+    teamPreview.on('slideChange', function (e) {
+        // console.log('slide changed');
+        // console.log(e.activeIndex);
+    });
+
+    // END TEAM
 
     const videoWork = new Swiper('.videoWork-swiper-js', {
         slidesPerView: 1,
@@ -134,14 +204,11 @@ $(document).ready(function() {
             },
         }
 
-        // spaceBetween: 10,
-
     });
 
     const logos = new Swiper('.logos-swiper-js', {
         slidesPerView: 3,
         speed: 500,
-        // loop: true,
         autoplay: {
           delay: 5000,
         },
@@ -152,20 +219,20 @@ $(document).ready(function() {
             },
         }
     });
-    logos.on('slideChange', function () {
-        // console.log('slide changed');
 
-        // let leftSlide = logos.activeIndex;
-        // let rightSlide = logos.activeIndex + 2;
-        // leftSlide.add('left_slide');
-        // rightSlide.add('right_slide');
-
-        // console.log(leftSlide);
-        // console.log(rightSlide);
-        // console.log(logos.activeIndex);
-        // console.log(logos.$el);
-    });
-
+    // logos.on('slideChange', function () {
+    //     console.log('slide changed');
+    //
+    //     let leftSlide = logos.activeIndex;
+    //     let rightSlide = logos.activeIndex + 2;
+    //     leftSlide.add('left_slide');
+    //     rightSlide.add('right_slide');
+    //
+    //     console.log(leftSlide);
+    //     console.log(rightSlide);
+    //     console.log(logos.activeIndex);
+    //     console.log(logos.$el);
+    // });
 
     // let activeSlide = swiper.activeIndex;
 
@@ -195,7 +262,6 @@ $(document).ready(function() {
     });
 
     const project = new Swiper(".project-swiper-js", {
-        // spaceBetween: 10,
         slidesPerView: 1,
         allowTouchMove: false,
         loop: true,
@@ -213,7 +279,6 @@ $(document).ready(function() {
             swiper: project_sm,
         },
     });
-
     // END project
 
 
@@ -272,36 +337,6 @@ $(document).ready(function() {
     }
     addSliders();
 
-
-    // const steps = new Swiper('.steps-swiper-js', {
-    //     slidesPerView: 2,
-    //     spaceBetween: 10,
-    //     speed: 500,
-    //     loop: true,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //
-    //     navigation: {
-    //         nextEl: '.icon_arrow_right',
-    //         prevEl: '.icon_arrow_left',
-    //     },
-    //     pagination: {
-    //         el: '.steps__dotted',
-    //         clickable: true,
-    //     },
-    //
-    //     breakpoints: {
-    //         768: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 36,
-    //         },
-    //     }
-    //
-    //     // spaceBetween: 10,
-    //
-    // });
-
     function addSteps() {
 
         let steps = $('.steps-swiper-js');
@@ -346,326 +381,4 @@ $(document).ready(function() {
     }
     addSteps();
 
-    // const youtube = new Swiper('.youtubeBox-swiper-js', {
-    //     loop: true,
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     pagination: {
-    //         el: '.youtubeBox__dotted',
-    //     },
-    //     navigation: {
-    //         nextEl: '.icon-arrow_long_right',
-    //         prevEl: '.icon-arrow_long_left',
-    //     },
-    //     spaceBetween: 10,
-    // });
-
-    // const blog = new Swiper('.blog-swiper-js', {
-    //     loop: true,
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     pagination: {
-    //         el: '.blog__dotted',
-    //     },
-    //     navigation: {
-    //         nextEl: '.icon-arrow_long_right',
-    //         prevEl: '.icon-arrow_long_left',
-    //     },
-    //     spaceBetween: 22,
-    //     breakpoints: {
-    //         768: {
-    //             spaceBetween: 38,
-    //             slidesPerView: 2,
-    //         },
-    //     }
-    // });
-
-    // const logoSlider = new Swiper('.logoSlider-swiper-js', {
-    //     // loop: true,
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     autoplay: {
-    //       delay: 5000,
-    //     },
-    //     grabCursor: true,
-    //     pagination: {
-    //         el: '.logoSlider__doted',
-    //     },
-    //     breakpoints: {
-    //         768: {
-    //             slidesPerView: 4,
-    //         },
-    //     }
-    // });
-
-    // const teamSlider = new Swiper('.team-swiper-js', {
-    //     loop: true,
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     autoplay: {
-    //       delay: 5000,
-    //     },
-    //     pagination: {
-    //         el: '.team__dotted',
-    //     },
-    //     dynamicBullets: true,
-    //     navigation: {
-    //         nextEl: '.icon-arrow_long_right',
-    //         prevEl: '.icon-arrow_long_left',
-    //     },
-    //     spaceBetween: 22,
-    //     breakpoints: {
-    //         768: {
-    //             slidesPerView: 2,
-    //             spaceBetween: 34,
-    //         },
-    //     }
-    // });
-
-    // function mobilSlider () {
-    //     let slider_services = null;
-    //     let slider_conditions = null;
-    //     let mediaQuerySize = 767;
-    //
-    //     function initSlider () {
-    //         if (!slider_services) {
-    //             slider_services = new Swiper('.services-swiper-js', {
-    //
-    //                 pagination: {
-    //                     el: '.services__dotted',
-    //                 },
-    //
-    //                 slidesPerView: 1,
-    //                 spaceBetween: 22,
-    //
-    //                 observer: true,
-    //                 observeParents: true,
-    //                 observeSlideChildren: true,
-    //             });
-    //         }
-    //
-    //         if (!slider_conditions) {
-    //             slider_conditions = new Swiper('.conditions-swiper-js', {
-    //
-    //                 pagination: {
-    //                     el: '.conditions__dotted',
-    //                 },
-    //
-    //                 slidesPerView: 1,
-    //                 spaceBetween: 22,
-    //
-    //                 observer: true,
-    //                 observeParents: true,
-    //                 observeSlideChildren: true,
-    //             });
-    //         }
-    //
-    //     }
-    //
-    //     function destroySlider () {
-    //         if (slider_services) {
-    //             slider_services.destroy();
-    //             slider_services = null;
-    //         }
-    //
-    //         if (slider_conditions) {
-    //             slider_conditions.destroy();
-    //             slider_conditions = null;
-    //         }
-    //     }
-    //
-    //     $(window).on('load resize', function () {
-    //         let windowWidth = $(this).innerWidth();
-    //         if (windowWidth <= mediaQuerySize) {
-    //             initSlider();
-    //             // console.log('init');
-    //         } else {
-    //             destroySlider();
-    //             // console.log('destroy');
-    //         }
-    //     });
-    // }
-    // mobilSlider();
-
-
-    // const steps = new Swiper('.steps-swiper-js', {
-    //     // loop: true,
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     // grabCursor: true,
-    //     pagination: {
-    //         el: '.steps__dotted',
-    //     },
-    //     dynamicBullets: true,
-    //
-    //     spaceBetween: 22,
-    //     breakpoints: {
-    //         768: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 0,
-    //             navigation: {
-    //                 nextEl: '.icon-arrow_long_right',
-    //                 prevEl: '.icon-arrow_long_left',
-    //             },
-    //         },
-    //     }
-    // });
-
-    // const tariffs = new Swiper('.tariffs-swiper-js', {
-    //     // loop: true,
-    //     slidesPerView: 1,
-    //     initialSlide: 1,
-    //     autoHeight: true,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     // grabCursor: true,
-    //     pagination: {
-    //         el: '.tariffs__dotted',
-    //     },
-    //     // dynamicBullets: true,
-    //
-    //     spaceBetween: 22,
-    //     breakpoints: {
-    //         768: {
-    //             slidesPerView: 4,
-    //             spaceBetween: 30,
-    //             // navigation: {
-    //             //     nextEl: '.icon-arrow_long_right',
-    //             //     prevEl: '.icon-arrow_long_left',
-    //             // },
-    //         },
-    //     }
-    // });
-
-    // const moreServices = new Swiper('.moreServices-swiper-js', {
-    //     // loop: true,
-    //     slidesPerView: 1,
-    //     autoHeight: true,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     // grabCursor: true,
-    //     pagination: {
-    //         el: '.moreServices__dotted',
-    //     },
-    //     // dynamicBullets: true,
-    //
-    //     spaceBetween: 22,
-    //     breakpoints: {
-    //         768: {
-    //             slidesPerView: 5,
-    //             spaceBetween: 16,
-    //             // navigation: {
-    //             //     nextEl: '.icon-arrow_long_right',
-    //             //     prevEl: '.icon-arrow_long_left',
-    //             // },
-    //         },
-    //     }
-    // });
-
-    // const payment = new Swiper('.payment-swiper-js', {
-    //     // loop: true,
-    //     slidesPerView: 1,
-    //     autoHeight: true,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     // grabCursor: true,
-    //     pagination: {
-    //         el: '.payment__dotted',
-    //     },
-    //     // dynamicBullets: true,
-    //
-    //     spaceBetween: 22,
-    //     breakpoints: {
-    //         768: {
-    //             slidesPerView: 2,
-    //             spaceBetween: 84,
-    //             // navigation: {
-    //             //     nextEl: '.icon-arrow_long_right',
-    //             //     prevEl: '.icon-arrow_long_left',
-    //             // },
-    //         },
-    //     }
-    // });
-
-    // const more = new Swiper('.more-swiper-js', {
-    //     // loop: true,
-    //     slidesPerView: 1,
-    //     autoHeight: true,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     // grabCursor: true,
-    //     pagination: {
-    //         el: '.more__dotted',
-    //     },
-    //     // dynamicBullets: true,
-    //
-    //     spaceBetween: 22,
-    //     breakpoints: {
-    //         768: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 0,
-    //             autoHeight: false,
-    //
-    //         },
-    //     }
-    // });
-
-    // const gallery = new Swiper('.gallery-swiper-js', {
-    //     loop: true,
-    //     slidesPerView: 1,
-    //     // autoHeight: true,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     // grabCursor: true,
-    //     // pagination: {
-    //     //     el: '.more__dotted',
-    //     // },
-    //     // dynamicBullets: true,
-    //
-    //     spaceBetween: 22,
-    //     navigation: {
-    //         nextEl: '.icon-arrow_right',
-    //         prevEl: '.icon-arrow_left',
-    //     },
-    //     // breakpoints: {
-    //     //     768: {
-    //     //         slidesPerView: 3,
-    //     //         spaceBetween: 0,
-    //     //         autoHeight: false,
-    //     //
-    //     //     },
-    //     // }
-    // });
-
 });
-
-// jQuery(function($){
-//   let windowWidth = $(window).width();
-//   let windowHeight = $(window).height();
-//
-//   $(window).resize(function() {
-//     if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
-//       location.reload();
-//       return;
-//     }
-//   });
-// });

@@ -1,0 +1,128 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title Вакансии
+    // end breadcrumbs
+
+    // begin partOfTeam
+    section#partOfTeam.partOfTeam.section
+        .partOfTeam__bg.bg
+            .container_center.container_center_right
+                .partOfTeam__content
+                    .section__caption
+                        h1.section__title
+                            span <b>Станьте частью</b> команды АртСтрой
+                        .section__subtitle
+                            span Никогда не перестаем искать и находить специалистов, которые разделяют <b>наши ценности:</b>
+                    .team__list.counter-wrap
+                        each item in ['стремление менять <b>строительную индустрию и мир вокруг в лучшую сторону</b>', 'храбрость <b>покорять новые личные и командные вершины</b>', '<b>смелость озвучивать идеи,</b> вносить новое, совершенствовать процессы', '<b>честный подход и заинтересованность</b> в результате каждого проекта']
+                            .team__item.counter-item
+                                .team__nav
+                                    .team__icon.check_mark
+                                        i.icon_mark
+                                    .team__number
+                                        span.counter-el
+                                .team__content
+                                    span!=item
+                    .partOfTeam__label
+                        span Главное для нас — это люди. Без них — не было бы Артстроя. Люди вместе могут совершить то, чего не в силах сделать в одиночку. Единение умов и рук, сосредоточение их сил может стать почти всемогущим.
+
+
+                    .partOfTeam__figures
+                        .figures
+                            .figures__list
+
+                                .figures__item
+                                    .figures__top
+                                        span(class="count_numbers_js") 8
+                                    .figures__bottom
+                                        span лет успешно<br> работаем на рынке
+                                .figures__item
+                                    .figures__top
+                                        span(class="count_numbers_js") 32
+                                    .figures__bottom
+                                        span сотрудника в команде
+                                .figures__item
+                                    .figures__top
+                                        <span><small>в</small> </span>
+                                        <span class="count_numbers_js">19</span>
+                                    .figures__bottom
+                                        span городах России<br> наши клиенты
+                                .figures__item
+                                    .figures__top
+                                        span(class="count_numbers_big_js") 45000 
+                                        <span><small>м</small></span>
+                                        <span><sup>2</sup></span>
+                                    .figures__bottom
+                                        span преобразили за годы работы
+
+
+    // end partOfTeam
+
+    // begin teamSliders
+    section#teamSliders.teamSliders.section
+        .container_center.container_center_right
+            .teamSliders__label
+                span Не призываем верить на слово  
+            h2.section__title
+                span <b>Почувствуйте атмосферу в коллективе</b> по фото и видео с корпоративных мероприятий и рабочих дней в офисе 
+            .teamSliders__content
+                .teamSliders__top
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+
+                    .swiper.teamImgSlider.teamImgSlider-swiper-js.itemForDataFancybox_js
+                        .swiper-wrapper
+                            each item in [1,1,1,1]
+                                .swiper-slide
+                                    .data__img.img
+                                        a(href="../../img/teamSliders_img.jpg" data-fancybox data-type="image")
+                                            img(src="../../img/teamSliders_img.jpg" loading="lazy")
+
+                        .teamSliders__control
+                            .teamImgSlider__dotted.dotted_sm
+                            .teamImgSlider__arrows.custom_arrows.desktop
+                                i.icon_arrow_left
+                                i.icon_arrow_right
+
+                .teamSliders__bottom
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+                    .swiper.singleSlider.single-swiper-js
+                        .swiper-wrapper.singleSlider__wrapper
+                            each item in [1,1,1,1]
+                                .swiper-slide.singleSlider__slide
+                                    .reviews__video.bg(style="background-image: url('../../img/teamSliders_video.jpg')")
+                                        .reviews__content
+                                            .reviews__name
+                                                span Корпоратив с командой
+
+                                            .reviews__time
+                                                span Длительность: 2:32 мин
+
+                                        .play.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+                        .teamSliders__control
+                            .singleSlider__dotted.dotted_sm
+
+                            .singleSlider__arrows.custom_arrows.desktop
+                                i.icon_arrow_left
+                                i.icon_arrow_right
+
+    // end teamSliders

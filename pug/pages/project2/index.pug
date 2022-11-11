@@ -1,0 +1,237 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+                span
+                    a(href="#")
+                        span Портфолио
+                span.kb_sep
+
+                span.kb_title Проект дома 1
+    // end breadcrumbs
+
+    // begin project
+    section#project.project.section
+        .container_center.container_center_right
+            .section__caption
+                h1.section__title
+                    span Проект дома 1
+
+        .projects__wrap
+            .projects__top
+                //- begin projects__slider
+                .swiper.projects__slider.project-swiper-js.itemForDataFancybox_js
+                    .swiper-wrapper
+                        .swiper-slide.projects__slide
+                            .projects__beforeAfter.img.shadow.twentytwenty-container
+                                img(src="../../img/project_1.webp" loading="lazy")
+                                img(src="../../img/project_2.webp" loading="lazy")
+                        .swiper-slide.projects__slide
+                            .projects__img.projects__video.bg.shadow(style="background-image: url('../../img/project_1.webp')")
+                                .play.pulse.youtubeModal-js#rsDoGqnPE4c
+                                    i.icon_play
+                        each item in [1,2,3,4,5,6,7,8]
+
+                            .swiper-slide.projects__slide
+                                .projects__img.img
+                                    a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                        img(src="../../img/project_2.webp" loading="lazy")
+
+                .projects__control
+                    .project__dotted.dotted_sm
+                    .project__arrows.custom_arrows.custom_arrows_white
+                        i.icon_arrow_left
+                        i.icon_arrow_right
+                //- end projects__slider
+
+            //- begin projects__slider_sm
+            .swiper.projects__slider_sm.project-swiper-sm-js
+                .swiper-wrapper
+
+                    .swiper-slide.projects__slide_sm
+                        .projects__img_sm.bg(style="background-image: url('../../img/project_ba_m.webp')")
+
+                    .swiper-slide.projects__slide_sm
+                        .projects__img_sm.projects__video_sm.bg(style="background-image: url('../../img/project_1.webp')")
+                            .play
+                                i.icon_play
+
+                    each item in [1,2,3,4,5,6,7,8]
+
+
+                        .swiper-slide.projects__slide_sm
+                            .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+        .container_center.container_center_right
+
+            .project__description
+                .description
+                    each item in [ {label: 'Проект:', data: 'Серийный'}, {label: 'Площадь:', data: '100 м<sup>2</sup>'}, { label: '    Материал:', data: 'Газобетон'}, { label: 'Кол-во комнат', data: '4 комнаты'}, { label: 'Кол-во санузлов:', data: '3 санузла'} ]
+
+                        .description__item
+                            .description__label
+                                span!=item.label
+                            .description__data
+                                span!=item.data
+
+
+            .project__content.project__content_single
+                .project__label
+                    span О проекте
+                .project__text
+                    p Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+
+                    p Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+
+
+
+
+            .project__data
+                .data
+
+                    // begin .data__item
+                    .data__item
+                        .data__title
+                            span Планировка
+
+                        .swiper__label.mobile
+                            .swiper__img
+                                img(src="../../img/hand.svg")
+                            span Листайте влево/вправо
+
+                        .swiper.dataSlider.data-swiper-js.itemForDataFancybox_js
+                            .swiper-wrapper.dataSlider__wrapper
+                                each item in [1,1,1,1]
+                                    .swiper-slide.dataSlider__slide
+                                        .data__img.img
+                                            a(href="../../img/house_1.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/house_1.jpg" loading="lazy")
+
+                            .data__control
+                                .data__dotted.dotted_sm
+                                .data__arrows.custom_arrows.desktop
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+
+                    // end .data__item
+
+                    // begin .data__item
+                    .data__item
+                        .data__title
+                            span Фасады
+
+                        .swiper__label.mobile
+                            .swiper__img
+                                img(src="../../img/hand.svg")
+                            span Листайте влево/вправо
+
+                        .swiper.dataSlider.data-swiper-js.itemForDataFancybox_js
+                            .swiper-wrapper.dataSlider__wrapper
+                                each item in [1,1,1,1]
+                                    .swiper-slide.dataSlider__slide
+                                        .data__img.img
+                                            a(href="../../img/house_2.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/house_2.jpg" loading="lazy")
+
+                            .data__control
+                                .data__dotted.dotted_sm
+                                .data__arrows.custom_arrows.desktop
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+
+                    // end .data__item
+
+                    // begin .data__item
+                    .data__item
+                        .data__title
+                            span Чертежи
+
+                        .swiper__label.mobile
+                            .swiper__img
+                                img(src="../../img/hand.svg")
+                            span Листайте влево/вправо
+
+                        .swiper.dataSlider.data-swiper-js.itemForDataFancybox_js
+                            .swiper-wrapper.dataSlider__wrapper
+                                each item in [1,1]
+                                    .swiper-slide.dataSlider__slide
+                                        .data__img.img
+                                            a(href="../../img/house_3.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/house_3.jpg" loading="lazy")
+
+                            .data__control
+                                .data__dotted.dotted_sm
+                                .data__arrows.custom_arrows.desktop
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+
+                    // end .data__item
+
+
+
+
+    // end project
+
+    // begin consultation
+    section#consultation.consultation.section
+        .container_center
+            .consultation__content.bg
+                .consultation__left
+                    h2.section__title 
+                        span <b>Обсудим</b> ваш проект? 
+                    .consultation__list
+                        each item in ['Сориентируем по <b>стоимости и срокам</b> работ', 'Ответим на вопросы', 'Вышлем <b>пакет документов:</b> примеры сметы, чертежей и планов', 'Договоримся <b>об удобном времени для выезда замерщика.</b> Выезд бесплатный и ни к чему вас не обязывает' ]
+                            .consultation__item
+                                .consultation__mark.check_mark
+                                    i.icon_mark
+                                span!=item
+                .consultation__right
+                    .consultation__label
+                        span Оставьте заявку, позвоним<br> вам в течение 10 минут.
+                    .consultation__form
+                        form.form
+                            .form__row.form__row_43
+                                .form__label
+                                    span Введите номер телефона
+                                input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                            .form__row.form__row_57
+                                .form__label.form__label_opacity.desktop
+
+                                button.btn.btn_didisabled_js(type="submit")
+                                    span Позвоните
+                                    span мне
+
+                            .form__row.form__row_full.form__row_mb0
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+                    .consultation__button
+                        .consultation__phone
+                            span Ждем звонка: +7 (391) 2-0<i></i>54-081
+                        a.btn.btn_whatsapp(href="#")
+                            span Напишите нам в WhatsApp
+                            small время ответа 10 минут
+
+                .consultation__manager.bg(style="background-image: url('../../img/manager.webp')")
+                .manager
+                    .manager__name
+                        span Алексей<br> Ивановcкий
+                    .manager__post
+                        span ведущий менеджер<br> заботы о клиентах
+
+
+
+
+    // end consultation
