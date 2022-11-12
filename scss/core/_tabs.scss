@@ -1,40 +1,98 @@
 .tabs {
-    border-bottom: 1px solid #eee;
     display: flex;
+    // justify-content: space-between;
+    // margin-bottom: 0.75em;
 
-    &__item {
-        padding: 5px 15px;
-        border: 1px solid #eee;
-        margin: 0 5px;
-        border-bottom: 0;
-        border-radius: 5px 5px 0 0;
-        cursor: pointer;
+    @media (max-width: 767px) {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 0.75em;
+        margin-left: -1.25em;
+        margin-right: -1.25em;
+    }
+
+    @media (min-width: 768px) {
+        margin-bottom: 4.375em;
+
+    }
+}
+
+.tab {
+    position: relative;
+    width: fit-content;
+    flex: none;
+    margin-right: 2em;
+    cursor: pointer;
+
+    &:first-child {
+        margin-left: 1em;
+    }
+
+    &:last-child {
+        margin-right: 2em;
+    }
+
+    @media (min-width: 768px) {
+        margin-right: 6.5em;
 
         &:first-child {
             margin-left: 0;
         }
+    }
 
-        &:hover {
-            background-color: #eee;
+    &:after {
+        position: absolute;
+        top: 50%;
+        right: -3.5em;
+        content: '\e91e';
+        font-family: 'icomoon';
+        font-size: 0.25em;
+        color: #B8B8B8;
+        transition: 0.3s;
+
+        @media (min-width: 768px) {
+            transform: translateY(-40%)scale(1);
+            font-size: 0.5em;
         }
 
-        &.active {
-            background-color: blue;
-            color: #fff;
+    }
+
+    &.active {
+        span {
+            text-decoration: underline;
+            color: $second_color;
+        }
+
+        &:after {
+            transform: translateY(-40%)scale(-1);
+            color: $second_color;
+
         }
     }
 
-}
+    &:hover {
+        &:after {
+            color: $second_color;
+        }
 
-.tabContent {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+        span {
+            color: $second_color;
+        }
+    }
 
-    &__item {
-        display: none;
+    span {
+        font-size: 0.75em;
+        color: #B8B8B8;
+        transition: 0.3s;
 
-        &.active {
-            display: block;
+        @media (min-width: 768px) {
+            font-size: 1.5em;
         }
     }
 }
+
+.tabs__wrapper {}
+
+.tabs__content {}
+
+.tab__item {}

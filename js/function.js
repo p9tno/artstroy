@@ -225,27 +225,28 @@ $(document).ready(function() {
     addNameFile();
 
 
-    // <div class="tabs-wrapper">
-    //     <div class="tabs">
-    //         <span class="tab">Вкладка 1</span>
-    //         <span class="tab">Вкладка 2</span>
-    //         <span class="tab">Вкладка 3</span>
-    //     </div>
-    //     <div class="tabs-content">
-    //         <div class="tab-item">Содержимое 1</div>
-    //         <div class="tab-item">Содержимое 2</div>
-    //         <div class="tab-item">Содержимое 3</div>
-    //     </div>
-    // </div>
+    // .tabs__wrapper
+    //     .tabs
+    //         span.tab Вкладка 1
+    //         span.tab Вкладка 2
+    //         span.tab Вкладка 3
+    //     .tabs__content
+    //         .tab__item Содержимое 1
+    //         .tab__item Содержимое 2
+    //         .tab__item Содержимое 3
 
-    // $('.tabs-wrapper').each(function() {
-    //     let ths = $(this);
-    //     ths.find('.tab-item').not(':first').hide();
-    //     ths.find('.tab').click(function() {
-    //         ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-    //         ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-    //     }).eq(0).addClass('active');
-    // });
+    function initTabs() {
+        $('.tabs__wrapper').each(function() {
+            let ths = $(this);
+            ths.find('.tab__item').not(':first').hide();
+            ths.find('.tab').click(function() {
+                ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+                ths.find('.tab__item').hide().eq($(this).index()).fadeIn()
+            }).eq(0).addClass('active');
+        });
+    }
+    initTabs();
+
 
 
     // function doDrop() {
@@ -576,6 +577,147 @@ $(document).ready(function() {
 
     }
     showMoreAdvantage();
+
+
+    // function showMoreVacancies(classItem, btn) {
+    //
+    //     // let classItem = '.vacancies__item';
+    //     // let classItem = class;
+    //     let item = $(''+ classItem +'');
+    //     let count = item.length;
+    //     let start = 1;
+    //     let show = 1;
+    //
+    //     item.addClass('d-none');
+    //     $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
+    //
+    //     $(btn).click(function(e) {
+    //         e.preventDefault();
+    //         $(this).addClass('loading');
+    //
+    //         let load = $(this).data('load');
+    //         let more = $(this).data('more');
+    //
+    //         start = (start + show <= count) ? start + show : count;
+    //
+    //         $(this).text(load);
+    //
+    //         setTimeout(() => {
+    //             $(''+ classItem +':lt(' + start + ')').removeClass('d-none');
+    //             if ($(''+ classItem +':not(.d-none)').length == count) {
+    //                 $(this).parent().remove();
+    //             }
+    //             $(this).removeClass('loading');
+    //             $(this).text(more);
+    //         }, 500);
+    //
+    //
+    //     });
+    //
+    // }
+    // showMoreVacancies('.vacancies__item', '.show_more_v_js');
+
+
+
+    // START TABS VACANCIES
+    addDataVacancies();
+
+    function initMore(id) {
+        let classItem = '[data-v-item=' + id + ']';
+        let item = $(''+ classItem +'');
+        let count = item.length;
+        let start = 3;
+        let show = 3;
+
+        item.addClass('d-none');
+        $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
+
+        $('[data-v-toggle=' + id + ']').click(function(e) {
+            e.preventDefault();
+            $(this).addClass('loading');
+
+            let load = $(this).data('load');
+            let more = $(this).data('more');
+
+            start = (start + show <= count) ? start + show : count;
+
+            $(this).text(load);
+
+            setTimeout(() => {
+                $(''+ classItem +':lt(' + start + ')').removeClass('d-none');
+                if ($(''+ classItem +':not(.d-none)').length == count) {
+                    $(this).parent().remove();
+                }
+
+                $(this).removeClass('loading');
+                $(this).text(more);
+            }, 1000);
+        });
+
+    }
+
+    function addDataVacancies() {
+        let item = $('.itemVanavcies_js');
+        let num = 0;
+
+        item.each(function(index, el) {
+            $(this).find('.vacancies__item').attr('data-v-item', num);
+            $(this).find('.load_more').attr('data-v-toggle', num);
+            initMore(num);
+            num++;
+        });
+    }
+
+    // END TABS VACANCIES
+
+
+
+    // function addDataVacancies() {
+    //     let item = $('.itemVanavcies_js');
+    //     let num = 0;
+    //
+    //     item.each(function(index, el) {
+    //         $(this).find('.vacancies__item').attr('data-v-item', num);
+    //         $(this).find('a').attr('data-v-toggle', num);
+    //         num++;
+    //     });
+    // }
+    // addDataVacancies();
+
+    // function collapsed() {
+    //     let toggle = $('[data-collapse]');
+    //
+    //     toggle.on('click', function() {
+    //         let id = $(this).data('collapse'),
+    //         body = $('[data-collapse-body="'+id+'"]'),
+    //         wrap = body.closest('[data-collapse-wrapper]'),
+    //         preview = $('.content__preview');
+    //         console.log(preview);
+    //
+    //         if (!id) {
+    //             // $('[data-collapse-wrapper]').removeClass('open');
+    //             body = $(this).parent().find('[data-collapse-body]');
+    //             $(this).toggleClass('open');
+    //             preview.toggleClass('open');
+    //             if ($(this).hasClass('open')) {
+    //                 body.slideDown();
+    //             } else {
+    //                 body.slideUp();
+    //             }
+    //         } else if (id === 'all') {
+    //             body.slideDown();
+    //             preview.addClass('open');
+    //             toggle.addClass('open');
+    //         } else {
+    //             body.slideToggle();
+    //             preview.toggleClass('open');
+    //             $(this).toggleClass('open');
+    //         }
+    //     });
+    // }
+    // collapsed();
+
+
 
     // https://github.com/michalsnik/aos
     AOS.init({

@@ -126,3 +126,56 @@ block content
                                 i.icon_arrow_right
 
     // end teamSliders
+
+    // begin vacancies
+    section#vacancies.vacancies.section
+        .container_center
+            .section__subtitle
+                span Актуальные вакансии. Выберите нужный раздел
+            .vacancies__tabs
+                .tabs__wrapper
+                    .tabs
+                        each item in ['Все', 'Дизайнеры', 'Прорабы', 'Рабочие специальности']
+                            .tab
+                                span=item
+
+
+                    .tabs__content
+                        each item in ['', '', '', '', ]
+
+                            .tab__item
+                                .vacancies__content
+                                    .vacancies__list.itemVanavcies_js
+                                        each item in ['', '', '', '', '', '', '' ]
+                                            .vacancies__item(data-v-item="")
+                                                .vacancies__title
+                                                    span <b>Дизайнер</b>
+                                                .vacancies__row
+                                                    .vacancies__col
+                                                        .vacancies__label
+                                                            span Чем нужно будет заниматься:
+                                                        .vacancies__text
+                                                            p Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                                            p Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. 
+                                                    .vacancies__col
+                                                        .vacancies__label
+                                                            span От нас (условия):
+                                                        ul.vacancies__terms
+                                                            each item in ['комфортный график работы пн-пт с 10:00 до 18:30 (можно с 09:00 до 17:30)', 'прозрачная система расчета ЗП', ' социальный пакет']
+                                                                li
+                                                                    span=item
+                                                        ul.vacancies__info
+                                                            each item in [ {label:'Город:', info:'Москва'}, {label:'Зар. плата:', info:'от 100 000 руб'}, {label:'Тип:', info:'офис/удаленно'} ]
+
+                                                                li
+                                                                    span=item.label
+                                                                    span=item.info
+                                                .vacancies__action
+                                                    a.btn.show_js(href="#vacancymodal")
+                                                        span оставить отклик
+
+                                        .vacancies__more
+                                            a.load_more(href="#" data-load="Загрузкка" data-more="Смотреть еще вакансии" data-v-toggle="") Смотреть еще вакансии
+
+
+    // end vacancies
