@@ -100,19 +100,15 @@
 
         .icon_insta {
             background: linear-gradient(49.12deg, #FFDD55 7.02%, #FF543E 50.45%, #C837AB 93.88%);
-
-            // font-size: 0.75em;
         }
+
     }
 
     @media (min-width: 768px) {
         &_large {
             .messenger__link {
                 i {
-
-                    width: 3em;
-                    height: 3em;
-
+                    font-size: 1.3334em;
                 }
             }
         }
@@ -120,8 +116,7 @@
         &_medium {
             .messenger__link {
                 i {
-                    width: 2.75em;
-                    height: 2.75em;
+                    font-size: 1.2223em;
                 }
             }
         }

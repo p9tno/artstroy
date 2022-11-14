@@ -24,6 +24,10 @@
 					width: 100%;
 				}
 
+				&_25 {
+					width: calc(25% - 6em);
+				}
+
 				&_31 {
 					width: calc(31% - 3em);
 				}
@@ -37,6 +41,37 @@
 				}
 			}
 
+		}
+	}
+
+	&_grid-col4 {
+		@media (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -1em;
+
+			.form__row {
+				margin: 0 0.6875em 0.6875em;
+				width: 100%;
+
+				width: calc(25% - 1.375em);
+
+				&_full {
+					width: 100%;
+				}
+
+				&_23 {
+					width: calc(23% - 1.375em);
+				}
+
+				&_31 {
+					width: calc(31% - 1.375em);
+				}
+
+				&_mb0 {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 

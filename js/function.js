@@ -411,7 +411,8 @@ $(document).ready(function() {
 
         // let HeaderTop = $( '.header__bottom' ).offset().top;
 
-        let HeaderTop = $( '.header__bottom' ).offset().top;
+        // let HeaderTop = $( '.header__bottom' ).offset().top;
+        let HeaderTop = $('.header' ).innerHeight();
         // console.log(HeaderTop);
         // let HeaderTop = $( 'header' ).offset().top + $( '.section' ).innerHeight();
         let currentTop = $( window ).scrollTop();

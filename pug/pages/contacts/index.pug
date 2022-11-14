@@ -1,0 +1,88 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title Контакты
+    // end breadcrumbs
+
+    // begin contacts
+    section#contacts.contacts.section
+        .container_center.container_center_right
+            .section__caption
+                h1.section__title
+                    span Наши <b>контакты</b>
+            .contacts__row
+                .contacts__col
+                    each item in ['', '',]
+
+                        .contacts__item
+                            .contacts__location
+                                .contacts__icon
+                                    i.icon_location
+                                .contacts__text
+                                    span Красноярск, ул. Обороны, д. 3, к. Б, офис 403
+                                    .contacts__link
+                                        a(href="#") Смотреть на карте
+                    .contacts__item
+                        .phone
+                            .phone__link
+                                a(href="tel:+7 (391) 2-054-081 ") +7 (391) 2-054-081
+                            .phone__label
+                                span Пн-Сб  9:00-19:00
+                    .contacts__item.mb50
+                        .contacts__mail
+                            a(href="mailto:informremont@mail.ru") informremont@mail.ru
+
+                    .contacts__item.mb50
+                        .contacts__label
+                            span Мы в соцсетях
+                        .messenger.messenger_large
+
+                            .messenger__list
+                                .messenger__item
+                                    a.messenger__link(href="https://wa.me/+73912054081" target="_blank")
+                                        i.icon_whatsapp
+                                .messenger__item
+                                    a.messenger__link(href="https://wapp.click/73912054081" target="_blank")
+                                        i.icon_telegram
+                                .messenger__item
+                                    a.messenger__link(href="viber://chat?number=%2B73912054081" target="_blank")
+                                        i.icon_viber
+
+                    .contacts__item.mb50
+                        .contacts__label
+                            span Пишите онлайн
+                        .contacts__messenger
+                            .messenger.messenger_large
+                                .messenger__list
+                                    .messenger__item
+                                        a(href="#" target="_blank").messenger__link
+                                            i.icon_youtube
+                                    .messenger__item
+                                        a(href="#" target="_blank").messenger__link
+                                            i.icon_wk
+                                    .messenger__item
+                                        a(href="#" target="_blank").messenger__link
+                                            i.icon_insta
+
+                    .contacts__item
+                        .contacts__link
+                            a(href="#") Реквизиты
+
+                .contacts__col
+                .contacts__col
+                    .contacts__form
+
+
+    // end contacts

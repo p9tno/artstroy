@@ -1,0 +1,100 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title Поставщикам материалов
+    // end breadcrumbs
+
+    // begin provider
+    section#provider.provider.section
+        .container_center.container_center_right
+            .provider__content
+                .section__caption
+                    h1.section__title
+                        span Открыты к <b>официальному сотрудничеству</b> с поставщиками 
+                    .section__subtitle
+                        span строительных и отделочных материалов
+                .provider__list.counter-wrap
+                    each item in [ 'Керамическая<br> плитка', 'Металлопрокат', 'Кварцвиниловые<br>покрытия', 'Паркетная<br> доска', 'Производители<br> инструмента', 'Сантехника', 'Производители<br> газобетона', 'Мебель', 'Транспортные<br> компании', 'Кровельные<br> материалы', 'Инженерные<br> системы', 'Декор' ]
+                        .provider__item.counter-item
+                            .provider__nav
+                                .provider__icon.check_mark
+                                    i.icon_mark
+                                .provider__number
+                                    span.counter-el
+                            .provider__label
+                                span!=item
+
+
+                .provider__title
+                    span Отправьте ваше коммерческое предложение или актуальный прай-лист
+                .provider__subtitle
+                    span Мы свяжемся с вами, чтобы обсудить условия сотрудничества
+
+        .provider__form
+
+
+            .form__wrap
+                form.form.form_grid-col4
+                    .form__row.form__row_23
+                        .form__label
+                            span Выберите файл
+                        label.form__file_label(data-text="Файл не выбран")
+                            input(type='file' required='required')
+                            p.form__file Загрузить файл
+
+                    .form__row.form__row_23
+                        .form__label
+                            span Куда прислать?
+                        select.select(data-placeholder="Whatsapp")
+                            option(value="")
+                            option(value="whatsapp") Whatsapp
+                            option(value="Viber") Viber
+                            option(value="Telegram") Telegram
+                            option(value="mail") Email
+
+                    .form__row.form__row_23.form__row_hide.form__row_email_js
+                        .form__label
+                            span Введите email
+                        input(type="email" placeholder="E-mail")
+
+                    .form__row.form__row_23.form__row_phone_js
+                        .form__label
+                            span Введите номер телефона
+                        input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                    .form__row.form__row_31
+                        .form__label.form__label_opacity.desktop
+                            span Нажмите
+                        button.btn.btn_didisabled_js(type="submit")
+                            span Обсудить условия сотрудничества
+
+
+
+                    .form__row.form__row_full.form__row_mb0
+                        .form__privacy
+                            label.form__check
+                                input.check_checked_js(type="checkbox" checked="checked")
+                                span.snakeline Нажимая кнопку вы соглашаетесь  с условиями <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+
+
+
+
+
+
+
+
+
+    // end provider

@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css"/>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
   </head>
   <body>
     <div class="preloader__wrap" id="preloader">
@@ -115,45 +115,80 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin test-->
-        <section class="test section" id="test">
-          <div class="container_center">
-            <h2 class="section__title"><span>Навигация</span></h2>
-            <div class="test__content">
-              <ul style="font-size:1.25em;">
-                <li><a href="../pages/home/">Главная </a></li>
-                <li><a href="../pages/services/">Услуги </a></li>
-                <li><a href="../pages/portfolio/">Портфолио </a></li>
-                <li><a href="../pages/project/">Портфолио (одна работа)</a></li>
-                <li><a href="../pages/project2/">Портфолио (одна работа, проект дома)</a></li>
-                <li><a href="../pages/about/">О компании </a></li>
-                <li><a href="../pages/blog/">Блог</a></li>
-                <li><a href="../pages/blogSingle/">Блог одна статья</a></li>
-                <li><a href="../pages/vacancy/">Вакансии</a></li>
-                <li><a href="../pages/purveyor/">Поставщикам</a></li>
-                <li><a href="../pages/contacts/">Контакты</a></li>
-              </ul>
+        <!-- begin breadcrumbs-->
+        <div class="breadcrumbs section">
+          <div class="container_center container_center_right">
+            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"></span><span class="kb_title">Контакты</span></div>
+          </div>
+        </div>
+        <!-- end breadcrumbs-->
+        <!-- begin contacts-->
+        <section class="contacts section" id="contacts">
+          <div class="container_center container_center_right">
+            <div class="section__caption">
+              <h1 class="section__title"><span>Наши <b>контакты</b></span></h1>
+            </div>
+            <div class="contacts__row">
+              <div class="contacts__col">
+                <div class="contacts__item">
+                  <div class="contacts__location">
+                    <div class="contacts__icon"><i class="icon_location"></i></div>
+                    <div class="contacts__text"><span>Красноярск, ул. Обороны, д. 3, к. Б, офис 403</span>
+                      <div class="contacts__link"><a href="#">Смотреть на карте</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__location">
+                    <div class="contacts__icon"><i class="icon_location"></i></div>
+                    <div class="contacts__text"><span>Красноярск, ул. Обороны, д. 3, к. Б, офис 403</span>
+                      <div class="contacts__link"><a href="#">Смотреть на карте</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="phone">
+                    <div class="phone__link"><a href="tel:+7 (391) 2-054-081 ">+7 (391) 2-054-081</a></div>
+                    <div class="phone__label"><span>Пн-Сб  9:00-19:00</span></div>
+                  </div>
+                </div>
+                <div class="contacts__item mb50">
+                  <div class="contacts__mail"><a href="mailto:informremont@mail.ru">informremont@mail.ru</a></div>
+                </div>
+                <div class="contacts__item mb50">
+                  <div class="contacts__label"><span>Мы в соцсетях</span></div>
+                  <div class="messenger messenger_large">
+                    <div class="messenger__list">
+                      <div class="messenger__item"><a class="messenger__link" href="https://wa.me/+73912054081" target="_blank"><i class="icon_whatsapp"></i></a></div>
+                      <div class="messenger__item"><a class="messenger__link" href="https://wapp.click/73912054081" target="_blank"><i class="icon_telegram"></i></a></div>
+                      <div class="messenger__item"><a class="messenger__link" href="viber://chat?number=%2B73912054081" target="_blank"><i class="icon_viber"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__item mb50">
+                  <div class="contacts__label"><span>Пишите онлайн</span></div>
+                  <div class="contacts__messenger">
+                    <div class="messenger messenger_large">
+                      <div class="messenger__list">
+                        <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_youtube"></i></a></div>
+                        <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_wk"></i></a></div>
+                        <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_insta"></i></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__link"><a href="#">Реквизиты</a></div>
+                </div>
+              </div>
+              <div class="contacts__col"></div>
+              <div class="contacts__col">
+                <div class="contacts__form"></div>
+              </div>
             </div>
           </div>
         </section>
-        <!-- end test-->
-        <!-- begin tetsModals-->
-        <section class="tetsModals section" id="tetsModals">
-          <div class="container_center">
-            <h2 class="section__title"><span>Модальные окна</span></h2>
-            <ul style="font-size:1.25em;">
-              <li><a class="show_js" href="#privacy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ  </a></li>
-              <li><a class="show_js" href="#application">Быстро оставьте заявку</a></li>
-              <li><a class="show_js" href="#vacancymodal">Оставьте свой отклик на вакансию</a></li>
-              <li><a class="show_js" href="#mortgage">Узнайте условия строительства своего дома в ипотеку </a></li>
-              <li><a class="show_js" href="#discounts">Расскажем про актуальные скидки</a></li>
-              <li><a class="show_js" href="#calculate">Что вам нужно рассчитать?</a></li>
-              <li><a class="show_js" href="#download">Скачать презентацию</a></li>
-              <li><a class="show_js" href="#download2">Скачать презентацию 2</a></li>
-            </ul>
-          </div>
-        </section>
-        <!-- end tetsModals-->
+        <!-- end contacts-->
       </main>
       <div class="lowerpanel" id="lowerpanel">
         <div class="lowerpanel__wrap">
@@ -579,22 +614,22 @@
         </div>
       </div>
       <!-- End modal download2-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/jquery.event.move.js"></script>
-      <script src="js/jquery.twentytwenty.js"></script>
-      <script src="js/jquery.marquee.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/jquery-ui.min.js"></script>
-      <script src="js/jquery-ui-touch-punch.js"></script>
-      <script src="js/quiz.js"></script>
-      <script src="js/form.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/jquery.maskedinput.min.js"></script>
+      <script src="../../js/modal.js"></script>
+      <script src="../../js/swiper-bundle.min.js"></script>
+      <script src="../../js/slider.js"></script>
+      <script src="../../js/select2.min.js"></script>
+      <script src="../../js/jquery.event.move.js"></script>
+      <script src="../../js/jquery.twentytwenty.js"></script>
+      <script src="../../js/jquery.marquee.min.js"></script>
+      <script src="../../js/aos.js"></script>
+      <script src="../../js/fancybox.min.js"></script>
+      <script src="../../js/jquery-ui.min.js"></script>
+      <script src="../../js/jquery-ui-touch-punch.js"></script>
+      <script src="../../js/quiz.js"></script>
+      <script src="../../js/form.js"></script>
+      <script src="../../js/function.js"></script>
     </div>
   </body>
 </html>
