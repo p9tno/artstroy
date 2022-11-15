@@ -281,6 +281,23 @@ $(document).ready(function() {
     });
     // END project
 
+    const otherProjects = new Swiper(".otherProjects-swiper-js", {
+        slidesPerView: 1,
+        allowTouchMove: false,
+        loop: true,
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+
+        pagination: {
+            el: '.otherProjects__dotted',
+        },
+
+
+    });
+
 
     function addSliders() {
 

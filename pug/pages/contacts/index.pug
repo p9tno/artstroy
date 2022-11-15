@@ -28,12 +28,24 @@ block content
 
                         .contacts__item
                             .contacts__location
-                                .contacts__icon
-                                    i.icon_location
-                                .contacts__text
-                                    span Красноярск, ул. Обороны, д. 3, к. Б, офис 403
-                                    .contacts__link
-                                        a(href="#") Смотреть на карте
+                                .contacts__flex
+                                    .contacts__icon
+                                        i.icon_location
+                                    .contacts__text
+                                        span Красноярск, ул. Обороны,<br> д. 3, к. Б, офис 403
+                                .contacts__link
+                                    a.show_js(href="#map") Смотреть на карте
+
+                                    // Begin Modal map
+                                    .modal.fade.map#map
+                                        .modal-dialog
+                                            .modal-content
+                                                a(href="#" class="modal-close" data-dismiss="modal")
+                                                .modal-body
+                                                    .map__content
+                                                        iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A517f80209eff5be70d54d90135057484989abca4bf803d75b37acf02aee4b0d4&amp;source=constructor" width="100%" height="100%" frameborder="0")
+
+                                    // End modal map
                     .contacts__item
                         .phone
                             .phone__link
@@ -78,11 +90,125 @@ block content
 
                     .contacts__item
                         .contacts__link
-                            a(href="#") Реквизиты
+                            a(href="../../img/pdf.pdf" target="_blank") Реквизиты
+                            //- a(href="#") Реквизиты
 
                 .contacts__col
+
+                    .contacts__item
+                        .contacts__label
+                            span До встречи в офисе
+                        .swiper__label.mobile
+                            .swiper__img
+                                img(src="../../img/hand.svg")
+                            span Листайте влево/вправо
+                        .swiper.singleSlider.single-swiper-js
+                            .swiper-wrapper.singleSlider__wrapper
+                                each item in [1,1,1,1]
+                                    .swiper-slide.singleSlider__slide
+                                        .contacts__img.img
+                                            a(href="../../img/contacts_1.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/contacts_1.jpg" loading="lazy")
+                            .contacts__control
+                                .singleSlider__dotted
+                                .singleSlider__arrows.custom_arrows.desktop
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+
+                    .contacts__item
+                        .contacts__label
+                            span До встречи у вас на замере
+                        .swiper__label.mobile
+                            .swiper__img
+                                img(src="../../img/hand.svg")
+                            span Листайте влево/вправо
+                        .swiper.singleSlider.single-swiper-js
+                            .swiper-wrapper.singleSlider__wrapper
+                                each item in [1,1,1,1]
+                                    .swiper-slide.singleSlider__slide
+                                        .contacts__img.img
+                                            a(href="../../img/contacts_2.jpg" data-fancybox data-type="image")
+                                                img(src="../../img/contacts_2.jpg" loading="lazy")
+                            .contacts__control
+                                .singleSlider__dotted
+                                .singleSlider__arrows.custom_arrows.desktop
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+
                 .contacts__col
-                    .contacts__form
+                    .contacts__form.bg
+                        .contacts__form-title
+                            span Форма обратной связи
+                        .contacts__form-subtitle
+                            span Оставьте заявку, позвоним в течение 10 минут
+                        form.form
+                            .form__row
+                                .form__label
+                                    span Введите номер телефона
+                                input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit")
+                                    span Позвоните мне
+
+                            .form__row.form__row_full.form__row_mb0
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
 
 
     // end contacts
+
+    // begin report
+    section#report.report.section
+        .report__wrap
+            .report__notepad
+                .notepad
+                    .section__subtitle
+                        span Рассчитайте примерную стоимость в нашем онлайн калькуляторе
+                    .notepad__link
+                        a.show_js(href="#calculate") Перейти в калькулятор
+
+                    .notepad__bg.bg
+            .report__content
+                .report__caption
+                    h2.report__title(data-aos="fade-up")
+                        span Скачайте пример реальной сметы на ремонт с полными графиками работ
+                    .report__subtitle
+                        span и поймите наш подход наглядно
+                .report__form
+                    form.form.form_sm
+                        .form__row
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Скачать смету
+
+                        .form__row.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+                .report__bg.bg(data-aos="fade-left" data-aos-delay="500")
+
+    // end report

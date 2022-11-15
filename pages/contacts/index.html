@@ -132,17 +132,47 @@
               <div class="contacts__col">
                 <div class="contacts__item">
                   <div class="contacts__location">
-                    <div class="contacts__icon"><i class="icon_location"></i></div>
-                    <div class="contacts__text"><span>Красноярск, ул. Обороны, д. 3, к. Б, офис 403</span>
-                      <div class="contacts__link"><a href="#">Смотреть на карте</a></div>
+                    <div class="contacts__flex">
+                      <div class="contacts__icon"><i class="icon_location"></i></div>
+                      <div class="contacts__text"><span>Красноярск, ул. Обороны,<br> д. 3, к. Б, офис 403</span></div>
+                    </div>
+                    <div class="contacts__link"><a class="show_js" href="#map">Смотреть на карте</a>
+                      <!-- Begin Modal map-->
+                      <div class="modal fade map" id="map">
+                        <div class="modal-dialog">
+                          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                            <div class="modal-body">
+                              <div class="map__content">
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A517f80209eff5be70d54d90135057484989abca4bf803d75b37acf02aee4b0d4&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End modal map-->
                     </div>
                   </div>
                 </div>
                 <div class="contacts__item">
                   <div class="contacts__location">
-                    <div class="contacts__icon"><i class="icon_location"></i></div>
-                    <div class="contacts__text"><span>Красноярск, ул. Обороны, д. 3, к. Б, офис 403</span>
-                      <div class="contacts__link"><a href="#">Смотреть на карте</a></div>
+                    <div class="contacts__flex">
+                      <div class="contacts__icon"><i class="icon_location"></i></div>
+                      <div class="contacts__text"><span>Красноярск, ул. Обороны,<br> д. 3, к. Б, офис 403</span></div>
+                    </div>
+                    <div class="contacts__link"><a class="show_js" href="#map">Смотреть на карте</a>
+                      <!-- Begin Modal map-->
+                      <div class="modal fade map" id="map">
+                        <div class="modal-dialog">
+                          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                            <div class="modal-body">
+                              <div class="map__content">
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A517f80209eff5be70d54d90135057484989abca4bf803d75b37acf02aee4b0d4&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End modal map-->
                     </div>
                   </div>
                 </div>
@@ -178,32 +208,142 @@
                   </div>
                 </div>
                 <div class="contacts__item">
-                  <div class="contacts__link"><a href="#">Реквизиты</a></div>
+                  <div class="contacts__link"><a href="../../img/pdf.pdf" target="_blank">Реквизиты</a></div>
                 </div>
               </div>
-              <div class="contacts__col"></div>
               <div class="contacts__col">
-                <div class="contacts__form"></div>
+                <div class="contacts__item">
+                  <div class="contacts__label"><span>До встречи в офисе</span></div>
+                  <div class="swiper__label mobile">
+                    <div class="swiper__img"><img src="../../img/hand.svg"/></div><span>Листайте влево/вправо</span>
+                  </div>
+                  <div class="swiper singleSlider single-swiper-js">
+                    <div class="swiper-wrapper singleSlider__wrapper">
+                      <div class="swiper-slide singleSlider__slide">
+                        <div class="contacts__img img"><a href="../../img/contacts_1.jpg" data-fancybox="data-fancybox" data-type="image"><img src="../../img/contacts_1.jpg" loading="lazy"/></a></div>
+                      </div>
+                      <div class="swiper-slide singleSlider__slide">
+                        <div class="contacts__img img"><a href="../../img/contacts_1.jpg" data-fancybox="data-fancybox" data-type="image"><img src="../../img/contacts_1.jpg" loading="lazy"/></a></div>
+                      </div>
+                      <div class="swiper-slide singleSlider__slide">
+                        <div class="contacts__img img"><a href="../../img/contacts_1.jpg" data-fancybox="data-fancybox" data-type="image"><img src="../../img/contacts_1.jpg" loading="lazy"/></a></div>
+                      </div>
+                      <div class="swiper-slide singleSlider__slide">
+                        <div class="contacts__img img"><a href="../../img/contacts_1.jpg" data-fancybox="data-fancybox" data-type="image"><img src="../../img/contacts_1.jpg" loading="lazy"/></a></div>
+                      </div>
+                    </div>
+                    <div class="contacts__control">
+                      <div class="singleSlider__dotted"></div>
+                      <div class="singleSlider__arrows custom_arrows desktop"><i class="icon_arrow_left"></i><i class="icon_arrow_right"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__label"><span>До встречи у вас на замере</span></div>
+                  <div class="swiper__label mobile">
+                    <div class="swiper__img"><img src="../../img/hand.svg"/></div><span>Листайте влево/вправо</span>
+                  </div>
+                  <div class="swiper singleSlider single-swiper-js">
+                    <div class="swiper-wrapper singleSlider__wrapper">
+                      <div class="swiper-slide singleSlider__slide">
+                        <div class="contacts__img img"><a href="../../img/contacts_2.jpg" data-fancybox="data-fancybox" data-type="image"><img src="../../img/contacts_2.jpg" loading="lazy"/></a></div>
+                      </div>
+                      <div class="swiper-slide singleSlider__slide">
+                        <div class="contacts__img img"><a href="../../img/contacts_2.jpg" data-fancybox="data-fancybox" data-type="image"><img src="../../img/contacts_2.jpg" loading="lazy"/></a></div>
+                      </div>
+                      <div class="swiper-slide singleSlider__slide">
+                        <div class="contacts__img img"><a href="../../img/contacts_2.jpg" data-fancybox="data-fancybox" data-type="image"><img src="../../img/contacts_2.jpg" loading="lazy"/></a></div>
+                      </div>
+                      <div class="swiper-slide singleSlider__slide">
+                        <div class="contacts__img img"><a href="../../img/contacts_2.jpg" data-fancybox="data-fancybox" data-type="image"><img src="../../img/contacts_2.jpg" loading="lazy"/></a></div>
+                      </div>
+                    </div>
+                    <div class="contacts__control">
+                      <div class="singleSlider__dotted"></div>
+                      <div class="singleSlider__arrows custom_arrows desktop"><i class="icon_arrow_left"></i><i class="icon_arrow_right"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts__col">
+                <div class="contacts__form bg">
+                  <div class="contacts__form-title"><span>Форма обратной связи</span></div>
+                  <div class="contacts__form-subtitle"><span>Оставьте заявку, позвоним в течение 10 минут</span></div>
+                  <form class="form">
+                    <div class="form__row">
+                      <div class="form__label"><span>Введите номер телефона</span></div>
+                      <input class="tel" type="tel" required="required" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _"/>
+                    </div>
+                    <div class="form__row">
+                      <button class="btn btn_didisabled_js" type="submit"><span>Позвоните мне</span></button>
+                    </div>
+                    <div class="form__row form__row_full form__row_mb0">
+                      <div class="form__privacy">
+                        <label class="form__check">
+                          <input class="check_checked_js" type="checkbox" checked="checked"/><span class="snakeline">Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <!-- end contacts-->
+        <!-- begin report-->
+        <section class="report section" id="report">
+          <div class="report__wrap">
+            <div class="report__notepad">
+              <div class="notepad">
+                <div class="section__subtitle"><span>Рассчитайте примерную стоимость в нашем онлайн калькуляторе</span></div>
+                <div class="notepad__link"><a class="show_js" href="#calculate">Перейти в калькулятор</a></div>
+                <div class="notepad__bg bg"></div>
+              </div>
+            </div>
+            <div class="report__content">
+              <div class="report__caption">
+                <h2 class="report__title" data-aos="fade-up"><span>Скачайте пример реальной сметы на ремонт с полными графиками работ</span></h2>
+                <div class="report__subtitle"><span>и поймите наш подход наглядно</span></div>
+              </div>
+              <div class="report__form">
+                <form class="form form_sm">
+                  <div class="form__row">
+                    <div class="form__label"><span>Куда прислать?</span></div>
+                    <select class="select" data-placeholder="Whatsapp">
+                      <option value=""></option>
+                      <option value="whatsapp">Whatsapp</option>
+                      <option value="Viber">Viber</option>
+                      <option value="Telegram">Telegram</option>
+                      <option value="mail">Email</option>
+                    </select>
+                  </div>
+                  <div class="form__row form__row_hide form__row_email_js">
+                    <div class="form__label"><span>Введите email</span></div>
+                    <input type="email" placeholder="E-mail"/>
+                  </div>
+                  <div class="form__row form__row_phone_js">
+                    <div class="form__label"><span>Введите номер телефона</span></div>
+                    <input class="tel" type="tel" required="required" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit"><span>Скачать смету</span></button>
+                  </div>
+                  <div class="form__row form__row_mb0">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span class="snakeline">Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="report__bg bg" data-aos="fade-left" data-aos-delay="500"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end report-->
       </main>
-      <div class="lowerpanel" id="lowerpanel">
-        <div class="lowerpanel__wrap">
-          <div class="lowerpanel__toggle"><span></span></div>
-          <div class="lowerpanel__container"><a class="lowerpanel__link show_js" href="#download2">
-              <div class="lowerpanel__btn"><i class="icon_pdf"></i></div>
-              <div class="lowerpanel__hint"><span>Скачать презентацию</span></div></a><a class="lowerpanel__link show_js" href="#application">
-              <div class="lowerpanel__btn"><i class="icon_phone"></i></div>
-              <div class="lowerpanel__hint"><span>Оставить заявку</span></div></a><a class="lowerpanel__link show_js" href="#discounts">
-              <div class="lowerpanel__btn"><i class="icon_percentage"></i></div>
-              <div class="lowerpanel__hint"><span>Акции</span></div></a><a class="lowerpanel__link" href="https://wa.me/+73912054081" target="_blank">
-              <div class="lowerpanel__btn"><i class="icon_whatsapp"></i></div>
-              <div class="lowerpanel__hint"><span>Написать в WhatsApp</span></div></a></div>
-        </div>
-      </div>
       <div class="toTop"><a href="#wrapper"> <i class="icon_to_top"></i></a></div>
       <footer class="footer">
         <div class="container_center container_center_sm">

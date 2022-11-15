@@ -235,3 +235,55 @@ block content
 
 
     // end consultation
+
+
+    // begin otherProjects
+    section#otherProjects.otherProjects.section
+        .container_center.container_center_right
+            .section__caption
+                h2.section__title
+                    span <b>Посмотрите</b> другие проекты
+        .otherProjects__list
+            each item in ['', '', '', ]
+
+                .otherProjects__item
+                    //- begin projects__slider
+                    .swiper.otherProjects__slider.otherProjects-swiper-js
+                        .swiper-wrapper
+                            .swiper-slide.projects__slide
+                                .projects__beforeAfter.img.shadow.twentytwenty-container
+                                    img(src="../../img/project_1.webp" loading="lazy")
+                                    img(src="../../img/project_2.webp" loading="lazy")
+                            .swiper-slide.projects__slide
+                                .projects__img.projects__video.bg.shadow(style="background-image: url('../../img/project_1.webp')")
+                                    .play.pulse.youtubeModal-js#rsDoGqnPE4c
+                                        i.icon_play
+                            each item in [1,2,3,4,5,6,7,8]
+
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+
+                        .otherProjects__control
+                            .otherProjects__dotted.dotted_sm
+                            .otherProjects__arrows.custom_arrows.custom_arrows_white
+                                i.icon_arrow_left
+                                i.icon_arrow_right
+                    //- end projects__slider
+                    .otherProjects__content
+                        .otherProjects__title
+                            span Проект 1
+                            small Серийный проект
+                        ul.list
+                            li
+                                small Площадь:
+                                span 100 м<sup>2</sup>
+                            li
+                                small Кол-во этажей:
+                                span 2 этажа
+                        .otherProjects__link
+                            a(href="#") Изучить подробнее
+
+
+    // end otherProjects

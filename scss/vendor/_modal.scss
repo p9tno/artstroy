@@ -453,3 +453,48 @@
     }
 
 }
+
+.map {
+    .modal-dialog {
+        max-width: 19.25em;
+        width: 100%;
+        @media (min-width: 768px) {
+            max-width: 73.25em;
+        }
+    }
+
+    .modal-content {
+        padding: 0;
+        background: none;
+    }
+
+    .modal-close {
+        right: 1em;
+        top: -2em;
+        color: $color_white;
+        @media (min-width: 768px) {
+            right: -2em;
+            top: -3em;
+        }
+
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+        padding-bottom: 20em;
+        @media (min-width: 768px) {
+            padding-bottom: 40em;
+
+        }
+
+        iframe {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+}
