@@ -1,0 +1,86 @@
+//- remont
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    //- -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_reverse.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+                span
+                    a(href="#")
+                        span Услуги
+                span.kb_sep
+
+                span.kb_title Ремонт коммерческих объектов
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.head_remont.section(style="background-image: url('../../img/remont_bg.webp')").bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+
+        .container_center.container_center_right
+            .head__content
+                .head__left
+                    .head__subtitle.mb20
+                        span По всей России
+                    h1.head__title.mb24
+                        span Ремонт <b>под ключ</b> для частных  и гос. компаний с филиальной сетью <b>точно в срок</b> или быстрее  по фиксированной смете
+                    .head__subtitle.mb66
+                        span работаем по вашему бренд-буку или сами разработаем проект 
+                    .head__button
+                        a.btn.btn_dark.btn_whatsapp(href="#")
+                            span Напишите нам в WhatsApp
+                            small время ответа 10 минут
+                .head__right
+                    .head__form
+                        .head__label
+                            span <b>Давайте обсудим ваше ТЗ</b>
+                        .head__text
+                            span Пришлите проект или тех.задание,<br> а мы сформируем коммерческое<br> предложение для вас
+
+                        form.form.form_sm
+                            .form__row
+                                .form__label
+                                    span Куда прислать?
+                                select.select(data-placeholder="Whatsapp")
+                                    option(value="")
+                                    option(value="whatsapp") Whatsapp
+                                    option(value="Viber") Viber
+                                    option(value="Telegram") Telegram
+                                    option(value="mail") Email
+
+                            .form__row.form__row_hide.form__row_email_js
+                                .form__label
+                                    span Введите email
+                                input(type="email" placeholder="E-mail")
+
+                            .form__row.form__row_phone_js
+                                .form__label
+                                    span Введите номер телефона
+                                input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit")
+                                    span Обсудить ТЗ и получить
+                                    span коммерческое предложение
+
+                            .form__row.form__row_mb0
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+    // end head

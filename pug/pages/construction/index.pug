@@ -1,0 +1,59 @@
+//- construction
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    //- -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_reverse.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+                span
+                    a(href="#")
+                        span Услуги
+                span.kb_sep
+
+                span.kb_title Малоэтажное строительство
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.head_construction.section(style="background-image: url('../../img/construction_bg.webp')").bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+
+        .container_center.container_center_right
+
+            .head__content
+                .head__left
+                    h1.head__title.mb22
+                        span Строим <b>экологичные дома из автоклавного газобетона</b> под ключ по продуманным авторским проектам
+                    .head__subtitle.mb54
+                        span воплотим мечты о красивой загородной жизни 
+                    .head__action.mb20
+                        a.btn.show_js(href="#application")
+                            span Рассчитать стоимость
+                            span строительства дома
+                        a.btn.btn_dark.btn_whatsapp(href="#")
+                            span Напишите нам в WhatsApp
+                            small время ответа 10 минут
+                    .head__text
+                        span Пройдите короткий тест, чтобы мы сориентировали по стоимости и сформировали предложение для вас.
+                .head__right
+                    .head__list
+                        each item in [ '<b>25 лет гарантия</b>  по договору.<br> Берем полную ответственность<br> за результат', '<b>8 лет</b> работаем в сфере<br> строительства', 'Строим в ипотеку от <b>ДомРФ,<br> Сбербанк</b>', 'Наши <b>стандарты<br> строительства</b> превосходят<br> СНиПы ' ]
+                            .head__item
+                                .head__mark.check_mark
+                                    i.icon_mark
+                                span!=item 
+
+    // end head

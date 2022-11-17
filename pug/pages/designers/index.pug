@@ -1,0 +1,45 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    //- -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_reverse.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title Дизайнерам, архитекторам
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.head_designers.section(style="background-image: url('../../img/designers_bg.webp')").bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+
+        .container_center.container_center_right
+            .head__content
+                .head__left
+                    .head__subtitle.mb66
+                        span АртСтрой приглашает к сотрудничеству дизайнеров и архитекторов
+                    h1.head__title
+                        span <b>Реализуем ваши дизайнерские и архитектурные проекты</b> с максимальной точностью 
+                .head__right
+                    .head__list
+                        each item in [ 'Прозрачная система оплаты<br> <b>агентского вознаграждения</b>', '<b>Мы с вами — команда,</b> которая<br> работат как единое целое и<br> воплощает в жизнь смелые идеи', 'Не тянем одеяло на себя и <b>не<br> дескридитируем перед клиентом</b>', '<b>Не предлагаем менять<br> решения,</b> заложенные<br> вами в проекте' ]
+                            .head__item
+                                .head__mark.check_mark
+                                    i.icon_mark
+                                span!=item 
+
+
+    // end head

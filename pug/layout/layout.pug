@@ -1,6 +1,8 @@
 block variable
     -var path = '';
-    -var page = true;
+    //- -var page = true;
+    -var page = 'bg';
+    //- -var leadmagnet = true;
 
 <!DOCTYPE html>
 html(lang="en")
@@ -18,25 +20,38 @@ html(lang="en")
         link(rel="stylesheet", type="text/css", href=path + "css/style.css")
     body
         //- begin preloader
-        .preloader__wrap#preloader
-            .preloader
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        //- .preloader__wrap#preloader
+        //-     .preloader
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
         //- end preloader
 
         .wrapper#wrapper
 
-            if page
+            if page=='bg'
                 include header_bg.pug
+            else if page=='leadmagnet'
+                include header_leadmagnet.pug
             else
                 include header.pug
+
+
+
+            //- main.main_content.lines
+            //-     .lines__wrap
+            //-         .lines__list
+            //-             span
+            //-             span
+            //-             span
+            //-             span
+            //-             span
 
             main.main_content
                 block content
@@ -92,8 +107,12 @@ html(lang="en")
             //- end toTop
 
 
+            if page=='leadmagnet'
+                include footer_leadmagnet.pug
+            else
+                include footer.pug
 
-            include footer.pug
+            //- include footer.pug
             include modal.pug
 
             script(src=path +"js/jquery.js")

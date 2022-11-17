@@ -1,0 +1,62 @@
+//- design
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    //- -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_reverse.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+                span
+                    a(href="#")
+                        span Услуги
+                span.kb_sep
+
+                span.kb_title Дизайн-проектирование
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.head_design.section(style="background-image: url('../../img/design_bg.webp')").bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+
+        .container_center.container_center_right
+
+            .head__content
+                .head__left
+                    .head__subtitle.mb20
+                        span По всей России 
+
+                    h1.head__title.mb22
+                        span <b>Создаем и реализуем уникальные дизайн-проекты</b> домов, квартир и коммерческой недвижимости
+                    .head__subtitle.mb56
+                        span Проекты АртСтрой — не просто красивые картинки. Разрабатываем чертежи и планы для 100% реализации 
+                    .head__action.mb20
+                        a.btn.show_js(href="#application")
+                            span Рассчитать стоимость
+                            span дизайн-проекта
+                        a.btn.btn_dark.btn_whatsapp(href="#")
+                            span Напишите нам в WhatsApp
+                            small время ответа 10 минут
+                    .head__text
+                        span Пройдите короткий тест, чтобы мы сориентировали по стоимости и сформировали предложение для вас.
+                .head__right
+                    .head__list
+                        each item in [ 'Создали более <b>1 000 проектов</b>', '<b>16 профессиональных дизайнеров</b> с прекрасным чувством стиля', 'Комплектуем <b>реальными позициями</b>', 'Действует <b>рассрочка<br> платежа</b> на 12 месяцев' ]
+                            .head__item
+                                .head__mark.check_mark
+                                    i.icon_mark
+                                span!=item 
+
+    // end head

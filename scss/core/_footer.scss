@@ -5,9 +5,28 @@
 	color: $color_white;
 	background-color: #1C1A1A;
 	padding: 1.75em 0 3em;
+
 	@media (min-width: 768px) {
 		padding: 2.8125em 0 2.625em;
 
+	}
+
+	&_leadmagnet {
+		@media (min-width: 768px) {
+			padding-top: 1.75em;
+		}
+
+		.footer__row {
+			&:first-child {
+				padding: 0;
+				border: 0;
+
+			}
+		}
+
+		.footer__col {
+			padding-bottom: 0;
+		}
 	}
 
 	&__row {

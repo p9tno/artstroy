@@ -1,0 +1,58 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    -var page = 'leadmagnet';
+
+block content
+
+
+    // begin head
+    section#head.head.head_leadmagnet.section(style="background-image: url('../../img/leadmagnet_bg.webp')").bg
+        .container_center.container_center_right
+            .head__left
+                h1.head__title
+                    span Нужен ремонт?
+                .head__subtitle
+                    span Скачайте портфолио проектов для вдохновения
+                .head__title
+                    span <b>33 идеи дизайнерского<br> ремонта в трендах 2022 года<br> (с фото до/после )</b>
+
+                .head__form_row
+                    form.form.form_grid
+                        .form__row.form__row_31
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_31.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_31.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row.form__row_38
+                            .form__label.form__label_opacity.desktop
+                                span Нажмите
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Скачать портфолио в 1 клик
+
+
+
+                        .form__row.form__row_full.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+
+
+    // end head

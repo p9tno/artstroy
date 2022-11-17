@@ -1,0 +1,48 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    //- -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_reverse.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title Спасибо
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.head_thanks.section(style="background-image: url('../../img/thanks_bg.webp')").bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+
+        .container_center.container_center_right
+
+            .head__left
+                h1.head__title.mb30
+                    span Отлично! Мы получили ваши данные 
+                .head__subtitle.mb80
+                    span Свяжемся с вами в течение 10 минут в рабочее время, если оставили заявку в нерабочее — начнем следующий день с вашей заявки.
+                .head__label.mb28
+                    span А пока ожидаете — посмотрите видеообзоры свежих проектов на YouTube или социальную сеть с фотографиями.
+                .head__action
+                    a.btn.btn_youtube(href="#")
+                        span Перейти на Youtube 
+                    a.btn.btn_insta(href="#")
+                        span Перейти в соц.сеть
+            .head__persone.bg(style="background-image: url('../../img/head_persone.webp')")
+
+
+
+
+    // end head

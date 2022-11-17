@@ -1,0 +1,50 @@
+extends ../../layout/layout.pug
+block variable
+    -var path = '../../';
+    //- -var page = true;
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_reverse.section
+        .container_center.container_center_right
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+
+                span.kb_title 404
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.head_404.section(style="background-image: url('../../img/404_bg.webp')").bg.lines
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+
+        .container_center.container_center_right
+
+            .head__left
+                h1.head__title.mb24
+                    span <b>Страница не найдена</b>
+                .head__subtitle.mb42
+                    span Кажется, что-то пошло не так. Такой страницы у нас нет. Возможно, она устарела или была удалена  
+                .head__button.mb74
+                    a.btn.btn_404(href="#") 
+                        span Вернуться на главную
+                .head__text.mb14
+                    span или напишите нам, чтобы сообщить об ошибке
+                .head__button
+                    a.btn.btn_dark.btn_whatsapp(href="#")
+                        span Напишите нам в WhatsApp
+                        small время ответа 10 минут
+
+
+
+
+
+    // end head
