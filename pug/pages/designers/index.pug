@@ -43,3 +43,422 @@ block content
 
 
     // end head
+
+    // begin request
+    section#request.request.section
+        .container_center.container_center_right
+            .request__title
+                span Оставьте заявку — вышлем вам образец агентского договора
+            .request__subtitle
+                span и обсудим партнерство
+        .container_right
+            .request__form
+                .form__wrap
+                    form.form.form_grid
+
+                        .form__row.form__row_31
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_31.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_31.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row.form__row_38
+                            .form__label.form__label_opacity.desktop
+                                span Нажмите
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Получить образец договора
+                                span и обсудить сотрудничество 
+
+
+
+
+                        .form__row.form__row_full.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+
+    // end request
+
+    // begin levelDesign
+    section#levelDesign.levelDesign.section
+        .container_center
+            h2.section__title
+                span <b>Релизовали более 40</b> дизайнерских проектов
+
+            .section__label
+                span Мы открыты: даем контакты дизайнеров-партнеров. Получите самый честный отзыв.
+            .levelDesign__filter
+                .filter#filter
+                    .filter__nav
+                        .filter__wrap
+                            .filter__label
+                                span Общий уровень дизайна
+
+                            ul.filter__list.form
+                                li.filter__checkbox
+                                    <input type="checkbox" checked value="star5" id="star5" />
+                                    label.stars.stars_5(for="star5")
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+
+                                li.filter__checkbox
+                                    <input type="checkbox" checked value="star4" id="star4" />
+                                    label.stars.stars_4(for="star4")
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+
+                                li.filter__checkbox
+                                    <input type="checkbox" checked value="star3" id="star3" />
+                                    label.stars.stars_3(for="star3")
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+
+                                li.filter__checkbox
+                                    <input type="checkbox" checked value="star2" id="star2" />
+                                    label.stars.stars_2(for="star2")
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+
+                                li.filter__checkbox
+                                    <input type="checkbox" checked value="star1" id="star1" />
+                                    label.stars.stars_1(for="star1")
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+                                        i.icon_star
+
+                        .filter__reset.filter_reset_js
+                            a(href="#") Сбросить фильтр
+
+                .filter__result
+                    // start filter__item
+                    .filter__item.star5
+                        .levelDesign__item
+                            .levelDesign__img.img
+                                img(src="../../img/levelDesign_1.jpg", alt="alt")
+                            .levelDesign__name
+                                span Анна Серова
+                            .levelDesign__desc
+                                span Совместно реализовали 7 объектов
+                            .levelDesign__profile
+                                .profile
+                                    .profile__label
+                                        span Профиль дизайнера
+
+                                    .profile__progress
+                                        small Достижения:
+                                        span Чемпион визуализации
+
+                                    .profile__total
+                                        .profile__title
+                                            span Карма
+                                            small Совокупный уровень
+                                        .stars.stars_white.stars_4
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+
+
+                                    .profile__list
+                                        each item in ['Уровень дизайна', 'Рабочие чертежи', '3D-визуализация' ]
+                                            .profile__item
+                                                span=item
+                                                .profile__stars
+                                                    .stars.stars_white.stars_1
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                    .profile__link
+                                        a(href="#" target="_blank") Перейти на страницу в соц.сети
+
+                    // end filter__item
+
+
+                    // start filter__item
+                    .filter__item.star5
+                        .levelDesign__item
+                            .levelDesign__img.img
+                                img(src="../../img/levelDesign_2.jpg", alt="alt")
+                            .levelDesign__name
+                                span Анна Серова
+                            .levelDesign__desc
+                                span Совместно реализовали 7 объектов
+                            .levelDesign__profile
+                                .profile
+                                    .profile__label
+                                        span Профиль дизайнера
+
+                                    .profile__progress
+                                        small Достижения:
+                                        span Чемпион визуализации
+
+                                    .profile__total
+                                        .profile__title
+                                            span Карма
+                                            small Совокупный уровень
+                                        .stars.stars_white.stars_4
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+
+
+                                    .profile__list
+                                        each item in ['Уровень дизайна', 'Рабочие чертежи', '3D-визуализация' ]
+                                            .profile__item
+                                                span=item
+                                                .profile__stars
+                                                    .stars.stars_white.stars_1
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                    .profile__link
+                                        a(href="#" target="_blank") Перейти на страницу в соц.сети
+
+                    // end filter__item
+
+
+                    // start filter__item
+                    .filter__item.star1
+                        .levelDesign__item
+                            .levelDesign__img.img
+                                img(src="../../img/levelDesign_3.jpg", alt="alt")
+                            .levelDesign__name
+                                span Анна Серова
+                            .levelDesign__desc
+                                span Совместно реализовали 7 объектов
+                            .levelDesign__profile
+                                .profile
+                                    .profile__label
+                                        span Профиль дизайнера
+
+                                    .profile__progress
+                                        small Достижения:
+                                        span Чемпион визуализации
+
+                                    .profile__total
+                                        .profile__title
+                                            span Карма
+                                            small Совокупный уровень
+                                        .stars.stars_white.stars_4
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+
+
+                                    .profile__list
+                                        each item in ['Уровень дизайна', 'Рабочие чертежи', '3D-визуализация' ]
+                                            .profile__item
+                                                span=item
+                                                .profile__stars
+                                                    .stars.stars_white.stars_1
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                    .profile__link
+                                        a(href="#" target="_blank") Перейти на страницу в соц.сети
+
+                    // end filter__item
+
+
+                    // start filter__item
+                    .filter__item.star2
+                        .levelDesign__item
+                            .levelDesign__img.img
+                                img(src="../../img/levelDesign_1.jpg", alt="alt")
+                            .levelDesign__name
+                                span Анна Серова
+                            .levelDesign__desc
+                                span Совместно реализовали 7 объектов
+                            .levelDesign__profile
+                                .profile
+                                    .profile__label
+                                        span Профиль дизайнера
+
+                                    .profile__progress
+                                        small Достижения:
+                                        span Чемпион визуализации
+
+                                    .profile__total
+                                        .profile__title
+                                            span Карма
+                                            small Совокупный уровень
+                                        .stars.stars_white.stars_4
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+
+
+                                    .profile__list
+                                        each item in ['Уровень дизайна', 'Рабочие чертежи', '3D-визуализация' ]
+                                            .profile__item
+                                                span=item
+                                                .profile__stars
+                                                    .stars.stars_white.stars_1
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                    .profile__link
+                                        a(href="#" target="_blank") Перейти на страницу в соц.сети
+
+                    // end filter__item
+
+
+                    // start filter__item
+                    .filter__item.star3
+                        .levelDesign__item
+                            .levelDesign__img.img
+                                img(src="../../img/levelDesign_2.jpg", alt="alt")
+                            .levelDesign__name
+                                span Анна Серова
+                            .levelDesign__desc
+                                span Совместно реализовали 7 объектов
+                            .levelDesign__profile
+                                .profile
+                                    .profile__label
+                                        span Профиль дизайнера
+
+                                    .profile__progress
+                                        small Достижения:
+                                        span Чемпион визуализации
+
+                                    .profile__total
+                                        .profile__title
+                                            span Карма
+                                            small Совокупный уровень
+                                        .stars.stars_white.stars_4
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+
+
+                                    .profile__list
+                                        each item in ['Уровень дизайна', 'Рабочие чертежи', '3D-визуализация' ]
+                                            .profile__item
+                                                span=item
+                                                .profile__stars
+                                                    .stars.stars_white.stars_1
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                    .profile__link
+                                        a(href="#" target="_blank") Перейти на страницу в соц.сети
+
+                    // end filter__item
+
+
+                    // start filter__item
+                    .filter__item.star4
+                        .levelDesign__item
+                            .levelDesign__img.img
+                                img(src="../../img/levelDesign_3.jpg", alt="alt")
+                            .levelDesign__name
+                                span Анна Серова
+                            .levelDesign__desc
+                                span Совместно реализовали 7 объектов
+                            .levelDesign__profile
+                                .profile
+                                    .profile__label
+                                        span Профиль дизайнера
+
+                                    .profile__progress
+                                        small Достижения:
+                                        span Чемпион визуализации
+
+                                    .profile__total
+                                        .profile__title
+                                            span Карма
+                                            small Совокупный уровень
+                                        .stars.stars_white.stars_4
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+                                            i.icon_star
+
+
+                                    .profile__list
+                                        each item in ['Уровень дизайна', 'Рабочие чертежи', '3D-визуализация' ]
+                                            .profile__item
+                                                span=item
+                                                .profile__stars
+                                                    .stars.stars_white.stars_1
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                                        i.icon_star
+                                    .profile__link
+                                        a(href="#" target="_blank") Перейти на страницу в соц.сети
+
+                    // end filter__item
+
+
+
+
+                //- .filter__more
+                //-     a.load_more.show_more_d_js(href="#" data-load="Загрузкка" data-more="Смотреть еще вакансии" data-v-toggle="") Смотреть еще
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // end levelDesign

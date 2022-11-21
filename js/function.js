@@ -158,16 +158,16 @@ $(document).ready(function() {
     collapsed();
 
 
-    function doTabs() {
-        $('.tabs__item').on('click', function() {
-            $('.tabs__item').removeClass('active');
-            $(this).addClass('active');
-
-            $('.tabContent__item').removeClass('active');
-            $($(this).data('tab')).addClass('active');
-        });
-    };
-    doTabs();
+    // function doTabs() {
+    //     $('.tabs__item').on('click', function() {
+    //         $('.tabs__item').removeClass('active');
+    //         $(this).addClass('active');
+    //
+    //         $('.tabContent__item').removeClass('active');
+    //         $($(this).data('tab')).addClass('active');
+    //     });
+    // };
+    // doTabs();
 
     function showHideTask() {
         $(".task__grid").on('mouseenter', '.task__item', function() {
@@ -580,43 +580,7 @@ $(document).ready(function() {
     showMoreAdvantage();
 
 
-    // function showMoreVacancies(classItem, btn) {
-    //
-    //     // let classItem = '.vacancies__item';
-    //     // let classItem = class;
-    //     let item = $(''+ classItem +'');
-    //     let count = item.length;
-    //     let start = 1;
-    //     let show = 1;
-    //
-    //     item.addClass('d-none');
-    //     $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
-    //
-    //     $(btn).click(function(e) {
-    //         e.preventDefault();
-    //         $(this).addClass('loading');
-    //
-    //         let load = $(this).data('load');
-    //         let more = $(this).data('more');
-    //
-    //         start = (start + show <= count) ? start + show : count;
-    //
-    //         $(this).text(load);
-    //
-    //         setTimeout(() => {
-    //             $(''+ classItem +':lt(' + start + ')').removeClass('d-none');
-    //             if ($(''+ classItem +':not(.d-none)').length == count) {
-    //                 $(this).parent().remove();
-    //             }
-    //             $(this).removeClass('loading');
-    //             $(this).text(more);
-    //         }, 500);
-    //
-    //
-    //     });
-    //
-    // }
-    // showMoreVacancies('.vacancies__item', '.show_more_v_js');
+
 
 
 
@@ -737,8 +701,88 @@ $(document).ready(function() {
     });
 
 
+    function filterForDesigners() {
+
+        function showMoreD(classItem, btn) {
+
+            // let classItem = '.vacancies__item';
+            // let classItem = class;
+
+            let item = $(''+ classItem +'');
+            let count = item.length;
+            let start = 3;
+            let show = 1;
+            //
+            // if (count >= start) {
+            //     let button = $(btn);
+            //     button.parent().remove();
+            // }
 
 
+            item.addClass('d-none');
+            $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
+
+            $(btn).click(function(e) {
+                e.preventDefault();
+                $(this).addClass('loading');
+
+                let load = $(this).data('load');
+                let more = $(this).data('more');
+
+                start = (start + show <= count) ? start + show : count;
+
+                $(this).text(load);
+
+                setTimeout(() => {
+                    $(''+ classItem +':lt(' + start + ')').removeClass('d-none');
+
+                    if ($(''+ classItem +':not(.d-none)').length == count) {
+                        $(this).parent().remove();
+                    }
+
+                    $(this).removeClass('loading');
+                    $(this).text(more);
+                }, 500);
+
+
+            });
+
+        }
+        // showMoreD('.levelDesign__item', '.show_more_d_js');
+
+
+
+
+        $("#filter :checkbox").click(function() {
+            $(".filter__item").hide();
+
+            $("#filter :checkbox:checked").each(function() {
+                // $("." + $(this).val()).show();
+                $("." + $(this).val()).fadeIn();
+            });
+
+        });
+
+        $('.filter_reset_js').click(function(e) {
+            e.preventDefault();
+
+            $("#filter :checkbox").each(function() {
+                $(this).prop('checked', true);
+                // $(".filter__item").show();
+                $(".filter__item").fadeIn();
+            });
+
+        });
+
+
+
+
+
+
+
+
+    }
+    filterForDesigners();
 
 
 })

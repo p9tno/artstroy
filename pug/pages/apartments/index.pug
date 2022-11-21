@@ -59,3 +59,129 @@ block content
                                 span!=item 
 
     // end head
+
+    // begin muchMore
+    section#muchMore.muchMore.section
+        .container_center.container_center_right
+            h2.section__title
+                span <b>Делаем гораздо больше</b> чем обычные ремонтные бригады
+        .container_right
+            .muchMore__tabs
+                .tabs__wrapper
+                    .tabs
+                        each item in ['Дизайн-проектирование', 'Снабжение объекта', 'Черновая и чистовая отделка', 'Чистота']
+                            .tab
+                                span=item
+                    .tabs__content
+                        //start tab__item
+                        .tab__item
+                            .muchMore__content.muchMore__content_engineering.bg(style="background-image: url('../../img/muchMore_bg_1.webp')")
+                                .muchMore__left
+                                    .muchMore__title
+                                        span Создаем дизайн-проект с нуля<br> или работаем по вашему
+                                    ul
+                                        li
+                                            span учитываем ваши пожелания и идеи
+                                        li
+                                            span разрабатываем комплексный пакет документов с<br> различными вариантами планировки, схемами,<br> техническими планами, 3D-визуализацией,<br> иллюстрациями
+                                        li
+                                            span комплектуем реальными позициями
+                                        li
+                                            span добиваемся 100% реализации
+
+                                    .muchMore__action
+                                        a.btn(href="#") 
+                                            span Подробнее о дизайн-проектировании
+                                        .muchMore__link
+                                            a(href="#") Посмотреть пример дизайн-проекта
+
+                                .muchMore__right.desktop
+                                    .muchMore__persone.bg(style="background-image: url('../../img/muchMore_persone.webp')")
+                                        .person
+                                            .person__name
+                                                span Турова <br>Ирина
+                                            .person__description
+                                                span Дизанйер интерьера<br> ООО «АРТСТРОЙ»
+
+
+                            .muchMore__form
+                                .muchMore__caption
+                                    small Уже есть дизайн-проект?
+                                    span Пришлите дизайн-проект и <b>получите смету на ремонт</b>
+
+                                .form__wrap
+                                    form.form.form_grid
+
+                                        .form__row.form__row_31
+                                            .form__label
+                                                span Прикрепите файл с проектом
+                                            label.form__file_label(data-text="Файл не выбран")
+                                                input(type='file' required='required')
+                                                p.form__file Загрузить файл
+                                        .form__row.form__row_31
+                                            .form__label
+                                                span Введите номер телефона
+                                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                                        .form__row.form__row_38
+                                            .form__label.desktop
+                                                span Смета будет готова в течение 3-х рабочих дней
+                                            button.btn.btn_didisabled_js(type="submit")
+                                                span Отправить дизайн-проект
+                                                span и получить смету
+
+                                        .form__row.form__row_full.form__row_mb0
+                                            .form__privacy
+                                                label.form__check
+                                                    input.check_checked_js(type="checkbox" checked="checked")
+                                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+                        //end tab__item
+
+                        //start tab__item
+                        .tab__item
+                            .muchMore__content.muchMore__content_supply.bg(style="background-image: url('../../img/muchMore_bg_2.webp')")
+                                .muchMore__left
+                                    .muchMore__title
+                                        span Отдел снабжения заказывает и доставляет материалы на объект точно в срок. 
+                                        span Без хлопот для вас и Управляющей компании.
+                                    .muchMore__text
+                                        p У нас налажены прямые поставки материалов от ведущих производителей.  
+                                        p Если чего-то нет в стране или это снято с производства, наш отдел снабжения предложит аналоги в разумный срок и по приемлемой цене
+                                .muchMore__right
+
+
+
+
+
+                        //end tab__item
+
+                        //start tab__item
+                        .tab__item
+                            .muchMore__content.muchMore__content_finish.bg(style="background-image: url('../../img/muchMore_bg_3.webp')")
+                                .muchMore__title
+                                    span Все работы и ответственность на нас
+                                .provider__list.counter-wrap
+                                    each item in [ 'Керамическая<br> плитка', 'Металлопрокат', 'Кварцвиниловые<br>покрытия', 'Паркетная<br> доска', 'Производители<br> инструмента', 'Сантехника', 'Производители<br> газобетона', 'Мебель', 'Транспортные<br> компании', 'Кровельные<br> материалы', 'Инженерные<br> системы', 'Декор' ]
+                                        .provider__item.counter-item
+                                            .provider__nav
+                                                .provider__icon.check_mark
+                                                    i.icon_mark
+                                                .provider__number
+                                                    span.counter-el
+                                            .provider__label
+                                                span!=item
+
+                        //end tab__item
+
+                        //start tab__item
+                        .tab__item
+                            .muchMore__content.muchMore__content_clean.bg(style="background-image: url('../../img/muchMore_bg_4.webp')")
+                                .muchMore__title.muchMore__title_sm
+                                    span На наших объектах всегда чисто, мы полностью укрываем все<br> элементы мебели, дверей, окон и полов с целью сохранения покрытия.<br> Перед сдачей объекта вывозим мусор
+
+                        //end tab__item
+
+
+
+    // end muchMore

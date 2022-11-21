@@ -59,8 +59,12 @@
 
     &.active {
         span {
-            text-decoration: underline;
             color: $second_color;
+
+            &:after {
+                opacity: 1;
+
+            }
         }
 
         &:after {
@@ -81,18 +85,25 @@
     }
 
     span {
+        position: relative;
         font-size: 0.75em;
         color: #B8B8B8;
+        text-decoration: none;
         transition: 0.3s;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -0.02em;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid $second_color;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
         @media (min-width: 768px) {
             font-size: 1.5em;
         }
     }
 }
-
-.tabs__wrapper {}
-
-.tabs__content {}
-
-.tab__item {}

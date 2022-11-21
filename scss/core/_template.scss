@@ -64,6 +64,18 @@ body {
 	}
 }
 
+.container_right {
+	padding: 0 1.25em;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: 768px) {
+		padding: 0;
+		width: 113.75em;
+		margin-right: inherit;
+	}
+}
+
 .section {
 	padding: 1.125em 0;
 	z-index: 1;
@@ -137,6 +149,21 @@ body {
 
 		b {
 			font-weight: 700;
+		}
+	}
+
+	&__label {
+		line-height: 1;
+		@media (min-width: 768px) {
+			line-height: $main_line_height;
+		}
+
+		span {
+			font-size: 0.625em;
+			@media (min-width: 768px) {
+				font-size: 1.5em;
+
+			}
 		}
 	}
 
