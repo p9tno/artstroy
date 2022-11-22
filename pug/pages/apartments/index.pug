@@ -253,3 +253,58 @@ block content
 
 
     // end details
+
+    // begin specialists
+    section#specialists.specialists.section
+        .container_center.container_center_right
+            .specialists__content
+                .specialists__caption
+                    .section__subtitle
+                        span Не возможно быть лучшими во всем спектре ремонтных работ.   
+                    h2.section__title
+                        span <b>Мы привлекаем специалистов-партнеров</b> для узкопрофильных работ  
+                    .section__subtitle
+                        span и сохраняем гарантии для вас  
+
+                .specialists__list
+                    .provider__list.provider__list_col2.counter-wrap
+                        each item in [ 'Установка<br> межкомнатных и<br> входных дверей', 'Вентиляция и<br> кондиционирование', 'Установка<br> пластиковых окон', 'Укладка и циклевка<br> паркета' ]
+                            .provider__item.counter-item
+                                .provider__nav
+                                    .provider__icon.check_mark
+                                        i.icon_mark
+                                    .provider__number
+                                        span.counter-el
+                                .provider__label
+                                    span!=item
+
+
+    // end specialists
+
+    // begin docount
+    section#docount.docount.section
+        .container_right
+            .docount__wrap.bg
+                .docount__content
+                    h2.section__title
+                        span Разрабатываем <b>детальную и понятную смету</b>
+                    .section__subtitle
+                        span с указанием позиций материалов,  объемов и площади работ
+                    .docount__list
+                        .docount__item
+                            .docount__mark.check_mark
+                                i.icon_mark
+                            span Подбираем <b>лучшие варианты </b> материалов и комплектующих  <b>в рамках бюджета и проекта. </b> 
+                        .docount__item
+                            .docount__mark.check_mark
+                                i.icon_mark
+                            span В среднем стоимость ремонта — от 20 000  руб. / м²  <b>зависит от сложности работ, состояния объекта, площади.  </b>
+
+                    .docount__button
+                        a.btn(href="#")
+                            span Посмотрите пример реальной сметы и
+                            span убедитесь в детальности проработки
+
+
+
+    // end docount

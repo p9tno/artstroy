@@ -26,6 +26,10 @@
             grid-column-gap: 1em;
             grid-row-gap: 5em;
 
+            &_col2 {
+                grid-template-columns: 1fr 1fr;
+            }
+
         }
     }
 
@@ -44,6 +48,7 @@
     }
 
     &__nav {
+        flex: none;
         position: relative;
         display: flex;
         align-items: center;
