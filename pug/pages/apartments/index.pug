@@ -143,12 +143,24 @@ block content
                             .muchMore__content.muchMore__content_supply.bg(style="background-image: url('../../img/muchMore_bg_2.webp')")
                                 .muchMore__left
                                     .muchMore__title
-                                        span Отдел снабжения заказывает и доставляет материалы на объект точно в срок. 
-                                        span Без хлопот для вас и Управляющей компании.
+                                        span Отдел снабжения заказывает и<br> доставляет материалы на объект<br> точно в срок. 
+                                        span Без хлопот для вас и<br> Управляющей компании.
                                     .muchMore__text
                                         p У нас налажены прямые поставки материалов от ведущих производителей.  
                                         p Если чего-то нет в стране или это снято с производства, наш отдел снабжения предложит аналоги в разумный срок и по приемлемой цене
                                 .muchMore__right
+                                    .logos__grid
+                                        each item in [1,2,3,1,2,3,1,2,3 ]
+
+                                            .logos__item
+                                                .logos__pop
+                                                    .pop
+                                                        .pop__content
+                                                            span Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
+                                                .logos__img.img
+                                                    img(src="../../img/logo_"+item+".png")
+
+
 
 
 
@@ -162,7 +174,7 @@ block content
                                 .muchMore__title
                                     span Все работы и ответственность на нас
                                 .provider__list.counter-wrap
-                                    each item in [ 'Керамическая<br> плитка', 'Металлопрокат', 'Кварцвиниловые<br>покрытия', 'Паркетная<br> доска', 'Производители<br> инструмента', 'Сантехника', 'Производители<br> газобетона', 'Мебель', 'Транспортные<br> компании', 'Кровельные<br> материалы', 'Инженерные<br> системы', 'Декор' ]
+                                    each item in [ 'Керамическая<br> плитка', 'Металлопрокат', 'Кварцвиниловые<br>покрытия', 'Паркетная<br> доска', 'Производители<br> инструмента', 'Сантехника', 'Производители<br> газобетона', 'Мебель', 'Транспортные<br> компании', 'Кровельные<br> материалы', 'Инженерные<br> системы' ]
                                         .provider__item.counter-item
                                             .provider__nav
                                                 .provider__icon.check_mark
@@ -171,6 +183,10 @@ block content
                                                     span.counter-el
                                             .provider__label
                                                 span!=item
+
+                                    .provider__item
+                                        .provider__label
+                                            span и все, что необходимо , чтобы довести до задуманного в дизайн-проекте
 
                         //end tab__item
 
@@ -185,3 +201,55 @@ block content
 
 
     // end muchMore
+
+    // begin details
+    section#details.details.section
+        .container_center.container_center_right
+            h2.section__title
+                span Внимание деталям. <b>Заморочены на качестве</b>
+            .details__link
+                a(href="../../img/pdf.pdf" target="_blank") Посмотреть стандарты АРТСТРОЙ
+        .container_right
+            .details__grid
+                each item in [1,2,3]
+
+                    .details__preview.bg(style="background-image: url('../../img/details_"+item+".jpg')")
+                        .details__plus(style="top: 37%; left: 60%;")
+                            .details__icon
+                                i.icon_plus
+
+                            .details__pop
+                                .pop
+                                    .pop__content
+                                        span Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                        .details__plus(style="top: 17%; left: 20%;")
+                            .details__icon
+                                i.icon_plus
+
+                            .details__pop
+                                .pop
+                                    .pop__content
+                                        span Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+        .details__list
+            .details__item
+                .details__head
+                    .details__mark.check_mark
+                        i.icon_mark
+                    .details__label
+                        span Контролируем исполнение<br> стандартов качества в 4 этапа
+                .details__text
+                    span Кроме прораба и бригадира перед сдачей объект проверяет<br> независимый строительный эксперт и лично технический директор.<br> Именно поэтому у нас <b>меньше 1% гарантийных случаев за 8 лет.</b>
+
+            .details__item
+                .details__head
+                    .details__mark.check_mark
+                        i.icon_mark
+                    .details__label
+                        span 5 лет на ремонт
+                .details__text
+                    span гарантии зафиксированы<br> в договоре
+
+
+
+    // end details

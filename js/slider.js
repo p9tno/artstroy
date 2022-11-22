@@ -111,7 +111,7 @@ $(document).ready(function() {
     const singleSlider = new Swiper('.single-swiper-js', {
         slidesPerView: 1,
         speed: 500,
-        loop: true,
+        // loop: true,
         // autoplay: {
         //   delay: 5000,
         // },

@@ -218,3 +218,27 @@
     }
 
 }
+
+.logos__grid {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .logos__item {
+        @media (max-width: 767px) {
+            height: 7.75em;
+        }
+        position: relative;
+        border: 0.031em solid #F3F4F7;
+    }
+
+    .logos__pop {
+        @media (max-width: 767px) {
+            width: 11em;
+        }
+    }
+}
