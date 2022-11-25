@@ -290,13 +290,15 @@ block content
                         span Разрабатываем <b>детальную и понятную смету</b>
                     .section__subtitle
                         span с указанием позиций материалов,  объемов и площади работ
-                    .docount__list
-                        .docount__item
-                            .docount__mark.check_mark
+
+                    .section__list
+                        .section__item
+                            .section__mark.check_mark
                                 i.icon_mark
                             span Подбираем <b>лучшие варианты </b> материалов и комплектующих  <b>в рамках бюджета и проекта. </b> 
-                        .docount__item
-                            .docount__mark.check_mark
+
+                        .section__item
+                            .section__mark.check_mark
                                 i.icon_mark
                             span В среднем стоимость ремонта — от 20 000  руб. / м²  <b>зависит от сложности работ, состояния объекта, площади.  </b>
 
@@ -308,3 +310,140 @@ block content
 
 
     // end docount
+
+    // begin personalManager
+    section#personalManager.personalManager.section
+        .container_center
+            .personalManager__content.bg(style="background-image: url('../../img/personalManager_bg.jpg')")
+                .personalManager__left
+                    h2.section__title
+                        span Ваш проект ведет личный менеджер
+                    .section__subtitle
+                        span который быстро и адекватно реагирует на  пожелания и вопросы
+
+                .personalManager__right
+                    h2.section__title
+                        span На связи 7 дней в неделю
+                    .section__subtitle
+                        span по телефону, почте и в мессенджерах
+                    .section__list
+                        .section__item
+                            .section__mark.check_mark
+                                i.icon_mark
+                            span <b>Отвечает в течение 1—2</b> часов в рабочее время
+
+                        .section__item
+                            .section__mark.check_mark
+                                i.icon_mark
+                            span Чат в WhatsApp / Viber / Telegram <b>для обсуждения текущих вопросов</b>
+
+
+                        .section__item
+                            .section__mark.check_mark
+                                i.icon_mark
+                            span <b>Фото и видео отчеты о</b> проделанной работе
+
+                .personalManager__persone.bg(style="background-image: url('../../img/muchMore_persone.webp')")
+
+                .personalManager__mask.bg.desktop
+
+
+
+
+
+    // end personalManager
+
+    // begin information
+    section#information.information.section.bg.lines(style="background-image: url('../../img/information_bg.webp')")
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+        .container_center
+            .information__content
+                .section__subtitle
+                    span Разбиваем стереотипы о халтурах в ремонте. Иногда ошибаемся и это нормально,<br> но никогда не бросаем проект на полпути, исправляем ошибки и доводим до ума.  
+                h2.section__title
+                    span <b>АРТСТРОЙ — ваша профессиональная<br> команда строителей</b>
+
+    // end information
+
+    // begin gifts
+    section#gifts.gifts.section
+        .container_center.container_center_right
+            .gifts__content
+                .gifts__left
+                    .gifts__caption
+                        h2.section__title
+                            span Дарим подарки и <b>заботимся о бюджете</b>
+                        .gifts__label
+                            span Актуальные акции
+                    .gifts__control
+                        .gifts__dotted
+                        .gifts__arrows.custom_arrows.desktop
+                            i.icon_arrow_left
+                            i.icon_arrow_right
+                .gifts__right
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+
+                    .swiper.gifts__slider.gifts-swiper-js
+                        .swiper-wrapper
+                            each item in [1,2,1,2]
+                                .swiper-slide
+                                    .gifts__item.bg(style="background-image: url('../../img/gifts_"+item+".jpg')")
+                                        .gifts__top
+                                            .gifts__title
+                                                span Натяжной потолок<br> сделаем в подарок
+                                            .gifts__desc
+                                                span при заказе комплексного ремонта
+                                        .gifts__main
+                                            .gifts__price
+                                                span 0 руб
+                                            .gifts__oldprice
+                                                span Стоимость <b>70 000 руб</b>
+                                        .gifts__bottom
+                                            a.btn(href="#")
+                                                span Получить подарок
+
+
+
+
+    // end gifts
+
+
+    // begin faq
+    section#faq.faq.section
+        .container_center
+            .faq__caption
+                h2.section__title
+                    span У нас часто <b>спрашивают</b>
+                .faq__button
+                    a.btn.btn_dark.btn_whatsapp(href="#")
+                        span Напишите нам в WhatsApp
+                        small время ответа 10 минут
+
+
+            .faq__content
+
+                each item in [1,2]
+
+                    .faq__col
+                        each title in [1,2,3,4]
+
+                            .collapse(data-collapse-wrapper="")
+                                .collapse__title(data-collapse="")
+                                    .faq__title
+                                        p Работаете ли вы по договору?
+                                .collapse__body(data-collapse-body="")
+                                    .faq__answer
+                                        p Да, мы работаем официально по договору. <br>С юр. лифцами всех форм налооблажения.
+
+
+
+    // end faq

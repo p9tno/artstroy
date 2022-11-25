@@ -1,0 +1,91 @@
+.personalManager {
+    .section__title {
+        text-align: left;
+        font-weight: 400;
+
+        @media (min-width: 768px) {
+            line-height: 1.182;
+        }
+    }
+
+    .section__subtitle {
+        text-align: left;
+        @media (min-width: 768px) {
+            line-height: 1.2223;
+
+            span {
+                font-size: 2.25em;
+                font-weight: 300;
+            }
+        }
+
+    }
+
+    color: $color_white;
+
+    &__content {
+        padding: 1.5em 1em 0;
+
+        @media (min-width: 768px) {
+            padding: 6em 7em 5.5em 8.75em;
+            display: flex;
+            justify-content: space-between;
+
+            position: relative;
+        }
+    }
+
+    &__left {
+        .section__title {
+            margin-bottom: 1.125em;
+            @media (min-width: 768px) {
+                margin-bottom: 2.125em;
+            }
+        }
+        margin-bottom: 2em;
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            width: 25em;
+        }
+    }
+
+    &__right {
+        .section__title {
+            margin-bottom: 1em;
+            @media (min-width: 768px) {
+                margin-bottom: 1.25em;
+
+            }
+        }
+        @media (min-width: 768px) {
+            width: 25.625em;
+        }
+    }
+
+    &__persone {
+        font-size: 0.42em;
+        width: 36.875em;
+        height: 50em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            position: absolute;
+
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
+
+    &__mask {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 35.25em;
+            background-image: url("../../img/personalManager_mask.webp");
+        }
+    }
+
+}
