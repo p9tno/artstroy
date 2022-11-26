@@ -84,3 +84,370 @@ block content
                                         span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
 
     // end head
+
+    // begin 
+    section.section
+        .container_center.container_center_right
+            .section__list.section__list_row
+                each item in ['Гарантия сроков.<br> Платим за каждый<br> день просрочки', 'Допуски и лицензии<br> СРО, МЧС, к огневым,<br> высотным работам ', '<b>Соблюдаем стандарты</b> <br>СНиП, СП и ГОСТ', 'Предоставляем всю<br> исполнительную<br> документацию']
+                    .section__item
+                        .section__mark.check_mark
+                            i.icon_mark
+                        span!=item
+
+    // end 
+
+
+    // begin facts
+    section.facts.facts_dark.section
+        .container_right
+            .facts__content
+                .facts__caption
+                    .section__subtitle
+                        span Не нужно искать 5-7 подрядчиков.
+                    h2.section__title
+                        span Экономим ваше<br> время и берем все<br> работы на себя  
+
+                .facts__list
+                    .provider__list.provider__list_col2.counter-wrap
+                        each item in [ 'Установка<br> межкомнатных и<br> входных дверей', 'Вентиляция и<br> кондиционирование', 'Установка<br> пластиковых окон', 'Укладка и циклевка<br> паркета', 'Установка<br> межкомнатных и<br> входных дверей', 'Вентиляция и<br> кондиционирование', 'Установка<br> пластиковых окон', 'Укладка и циклевка<br> паркета', ]
+                            .provider__item.counter-item
+                                .provider__nav
+                                    .provider__icon.check_mark
+                                        i.icon_mark
+                                    .provider__number
+                                        span.counter-el
+                                .provider__label
+                                    span!=item
+
+    // end facts
+
+    // begin facts
+    section.facts.section
+        .container_center
+            .facts__content
+                .facts__caption
+                    h2.section__title
+                        span Поддержим <b>любую<br> форму</b> сотрудничества
+
+                .facts__list
+                    .provider__list.provider__list_col2.counter-wrap
+                        each item in [ 'Установка<br> межкомнатных и<br> входных дверей', 'Вентиляция и<br> кондиционирование', 'Установка<br> пластиковых окон', 'Укладка и циклевка<br> паркета' ]
+                            .provider__item.counter-item
+                                .provider__nav
+                                    .provider__icon.check_mark
+                                        i.icon_mark
+                                    .provider__number
+                                        span.counter-el
+                                .provider__label
+                                    span!=item
+
+
+
+    // end facts
+
+
+    // begin presentation
+    section#presentation.presentation.presentation_sm.section.bg.lines(style="background-image: url('../../img/presentation_2.webp')")
+        .lines__wrap
+            .lines__list
+                span
+                span
+                span
+                span
+                span
+        .container_center.container_center_right
+            h2.section__title(data-aos="fade-up")
+                span Получите <b>коммерческое предложение</b><br> на основании вашего проекта или ТЗ
+            .presentation__label
+                span Пришлите ваш проект или тех. задание, а мы:
+
+            .presentation__list
+                each item in ['проанализируем ваш проект', '<b>предоставим всю информацию</b> для принятия<br> решения о сотрудничестве;', 'рассчитаем <b>детальную смету</b> на работы и материалы', 'составим <b>план работ с четкими сроками</b>']
+
+                    .presentation__item
+                        span!=item
+
+
+            .presentation__form
+                .presentation__caption
+                    .presentation__title
+                        span Заполните форму
+                    .presentation__subtitle
+                        span свяжемся с вами ближайшее время
+                .form__wrap
+                    form.form.form_grid-col4
+                        .form__row.form__row_23
+                            .form__label
+                                span Выберите файл
+                            label.form__file_label(data-text="Файл не выбран")
+                                input(type='file' required='required')
+                                p.form__file Загрузить файл
+
+                        .form__row.form__row_23
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_23.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_23.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row.form__row_31
+                            .form__label.form__label_opacity.desktop
+                                span Нажмите
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Получить коммерческое предложение
+
+
+
+                        .form__row.form__row_full.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+
+    // end presentation
+
+    // begin projects
+    section#projects.projects.section
+        .container_center
+            h2.section__title(data-aos="fade-up")
+                span Выполненные <b>проекты</b>
+            .section__subtitle
+                span Имеем практический опыт реализации проектов в следующих сферах:
+        .projects__runningLine
+            .runningLine.runningLine_sm
+                .runningLine__content
+                    .runningLine__list
+                        each item in ['Рестораны премиум класса', 'Точки общественного питания', 'Торгово-развлекательные центры', 'Кинотеатры и кино комплексы', 'Фитнес клубы и тренажёрные залы', 'Режимные военные объекты залы']
+                            .runningLine__item
+                                span=item
+        .projects__wrap
+            each item in [ '', '', '', '', '', '', '', '', '', '' ]
+
+                .projects__item
+                    .projects__top.itemForDataFancybox_js
+                        //- begin projects__slider
+                        .swiper.projects__slider.projects-swiper-js
+                            .swiper-wrapper
+                                .swiper-slide.projects__slide
+                                    .projects__beforeAfter.img.shadow.twentytwenty-container
+                                        img(src="../../img/project_1.webp" loading="lazy")
+                                        img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.projects__video.bg.shadow(style="background-image: url('../../img/project_1.webp')")
+                                        .play.pulse.youtubeModal-js#rsDoGqnPE4c
+                                            i.icon_play
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+                                .swiper-slide.projects__slide
+                                    .projects__img.img
+                                        a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+
+                        .projects__control
+                            .projects__dotted.dotted_sm
+                            .projects__arrows.custom_arrows.custom_arrows_white
+                                i.icon_arrow_left
+                                i.icon_arrow_right
+                        //- end projects__slider
+
+                    .projects__bottom
+                        //- begin projects__slider_sm
+                        .swiper.projects__slider_sm.projects-swiper-sm-js
+                            .swiper-wrapper
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_ba_m.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.projects__video_sm.bg(style="background-image: url('../../img/project_1.webp')")
+                                        .play
+                                            i.icon_play
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                                .swiper-slide.projects__slide_sm
+                                    .projects__img_sm.bg(style="background-image: url('../../img/project_2.webp')")
+
+                        //- end projects__slider_sm
+
+                        .projects__content
+                            .projects__content_left
+                                .projects__title
+                                    span Ремонт 2-комнантной квартиры
+                                .projects__client
+                                    span Заказчик: частное лицо
+                                .projects__description
+                                    span Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            .projects__content_right
+                                ul.projects__list
+                                    li
+                                        span Площадь:
+                                        b 100 м<sup>2</sup>
+                                    li
+                                        span Срок ремонта:
+                                        b 3 мес
+                                    li
+                                        span ЖК Тихие зори
+                                        b Красноярск 
+                                .projects__link
+                                    a(href="#") Изучить проект подробнее
+        .container_center.container_center_sm
+            .projects__action
+                .projects__load
+                    a.load_more.show_more_js(href="#" data-load="Загрузкка" data-more="Смотреть еще") Смотреть еще 4 работы
+                .projects__buton
+                    a.btn(href="#")
+                        span Перейти в полное портфолио >100 проектов
+
+
+
+    // end projects
+
+    // begin stages
+    section#stages.stages.section
+        .container_center.container_center_right
+            .stages__content
+
+                .stages__left
+                    .stages__caption
+                        h2.section__title
+                            span <b>Четко планируем работы</b> на крупных объектах 
+                        .stages__text
+                            p Понимаем, насколько важно соблюдение сроков. Ведь затянувщийся ремонт  — это излишние платежи по аренде и упущенная прибыль.
+                            p <b>Поэтому мы даем гарантию:  сдаем проект точно в срок или быстрее или платим за каждый день просрочки  </b>
+                    .stages__control
+                        .stages__dotted
+                        .stages__arrows.custom_arrows.desktop
+                            i.icon_arrow_left
+                            i.icon_arrow_right
+
+                .stages__right
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+
+                    .swiper.stages__slider.stages-swiper-js
+                        .swiper-wrapper
+                            each item in [ {title: 'Прорабатываем<br> план производства работ', text: 'и графики поставок<br> материалов еще до<br> подписания договора.'}, {title: 'Привлекаем дополнительные ресурсы ', text: 'за свой счёт, если<br> сбились с графика.<br> При необходимости<br> работаем ночью. '}, {title: 'Привлекаем дополнительные ресурсы ', text: 'за свой счёт, если сбились с графика. При необходимости работаем ночью. '} ]
+                                .swiper-slide
+                                    .stages__item
+                                        .stages__wrap
+                                            .stages__top
+                                                .stages__title
+                                                    span!=item.title
+                                                .stages__text
+                                                    p!=item.text
+
+                                            .stages__bottom
+                                                .stages__naw
+                                                    .stages__number
+                                                        span 01
+                                                .stages__icon
+                                                    i.icon_arrow_deg
+
+    // end stages
+
+    // begin docount
+    section#docount.docount.section
+        .container_right
+            .docount__wrap.bg
+                .docount__content
+                    h2.section__title
+                        span Разрабатываем <b>детальную и понятную смету</b>
+                    .section__subtitle
+                        span с указанием позиций материалов,  объемов и площади работ
+
+                    .section__list
+                        .section__item
+                            .section__mark.check_mark
+                                i.icon_mark
+                            span Подбираем <b>лучшие варианты </b> материалов и комплектующих  <b>в рамках бюджета и проекта. </b> 
+
+                        .section__item
+                            .section__mark.check_mark
+                                i.icon_mark
+                            span В среднем стоимость ремонта — от 20 000  руб. / м²  <b>зависит от сложности работ, состояния объекта, площади.  </b>
+
+                    .docount__button
+                        a.btn(href="#")
+                            span Посмотрите пример реальной сметы и
+                            span убедитесь в детальности проработки
+
+        .container_right
+            .docount__form
+                .docount__caption
+                    span Рассчитаем<br> смету бесплатно
+
+                    small Пришлите проект или тех.задание, мы сформируем предвариательное предложение для вас:  сроки и порядок работ, смета и условия 
+                .form__wrap
+                    form.form.form_grid-col4
+                        .form__row.form__row_23
+                            .form__label
+                                span Выберите файл
+                            label.form__file_label(data-text="Файл не выбран")
+                                input(type='file' required='required')
+                                p.form__file Загрузить файл
+
+                        .form__row.form__row_23
+                            .form__label
+                                span Куда прислать?
+                            select.select(data-placeholder="Whatsapp")
+                                option(value="")
+                                option(value="whatsapp") Whatsapp
+                                option(value="Viber") Viber
+                                option(value="Telegram") Telegram
+                                option(value="mail") Email
+
+                        .form__row.form__row_23.form__row_hide.form__row_email_js
+                            .form__label
+                                span Введите email
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.form__row_23.form__row_phone_js
+                            .form__label
+                                span Введите номер телефона
+                            input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                        .form__row.form__row_31
+                            .form__label.form__label_opacity.desktop
+                                span Нажмите
+                            button.btn.btn_didisabled_js(type="submit")
+                                span Рассчитать смету
+
+
+
+                        .form__row.form__row_full.form__row_mb0
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span.snakeline Нажимая кнопку вы соглашаетесь  с условиями <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+
+
+
+    // end docount

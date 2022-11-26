@@ -102,4 +102,122 @@
         }
     }
 
+    &__label {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 2.5em;
+        }
+
+        span {
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 2.25em;
+
+            }
+        }
+    }
+
+    &__list {
+        line-height: 1;
+        margin: 1em 0;
+        @media (min-width: 768px) {
+            line-height: 1.3;
+            margin: 2.5em 0;
+        }
+
+        .presentation__item {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0.9em;
+                left: 0;
+                width: 0.5em;
+                height: 0.5em;
+                border-radius: 50%;
+                background-color: $color_white;
+                font-size: 0.65em;
+                @media (min-width: 768px) {
+                    font-size: 1em;
+
+                }
+            }
+
+            padding-left: 0.75em;
+            margin-bottom: 0.5em;
+
+            @media (min-width: 768px) {
+                padding-left: 1.5em;
+                margin-bottom: 1em;
+
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+
+                font-size: 0.625em;
+                font-weight: 300;
+                @media (min-width: 768px) {
+                    font-size: 1.5em;
+
+                }
+
+            }
+
+            b {
+                font-weight: 500;
+            }
+        }
+    }
+
+    &_sm {
+        color: $color_white;
+
+        @media (max-width: 767px) {
+            margin-bottom: 23em;
+        }
+        @media (min-width: 768px) {
+            height: 66.5em;
+
+        }
+
+        .section__title {
+            width: auto;
+            text-align: left;
+        }
+
+        .presentation__title span {
+            font-weight: 400;
+        }
+
+        .presentation__form {
+            margin-top: 4em;
+            @media (min-width: 768px) {
+                align-items: center;
+                padding-right: 100px;
+
+                &:after {
+                    content: none;
+
+                }
+            }
+
+            .form__privacy {
+                span {
+                    color: $main_color;
+                }
+            }
+            //
+            // .btn {
+            //     span {
+            //         text-transform: none;
+            //     }
+            // }
+        }
+    }
+
 }

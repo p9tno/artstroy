@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+  .specialists__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.specialists__caption {
+  margin-bottom: 1.5em;
+}
+.specialists__caption > * {
+  margin-bottom: 0.75em;
+}
+@media (min-width: 768px) {
+  .specialists__caption > * {
+    margin-bottom: 2.5em;
+  }
+}
+.specialists__caption > *:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .specialists__caption {
+    margin-bottom: 0;
+    width: 41.875em;
+  }
+}
+@media (min-width: 768px) {
+  .specialists__list {
+    width: 53.75em;
+    /* 860/16 */
+  }
+}

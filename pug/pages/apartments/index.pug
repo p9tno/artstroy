@@ -254,19 +254,19 @@ block content
 
     // end details
 
-    // begin specialists
-    section#specialists.specialists.section
-        .container_center.container_center_right
-            .specialists__content
-                .specialists__caption
+    // begin facts
+    section.facts.section
+        .container_center
+            .facts__content.facts__content_center
+                .facts__caption
                     .section__subtitle
                         span Не возможно быть лучшими во всем спектре ремонтных работ.   
                     h2.section__title
                         span <b>Мы привлекаем специалистов-партнеров</b> для узкопрофильных работ  
                     .section__subtitle
-                        span и сохраняем гарантии для вас  
+                        span и сохраняем гарантии для вас
 
-                .specialists__list
+                .facts__list
                     .provider__list.provider__list_col2.counter-wrap
                         each item in [ 'Установка<br> межкомнатных и<br> входных дверей', 'Вентиляция и<br> кондиционирование', 'Установка<br> пластиковых окон', 'Укладка и циклевка<br> паркета' ]
                             .provider__item.counter-item
@@ -279,7 +279,8 @@ block content
                                     span!=item
 
 
-    // end specialists
+
+    // end facts
 
     // begin docount
     section#docount.docount.section

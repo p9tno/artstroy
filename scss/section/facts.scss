@@ -1,0 +1,84 @@
+.facts {
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+
+            &_center {
+                align-items: center;
+            }
+        }
+    }
+
+    &__caption {
+        > * {
+            margin-bottom: 0.75em;
+            @media (min-width: 768px) {
+                margin-bottom: 2.5em;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        margin-bottom: 1.5em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            width: 41.875em;
+        }
+    }
+
+    &__list {
+        .provider__list {
+            margin-bottom: 0;
+        }
+        @media (min-width: 768px) {
+            width: 53.75em;
+        }
+    }
+
+    &_dark {
+        color: $color_white;
+
+        .facts__content {
+
+            background-color: $color_dark;
+
+            padding: 2em 1.25em;
+
+            @media (min-width: 768px) {
+                padding: 5em 6.25em 5em 6.875em;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 46.875em;
+                    background-image: url("../../img/facts_mask.svg");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+
+        }
+
+        .section__subtitle {
+            @media (min-width: 768px) {
+                margin-bottom: 1em;
+            }
+        }
+
+        .provider__label {
+            span {
+                color: $color_white;
+            }
+        }
+    }
+
+}

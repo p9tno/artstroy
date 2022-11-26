@@ -233,6 +233,33 @@ $(document).ready(function() {
 
     });
 
+    const stages = new Swiper('.stages-swiper-js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: '.stages__dotted',
+            clickable: true,
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 60,
+            },
+        }
+
+    });
+
     const logos = new Swiper('.logos-swiper-js', {
         slidesPerView: 3,
         speed: 500,
