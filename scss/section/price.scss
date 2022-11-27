@@ -1,0 +1,175 @@
+.price {
+    .section__title {
+        text-align: left;
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (min-width: 768px) {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -13.75em;
+
+                width: 72.125em;
+                height: 67.5em;
+                background-image: url("../../img/advantage_mask.svg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+        }
+
+    }
+
+    &__left {}
+
+    &__right {}
+
+    &__list {
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 4em;
+        }
+    }
+
+    &__item {
+
+        color: $color_white;
+        text-align: center;
+        padding: 4.375em 3.875em;
+        width: 31.25em;
+        height: fit-content;
+
+        font-size: 0.56em;
+        margin-top: 2em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            font-size: 1em;
+
+        }
+
+        > * {
+            margin-bottom: 2.5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+
+        ul {
+            // border: 1px solid #000;
+            margin-left: -2.5em;
+            margin-right: -2.5em;
+
+            li {
+                margin-bottom: 1.7em;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 1.5em;
+                /* 24/16 */
+            }
+        }
+    }
+
+    &__title {
+        span {
+            font-weight: 500;
+            font-size: 3em;
+        }
+    }
+
+    &__link {
+        a {
+            text-decoration: none;
+            color: $color_warning;
+            font-size: 0.75em;
+            font-weight: 500;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+
+            &:after {
+                display: inline-block;
+                content: '\e900';
+                font-family: 'icomoon';
+                font-size: 0.5em;
+                margin-left: 0.75em;
+            }
+
+            @media (min-width: 768px) {
+                transform: translateX(0);
+
+                &:hover {
+                    &:after {
+                        -webkit-animation: snake 0.4s linear alternate infinite;
+                        animation: snake 0.4s linear alternate infinite;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__number {
+        padding: 2.5em 0;
+        border-top: 0.0625em solid rgba(255, 255, 255, 0.25);
+        /* 1/16 */
+        border-bottom: 0.0625em solid rgba(255, 255, 255, 0.25);
+        /* 1/16 */
+
+        span {
+            font-weight: 700;
+            font-size: 4em;
+        }
+
+        small {
+            font-weight: 500;
+            font-size: 2.5em;
+
+            sup {
+                font-size: 0.6em;
+            }
+        }
+
+    }
+
+    &__desc {
+        line-height: 1.4;
+
+        span {
+            font-size: 1.5em;
+        }
+    }
+
+    &__button {
+        .btn {
+            width: 100%;
+            align-items: center;
+
+            span {
+                text-transform: none;
+            }
+
+            &:after {
+
+                right: 6em;
+            }
+        }
+    }
+
+}
