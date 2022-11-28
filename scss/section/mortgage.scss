@@ -1,0 +1,47 @@
+.mortgage {
+    .section__title {
+        text-align: left;
+        @media (min-width: 768px) {
+            width: 20em;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
+        margin: 2em 0;
+
+        @media (min-width: 768px) {
+            margin: 0;
+            grid-column-gap: 5.375em;
+            grid-row-gap: 2em;
+            width: 48.375em;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__button {}
+
+}

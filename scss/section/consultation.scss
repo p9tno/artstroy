@@ -1,9 +1,10 @@
 .consultation {
     .section__title {
         text-align: left;
-        @media (min-width: 768px) {
-            width: 20.75em;
-        }
+
+        // @media (min-width: 768px) {
+        //     width: 20.75em;
+        // }
     }
 
     .container_center {
@@ -93,6 +94,28 @@
             margin-right: 1.25em;
 
         }
+    }
+
+    &__text {
+        margin-top: 2.25em;
+        line-height: 1.4;
+
+        span {
+            font-weight: 300;
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+
+            }
+
+            br {
+                display: none;
+                @media (min-width: 768px) {
+                    display: inline;
+                }
+            }
+        }
+
     }
 
     &__label {
@@ -191,7 +214,7 @@
         margin: 0;
         position: absolute;
         top: 11em;
-        left: 60em;
+        left: 63em;
 
     }
 

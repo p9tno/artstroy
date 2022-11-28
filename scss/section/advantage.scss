@@ -142,6 +142,13 @@
             border-left: 1px solid rgba($color_warning, 0.3);
             z-index: -1;
         }
+
+        &_no-line {
+            &:after {
+                content: none;
+
+            }
+        }
     }
 
     &__icon {
@@ -199,6 +206,7 @@
                 font-size: 2em;
 
             }
+
         }
     }
 
@@ -255,6 +263,93 @@
 
     &__load {
         text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .advantage__list_no-number {
+
+        @media (min-width: 768px) {
+            margin-right: 12em;
+            width: 36.875em;
+
+        }
+
+        .advantage__item {
+
+            @media (max-width: 767px) {
+                &:nth-child(n+5) {
+                    display: block;
+                }
+            }
+
+        }
+
+        .advantage__nav {
+            &:after {
+                content: none;
+
+            }
+        }
+
+        .advantage__title {
+            span {
+                font-weight: 400;
+
+                b {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .advantage__content {
+            @media (min-width: 768px) {
+                width: 28em;
+            }
+
+            ul {
+
+                padding-left: 0.5em;
+                margin-top: 0.25em;
+                @media (min-width: 768px) {
+                    padding-left: 0.75em;
+
+                }
+
+                li {
+                    position: relative;
+                    margin-bottom: 0.25em;
+                    padding-left: 0.5em;
+                    @media (min-width: 768px) {
+                        padding-left: 2.25em;
+
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 1.125em;
+                        left: 0;
+
+                        width: 0.625em;
+                        height: 0.625em;
+                        border-radius: 50%;
+
+                        background-color: $second_color;
+
+                        font-size: 0.45em;
+                        @media (min-width: 768px) {
+                            font-size: 1em;
+
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }

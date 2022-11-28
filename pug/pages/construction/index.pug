@@ -57,3 +57,382 @@ block content
                                 span!=item 
 
     // end head
+
+    // begin ourhouses
+    section#ourhouses.ourhouses.section
+        .container_right
+            .ourhouses__wrap
+                .ourhouses__top
+                    h2.section__title
+                        span Почему клиенты <b>выбирают наши дома?</b>
+                    .ourhouses__control
+                        .ourhouses__dotted.dotted_sm
+                        .ourhouses__arrows.custom_arrows
+                            i.icon_arrow_left
+                            i.icon_arrow_right
+
+                .ourhouses__bottom
+                    .swiper__label.mobile
+                        .swiper__img
+                            img(src="../../img/hand.svg")
+                        span Листайте влево/вправо
+                    .swiper.ourhouses-swiper-js
+                        .swiper-wrapper
+
+
+
+                            .swiper-slide
+                                .ourhouses__item(style="background-image: url('../../img/ourhouses_1.jpg')").bg
+
+                                    .ourhouses__inner
+                                        .ourhouses__title
+                                            span Современный стиль
+
+                                        .ourhouses__content
+
+
+                                            .ourhouses__text
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+
+
+                            .swiper-slide
+                                .ourhouses__item(style="background-image: url('../../img/ourhouses_2.jpg')").bg
+                                    .ourhouses__inner
+                                        .ourhouses__title
+                                            span Продуманность<br> до мелочей
+
+                                        .ourhouses__content
+                                            .ourhouses__text
+                                                p Продуманный дом — это, когда лишние потоки не пересекаются, грязь с улицы не разносится по дому 
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+
+                            .swiper-slide
+                                .ourhouses__item(style="background-image: url('../../img/ourhouses_3.jpg')").bg
+                                    .ourhouses__inner
+                                        .ourhouses__title
+                                            span Срок службы
+
+                                        .ourhouses__content
+                                            .ourhouses__text
+                                                p Гарантия на наши дома составляет 25 лет - и для нас это не пустые слова 
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+
+                            .swiper-slide
+                                .ourhouses__item(style="background-image: url('../../img/ourhouses_4.jpg')").bg
+                                    .ourhouses__inner
+                                        .ourhouses__title
+                                            span Свет
+
+                                        .ourhouses__content
+                                            .ourhouses__text
+                                                p Нам всегда не хватает солнечного света. Дневной свет – это залог здоровья и хорошего настроения.  
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+
+                            .swiper-slide
+                                .ourhouses__item(style="background-image: url('../../img/ourhouses_5.jpg')").bg
+                                    .ourhouses__inner
+                                        .ourhouses__title
+                                            span Тишина
+
+                                        .ourhouses__content
+                                            .ourhouses__text
+                                                p Приходя домой хочется отдохнуть, восстановить свои силы, восполнить энергию после суеты и городского шума  
+                                                p Приходя домой хочется отдохнуть, восстановить свои силы, восполнить энергию после суеты и городского шума  
+                                                p Приходя домой хочется отдохнуть, восстановить свои силы, восполнить энергию после суеты и городского шума  
+                                                p Наша цель — улучшить жизнь клиентов  и внешний облик города в целом ь — улучшить жизнь клиентов  и внешний облик города в целом
+
+
+
+    // end ourhouses
+
+    // begin largeSlider
+    section#largeSlider.largeSlider.section(style="background-image: url('../../img/largeSlider_bg.webp')").bg
+        .container_center.container_center_right
+            .largeSlider__content
+                .swiper.largeSlider-swiper-js
+
+                    .swiper-wrapper
+
+                        each item in ['', '', '', '', '']
+                            .swiper-slide
+                                .largeSlider__item
+                                    .section__title 
+                                        span Используем <b>материалы premium качества</b> и даем <b>гарантию на дом 25 лет</b>
+
+                                    .section__list.section__list_row
+                                        each item in ['Гарантия сроков.<br> Платим за каждый<br> день просрочки', 'Допуски и лицензии<br> СРО, МЧС, к огневым,<br> высотным работам ', '<b>Соблюдаем стандарты</b> <br>СНиП, СП и ГОСТ', 'Предоставляем всю<br> исполнительную<br> документацию']
+                                            .section__item
+                                                .section__mark.check_mark
+                                                    i.icon_mark
+                                                span!=item
+
+                .largeSlider__control
+
+                    .largeSlider__dotted.dotted_sm
+
+                    .largeSlider__arrows.custom_arrows
+                        i.icon_arrow_left
+                        i.icon_arrow_right
+
+
+
+    // end largeSlider
+
+    // begin mortgage
+    section#mortgage.mortgage.section
+        .container_center.container_center_right
+            .mortgage__content
+                h2.section__title
+                    span Строим дома <b>в ипотеку</b>
+                .mortgage__list
+                    each item in [1,2]
+                        .mortgage__item
+                            .mortgage__img
+                                img(src="../../img/mortgage_"+item+".png")
+                .mortgage__button
+                    a.btn(href="")
+                        span Узнать подробнее о
+                        span строительстве в ипотеку
+
+
+    // end mortgage
+
+
+    // begin advantage
+    section#advantage.advantage.section
+
+        .container_center.container_center_sm
+            .advantage__wrap
+
+                .advantage__caption
+                    .advantage__bg.advantage__bg_mask.bg
+                    h2.section__title
+                        span <b>Проекты домов — <br>легко адаптируются</b><br> под потребности<br> 9 из 10 семей
+
+                .advantage__list.advantage__list_no-number
+
+
+                    .advantage__item(data-aos="fade-left")
+                        .advantage__inner
+                            .advantage__nav
+                                .advantage__icon.check_mark
+                                    i.icon_mark
+                            .advantage__content
+                                .advantage__title
+                                    span Планировки составлены <b>из опыта работы более 100 дизайнеров</b> Красноярска
+
+                    .advantage__item(data-aos="fade-left")
+                        .advantage__inner
+                            .advantage__nav
+                                .advantage__icon.check_mark
+                                    i.icon_mark
+                            .advantage__content
+                                .advantage__title
+                                    span Ещё до этапа строительства <b>вы точно будете знать:</b>
+                                    ul.list
+                                        li
+                                            span что будет в доме сделано 
+                                        li
+                                            span как это будет функционировать 
+                                        li
+                                            span сколько всё стоит
+                                        li
+                                            span как обслуживать дом
+
+
+
+
+
+                    .advantage__item(data-aos="fade-left")
+                        .advantage__inner
+                            .advantage__nav
+                                .advantage__icon.check_mark
+                                    i.icon_mark
+                            .advantage__content
+                                .advantage__title
+                                    span <b>Минимизированы проблемы во время строительства и в перспективе.</b> Поскольку проекты практически опробованы
+
+                    .advantage__item(data-aos="fade-left")
+                        .advantage__inner
+                            .advantage__nav
+                                .advantage__icon.check_mark
+                                    i.icon_mark
+                            .advantage__content
+                                .advantage__title
+                                    span <b>Наши проекты проработаны детально</b> не только коробка дома, но и все инженерные системы отопление, вентиляция, электричество
+
+
+
+
+    // end advantage
+
+
+    // begin consultation
+    section#consultation.consultation.section
+        .container_center
+            .consultation__content.bg
+                .consultation__left
+                    h2.section__title 
+                        span Хотите разработаем <b>индивидуальный архитектурный проект</b> дома? 
+                    .consultation__text
+                        span Оставьте заявку — и наши<br> архитекторы учтут все ваши<br> пожелания, разработают<br> проект с учётом<br> современных тенденций в<br> мире архитектуры и дизайна
+
+
+                .consultation__right
+                    .consultation__label
+                        span Оставьте заявку, позвоним<br> вам в течение 10 минут.
+                    .consultation__form
+                        form.form
+                            .form__row.form__row_43
+                                .form__label
+                                    span Введите номер телефона
+                                input(type="tel" class="tel" required placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _")
+
+                            .form__row.form__row_57
+                                .form__label.form__label_opacity.desktop
+
+                                button.btn.btn_didisabled_js(type="submit")
+                                    span Позвоните
+                                    span мне
+
+                            .form__row.form__row_full.form__row_mb0
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span.snakeline Нажимая кнопку вы соглашаетесь  с условиями<br> <a href="#privacy" class="show_js">Политики конфиденциальности</a>
+                    .consultation__button
+                        .consultation__phone
+                            span Ждем звонка: +7 (391) 2-0<i></i>54-081
+                        a.btn.btn_whatsapp(href="#")
+                            span Напишите нам в WhatsApp
+                            small время ответа 10 минут
+
+                .consultation__manager.bg(style="background-image: url('../../img/muchMore_persone.webp')")
+                .manager
+                    .manager__name
+                        span Алексей<br> Ивановcкий
+                    .manager__post
+                        span ведущий менеджер<br> заботы о клиентах
+
+
+
+
+    // end consultation
+
+
+    // begin portfolio
+    section#portfolio.portfolio.section
+        .container_right
+            h2.section__title
+                span <b>Выберите готовый проект</b> своего будущего дома
+            .portfolio__content
+                .portfolio__aside
+                    form.portfolio__filters
+
+                        .portfolio__cat
+                            .portfolio__label
+                                span Категория дома
+                            ul.portfolio__list.list
+                                li
+                                    .filter__checkbox
+                                        <input type="checkbox" id="serial" />
+                                        label(for="serial") Серийные проекты
+                                li
+                                    .filter__checkbox
+                                        <input type="checkbox" id="individual" />
+                                        label(for="individual") Индивидуальные проекты
+
+                        .portfolio__cat
+                            .portfolio__label
+                                span Стоимость
+                            .portfolio__slider_wrap
+                                .portfolio__slider.js-slide-price
+
+                            .portfolio__slider_bottom
+                                .portfolio__slider_min
+                                    span#slide-price-min 2 500 000
+                                .portfolio__slider_max
+                                    span#slide-price-min 9 500 000
+
+                        .portfolio__cat
+                            .portfolio__label
+                                span Этажность
+                            ul.portfolio__list.list
+                                li
+                                    .filter__checkbox
+                                        <input type="checkbox" id="floor-1" />
+                                        label(for="floor-1") 1 этаж
+                                li
+                                    .filter__checkbox
+                                        <input type="checkbox" id="floor-2" />
+                                        label(for="floor-2") 2 этажа
+
+                        .portfolio__cat
+                            .portfolio__label
+                                span Площадь
+                            .portfolio__slider_wrap
+                                .portfolio__slider.js-slide-square
+
+                            .portfolio__slider_bottom
+                                .portfolio__slider_min
+                                    span#slide-square-min 300
+                                .portfolio__slider_max
+                                    span#slide-square-min 900
+
+
+                        .portfolio__reset#portfolio-reset
+                            a(href="#") Сбросить фильтр
+
+                .portfolio__grid
+                    each item in ['', '', '', '', '',]
+                        .otherProjects__item
+                            //- begin projects__slider
+                            .swiper.otherProjects__slider.otherProjects-swiper-js
+                                .swiper-wrapper
+                                    .swiper-slide.projects__slide
+                                        .projects__beforeAfter.img.shadow.twentytwenty-container
+                                            img(src="../../img/project_1.webp" loading="lazy")
+                                            img(src="../../img/project_2.webp" loading="lazy")
+                                    .swiper-slide.projects__slide
+                                        .projects__img.projects__video.bg.shadow(style="background-image: url('../../img/project_1.webp')")
+                                            .play.pulse.youtubeModal-js#rsDoGqnPE4c
+                                                i.icon_play
+                                    each item in [1,2,3,4,5,6,7,8]
+
+                                        .swiper-slide.projects__slide
+                                            .projects__img.img
+                                                a(href="../../img/project_2.webp" data-fancybox data-type="image")
+                                                    img(src="../../img/project_2.webp" loading="lazy")
+
+                                .otherProjects__control
+                                    .otherProjects__dotted.dotted_sm
+                                    .otherProjects__arrows.custom_arrows.custom_arrows_white
+                                        i.icon_arrow_left
+                                        i.icon_arrow_right
+                            //- end projects__slider
+                            .otherProjects__content
+                                .otherProjects__title
+                                    span Проект 1
+                                    small Серийный проект
+                                ul.list
+                                    li
+                                        small Площадь:
+                                        span 100 м<sup>2</sup>
+                                    li
+                                        small Кол-во этажей:
+                                        span 2 этажа
+                                .otherProjects__link
+                                    a(href="#") Изучить подробнее
+
+
+
+
+    // end portfolio

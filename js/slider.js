@@ -28,6 +28,36 @@ $(document).ready(function() {
         }
     });
 
+    const ourhouses = new Swiper('.ourhouses-swiper-js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.ourhouses__arrows .icon_arrow_right',
+            prevEl: '.ourhouses__arrows .icon_arrow_left',
+        },
+        pagination: {
+            el: '.ourhouses__dotted',
+            clickable: true,
+        },
+        initialSlide: 0,
+
+
+
+        breakpoints: {
+            768: {
+                spaceBetween: 27,
+                slidesPerView: 4,
+            },
+
+        }
+    });
+
     const data = new Swiper('.data-swiper-js', {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -122,6 +152,30 @@ $(document).ready(function() {
         },
         pagination: {
             el: '.singleSlider__dotted',
+            clickable: true,
+        },
+
+    });
+
+    const largeSlider = new Swiper('.largeSlider-swiper-js', {
+        slidesPerView: 1,
+        speed: 500,
+        // loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: '.largeSlider__dotted',
             clickable: true,
         },
 
