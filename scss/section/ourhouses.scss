@@ -69,7 +69,6 @@
 
         @media (min-width: 768px) {
             font-size: 1em;
-            transform: scaleY(1);
         }
 
         &:after {
@@ -110,8 +109,6 @@
 
         @media (min-width: 768px) {
             padding: 3.125em;
-            transform: scaleY(1);
-            transition: 0.3s;
         }
     }
 
@@ -168,24 +165,6 @@
             }
 
         }
-    }
-
-    .swiper-slide-active {
-        .ourhouses__innner {
-            @media (min-width: 768px) {
-                transform: scaleY(0.95);
-
-            }
-        }
-
-        .ourhouses__item {
-            @media (min-width: 768px) {
-                transform: scaleY(1.05);
-
-            }
-
-        }
-
     }
 
 }

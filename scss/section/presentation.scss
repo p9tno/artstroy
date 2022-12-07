@@ -109,7 +109,7 @@
         }
 
         span {
-            font-size: 1em;
+            font-size: 0.75em;
             @media (min-width: 768px) {
                 font-size: 2.25em;
 
@@ -145,7 +145,7 @@
             }
 
             padding-left: 0.75em;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.25em;
 
             @media (min-width: 768px) {
                 padding-left: 1.5em;
@@ -259,4 +259,39 @@
 
     }
 
+}
+
+.presentation_remont {
+
+    background-image: url("../../img/presentation_2_m.jpg");
+    @media (min-width: 768px) {
+        background-image: url("../../img/presentation_2.webp");
+    }
+    @media (max-width: 767px) {
+        height: 40.75em;
+    }
+
+    .presentation__form {
+        @media (max-width: 767px) {
+            margin-top: 16em;
+        }
+    }
+}
+
+.presentation_design {
+    background-image: url("../../img/presentation_3.webp");
+    background-position: left;
+
+    @media (min-width: 768px) {
+        background-position: center;
+    }
+}
+
+.presentation_design2 {
+    background-image: url("../../img/presentation_4.webp");
+    background-position: 14%;
+
+    @media (min-width: 768px) {
+        background-position: center;
+    }
 }

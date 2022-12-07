@@ -705,19 +705,10 @@ $(document).ready(function() {
 
         function showMoreD(classItem, btn) {
 
-            // let classItem = '.vacancies__item';
-            // let classItem = class;
-
             let item = $(''+ classItem +'');
             let count = item.length;
             let start = 3;
             let show = 1;
-            //
-            // if (count >= start) {
-            //     let button = $(btn);
-            //     button.parent().remove();
-            // }
-
 
             item.addClass('d-none');
             $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
@@ -743,31 +734,35 @@ $(document).ready(function() {
                     $(this).removeClass('loading');
                     $(this).text(more);
                 }, 500);
-
-
             });
-
         }
-        // showMoreD('.levelDesign__item', '.show_more_d_js');
+        showMoreD('.levelDesign__item', '.show_more_d_js');
 
+        // function toggleButton() {
+        //     let wrap = $('.filter__result');
+        //     let item = $('.d-none');
+        //     wrap.each(function(index, el) {
+        //         let count = item.length;
+        //         console.log(count);
+        //     });
+        // }
+        // toggleButton();
 
-
-
-        $("#filter :checkbox").click(function() {
-            $(".filter__item").hide();
-
-            $("#filter :checkbox:checked").each(function() {
-                // $("." + $(this).val()).show();
-                $("." + $(this).val()).fadeIn();
-            });
-
-        });
+        // $("#filter :checkbox").click(function() {
+        //     $(".filter__item").hide();
+        //
+        //     $("#filter :checkbox:checked").each(function() {
+        //         // $("." + $(this).val()).show();
+        //         $("." + $(this).val()).fadeIn();
+        //     });
+        //
+        // });
 
         $('.filter_reset_js').click(function(e) {
             e.preventDefault();
 
             $("#filter :checkbox").each(function() {
-                $(this).prop('checked', true);
+                $(this).prop('checked', false);
                 // $(".filter__item").show();
                 $(".filter__item").fadeIn();
             });
@@ -775,11 +770,19 @@ $(document).ready(function() {
         });
 
 
+        $("#filter :checkbox").click(function() {
 
+            // toggleButton();
 
+            let re = new RegExp($("#filter :checkbox:checked").map(function() {
+                return this.value;
+            }).get().join("|") );
 
-
-
+            $(".filter__item").each(function() {
+                var $this = $(this);
+                $this[re.source!="" && re.test($this.attr("class")) ? "show" : "hide"]();
+            });
+        });
 
     }
     filterForDesigners();
